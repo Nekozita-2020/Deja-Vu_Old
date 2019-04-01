@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 260f3aeaa9e854dedb0b56b39629aa22
+  m_OcclusionCullingData: {fileID: 36300000, guid: fdff99641165a45d4ad310a5ccb493e2,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -686,7 +687,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -713,7 +714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 1700}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542659734}
@@ -2124,7 +2125,7 @@ PrefabInstance:
     - target: {fileID: 1564773115115815200, guid: be1f96fa334b54e809b7a0505fae2ed0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8
+      value: 1708
       objectReference: {fileID: 0}
     - target: {fileID: 1564773115115815200, guid: be1f96fa334b54e809b7a0505fae2ed0,
         type: 3}
