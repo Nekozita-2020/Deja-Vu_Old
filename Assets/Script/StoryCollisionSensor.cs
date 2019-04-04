@@ -21,7 +21,7 @@ public class StoryCollisionSensor : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // 無害の物に衝突
-        if (collision.gameObject.tag == "Scenery")
+        if (collision.gameObject.tag == this.gameObject.tag || collision.gameObject.tag == "Scenery")
         {
             // 何も起こらない
         }
