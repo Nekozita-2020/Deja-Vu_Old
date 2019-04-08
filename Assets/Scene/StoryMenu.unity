@@ -1173,7 +1173,7 @@ PrefabInstance:
     - target: {fileID: 3674310000200007172, guid: d573dea773c044dc0abd45c50bfe9e7e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryTemplate
+      value: Tutorial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d573dea773c044dc0abd45c50bfe9e7e, type: 3}
