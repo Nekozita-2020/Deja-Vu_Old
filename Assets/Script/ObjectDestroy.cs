@@ -24,8 +24,8 @@ public class ObjectDestroy : MonoBehaviour
 
     public void OnObjectDerayDestroy()
     {
-        // 10秒後にオブジェクトを消去
-        Destroy(this.gameObject, 10.0f);
+        // 3秒後にオブジェクトを消去
+        Destroy(this.gameObject, 3.0f);
         // Destroy(TouchSencer);
     }
 
