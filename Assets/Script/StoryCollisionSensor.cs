@@ -5,11 +5,11 @@ using UnityEngine;
 public class StoryCollisionSensor : MonoBehaviour
 {
 
-    GameObject GameDirector;
+    [SerializeField] StoryGameManagement StoryGameManagement;
 
     void Start()
     {
-        GameDirector = GameObject.Find("GameDirector");
+
     }
 
     void Update()
@@ -27,7 +27,7 @@ public class StoryCollisionSensor : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Finish")
         {
-            GameDirector.GetComponent<StoryGameManagement>().OnGameClearProcess();
+            StoryGameManagement.OnGameClearProcess();
             // this.GetComponent<PlayToEffect>().OnEffectPlay_A();
             this.GetComponent<PlayToSEAfterDestroy>().OnPlaySE();
             this.GetComponent<ObjectDestroy>().OnObjectDerayDestroy();
@@ -35,7 +35,7 @@ public class StoryCollisionSensor : MonoBehaviour
         // アタッチされてるオブジェクトと異なるタグに衝突
         else
         {
-            GameDirector.GetComponent<StoryGameManagement>().OnGameOverProcess();
+            StoryGameManagement.OnGameOverProcess();
             this.GetComponent<PlayToEffect>().OnEffectPlay_A();
             this.GetComponent<PlayToSEAfterDestroy>().OnPlaySE();
             this.GetComponent<ObjectDestroy>().OnObjectDestroy();

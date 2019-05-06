@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
-
+    [SerializeField] private forward MainCameraForword;
     [SerializeField] private GameObject TutorialWindow;
-    public Pausable Pausable;
-
+    [SerializeField] private Pausable Pausable;
 
 
     void Start()
@@ -20,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     {
         // ゲームを一時停止
         Pausable.pausing = true;
+        MainCameraForword.ForwardSpeed = 0f;
 
         // チュートリアルウインドウを表示
         TutorialWindow.SetActive(true);
@@ -32,6 +32,7 @@ public class TutorialManager : MonoBehaviour
 
         // ゲームを再開
         Pausable.pausing = false;
+        MainCameraForword.ForwardSpeed = 13f;
     }
 
 }
