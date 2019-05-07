@@ -17668,6 +17668,15 @@ extern "C" IL2CPP_METHOD_ATTR void Application_OpenURL_m2888DA5BDF68B1BC23E98346
 	_il2cpp_icall_func = (Application_OpenURL_m2888DA5BDF68B1BC23E983469157783F390D7BC8_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::OpenURL(System.String)");
 	_il2cpp_icall_func(___url0);
 }
+// System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_mC20C40E50BAB994B10DDAC0E3C26A851025337BC (int32_t ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Application_set_targetFrameRate_mC20C40E50BAB994B10DDAC0E3C26A851025337BC_ftn) (int32_t);
+	static Application_set_targetFrameRate_mC20C40E50BAB994B10DDAC0E3C26A851025337BC_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_set_targetFrameRate_mC20C40E50BAB994B10DDAC0E3C26A851025337BC_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::set_targetFrameRate(System.Int32)");
+	_il2cpp_icall_func(___value0);
+}
 // System.Void UnityEngine.Application::CallLowMemory()
 extern "C" IL2CPP_METHOD_ATTR void Application_CallLowMemory_m4C6693BD717D61DB33C2FB061FDA8CE055966E75 (const RuntimeMethod* method)
 {

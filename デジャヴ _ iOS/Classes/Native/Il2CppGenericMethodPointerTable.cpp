@@ -39,6 +39,7 @@ extern "C" void Object_FindObjectOfType_TisRuntimeObject_m83E0D9C988BFEBFA41D833
 extern "C" void Object_Instantiate_TisRuntimeObject_mEF511C369E0CA9462FD3427DFC2375E81469570F_gshared ();
 extern "C" void Object_Instantiate_TisRuntimeObject_m15EC2C02BBEB7887B085259FD9A5D748BD4555BA_gshared ();
 extern "C" void Resources_GetBuiltinResource_TisRuntimeObject_m85F17CF969B8729F73D7FC6E935EF20EF3AAA994_gshared ();
+extern "C" void Array_FindAll_TisRuntimeObject_mB64E7B24864B1297951627375A2193F0E9944B60_gshared ();
 extern "C" void CustomAttributeData_UnboxValues_TisCustomAttributeNamedArgument_t98CF5ADD605D0BD45BB33196EF5C2FEE889B1328_m1E1B0981AF19441B173BDC112C6211C04278FC45_gshared ();
 extern "C" void CustomAttributeData_UnboxValues_TisCustomAttributeTypedArgument_t6BFE31718393511FACDC7899E1E6586C47110B01_mC6153B24EFD4687E1EA761396B687F5769C9E72E_gshared ();
 extern "C" void Component_GetComponents_TisRuntimeObject_mC1990520B7718DB9F2D68839716E6853645566FC_gshared ();
@@ -1929,7 +1930,7 @@ extern "C" void Array_BinarySearch_TisRuntimeObject_m3D141ED7E58DE3CDB292428CA23
 extern "C" void Array_BinarySearch_TisRuntimeObject_mB76D79CEE336657CD8A7EFC73555E9ACDD114692_gshared ();
 extern "C" void Array_FindIndex_TisRuntimeObject_m3709CE98970F1A895AA8C68CCDF653B32C101677_gshared ();
 extern "C" void Array_FindIndex_TisRuntimeObject_m3431C5A4A0FB6E3E41F25A6E068B4E0E6009F22D_gshared ();
-extern "C" void Array_FindIndex_TisRuntimeObject_m546B3706D948B8CF8F6A223F1366DD862B412372_gshared ();
+extern "C" void Array_FindIndex_TisRuntimeObject_m018A45E00D78E728852A81BFA83C8266F26A0C6C_gshared ();
 extern "C" void Array_FindLastIndex_TisRuntimeObject_m57639176B145226D7BBF497B2CE61E14A3795A82_gshared ();
 extern "C" void Array_FindLastIndex_TisRuntimeObject_m79C024A7C6A504B5937AAE43BE2AE57D614EC7E6_gshared ();
 extern "C" void Array_FindLastIndex_TisRuntimeObject_m0F2A11D1B80F6397FC3D95F19C1D87BA247601F0_gshared ();
@@ -5748,7 +5749,6 @@ extern "C" void Dictionary_2_pick_value_m6EC43D11849C9430A7FF7CD0AD2D36B113525F0
 extern "C" void KeyValuePair_2_get_Value_mD7B87575AB5AA2229B1D01590CB635C01D6CA8F3_AdjustorThunk ();
 extern "C" void KeyValuePair_2_get_Value_mC70A1A72D25EAF8B185463C9D5D8DF290FF38979_AdjustorThunk ();
 extern "C" void KeyValuePair_2_get_Value_m64AA8A8F220F0BD7FBAE96230701675D3B5E8705_AdjustorThunk ();
-extern "C" void Array_FindAll_TisRuntimeObject_m2F6D6C3B259AF0CEBA14C1F7FF502B93D78C63E5_gshared ();
 extern "C" void List_1_ToArray_m95DD3DAD700AC7CBB9974C866C9880FA55519D33_gshared ();
 extern "C" void List_1_ToArray_mE3701008FD26BBC8184384CA22962898157F7BAF_gshared ();
 extern "C" void List_1_ToArray_m841BF9D78E586CD3D79195980F9C326E5666A89B_gshared ();
@@ -5829,7 +5829,7 @@ extern const Il2CppMethodPointer g_Il2CppGenericMethodPointers[5768] =
 	(Il2CppMethodPointer)&Array_FindLastIndex_TisRuntimeObject_m0F2A11D1B80F6397FC3D95F19C1D87BA247601F0_gshared/* 31*/,
 	(Il2CppMethodPointer)&Array_FindLastIndex_TisRuntimeObject_m79C024A7C6A504B5937AAE43BE2AE57D614EC7E6_gshared/* 32*/,
 	(Il2CppMethodPointer)&Array_FindLastIndex_TisRuntimeObject_m57639176B145226D7BBF497B2CE61E14A3795A82_gshared/* 33*/,
-	(Il2CppMethodPointer)&Array_FindIndex_TisRuntimeObject_m546B3706D948B8CF8F6A223F1366DD862B412372_gshared/* 34*/,
+	(Il2CppMethodPointer)&Array_FindIndex_TisRuntimeObject_m018A45E00D78E728852A81BFA83C8266F26A0C6C_gshared/* 34*/,
 	(Il2CppMethodPointer)&Array_FindIndex_TisRuntimeObject_m3431C5A4A0FB6E3E41F25A6E068B4E0E6009F22D_gshared/* 35*/,
 	(Il2CppMethodPointer)&Array_FindIndex_TisRuntimeObject_m3709CE98970F1A895AA8C68CCDF653B32C101677_gshared/* 36*/,
 	(Il2CppMethodPointer)&Array_BinarySearch_TisRuntimeObject_m3D141ED7E58DE3CDB292428CA23BC6F584778D22_gshared/* 37*/,
@@ -5842,7 +5842,7 @@ extern const Il2CppMethodPointer g_Il2CppGenericMethodPointers[5768] =
 	(Il2CppMethodPointer)&Array_LastIndexOf_TisRuntimeObject_m83DF055020296D5A2AE4E58D0D046BCD4018F680_gshared/* 44*/,
 	(Il2CppMethodPointer)&Array_LastIndexOf_TisRuntimeObject_m16FF2AFC1C1A7904C612CFE142ACA20F5774041E_gshared/* 45*/,
 	(Il2CppMethodPointer)&Array_LastIndexOf_TisRuntimeObject_mBBFF15CD0C17EC6DC6308933057441074EEE6A9E_gshared/* 46*/,
-	(Il2CppMethodPointer)&Array_FindAll_TisRuntimeObject_m2F6D6C3B259AF0CEBA14C1F7FF502B93D78C63E5_gshared/* 47*/,
+	(Il2CppMethodPointer)&Array_FindAll_TisRuntimeObject_mB64E7B24864B1297951627375A2193F0E9944B60_gshared/* 47*/,
 	(Il2CppMethodPointer)&Array_Exists_TisRuntimeObject_m5350FD0CD3FFD0698D0863C9481AA4E636ABF835_gshared/* 48*/,
 	(Il2CppMethodPointer)&Array_AsReadOnly_TisRuntimeObject_m120A68175AFF1E7B955C7718E359333FF9DCAAA1_gshared/* 49*/,
 	(Il2CppMethodPointer)&Array_Find_TisRuntimeObject_m0DE88FF049D925B6256DD9758B05A953B1E8472A_gshared/* 50*/,

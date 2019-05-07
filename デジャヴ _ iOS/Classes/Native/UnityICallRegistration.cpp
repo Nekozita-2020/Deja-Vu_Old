@@ -138,6 +138,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_OpenURL();
 		Register_UnityEngine_Application_OpenURL();
 
+		//System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+		void Register_UnityEngine_Application_set_targetFrameRate();
+		Register_UnityEngine_Application_set_targetFrameRate();
+
 		//UnityEngine.RuntimePlatform UnityEngine.Application::get_platform()
 		void Register_UnityEngine_Application_get_platform();
 		Register_UnityEngine_Application_get_platform();
@@ -1854,6 +1858,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Internal_EmitOld();
 		Register_UnityEngine_ParticleSystem_Internal_EmitOld();
 
+		//System.Void UnityEngine.ParticleSystem::Pause(System.Boolean)
+		void Register_UnityEngine_ParticleSystem_Pause();
+		Register_UnityEngine_ParticleSystem_Pause();
+
 		//System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
 		void Register_UnityEngine_ParticleSystem_Play();
 		Register_UnityEngine_ParticleSystem_Play();
@@ -2414,6 +2422,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Rigidbody
 
+		//System.Boolean UnityEngine.Rigidbody::IsSleeping()
+		void Register_UnityEngine_Rigidbody_IsSleeping();
+		Register_UnityEngine_Rigidbody_IsSleeping();
+
 		//System.Boolean UnityEngine.Rigidbody::get_isKinematic()
 		void Register_UnityEngine_Rigidbody_get_isKinematic();
 		Register_UnityEngine_Rigidbody_get_isKinematic();
@@ -2453,6 +2465,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Rigidbody::Sleep()
 		void Register_UnityEngine_Rigidbody_Sleep();
 		Register_UnityEngine_Rigidbody_Sleep();
+
+		//System.Void UnityEngine.Rigidbody::WakeUp()
+		void Register_UnityEngine_Rigidbody_WakeUp();
+		Register_UnityEngine_Rigidbody_WakeUp();
 
 		//System.Void UnityEngine.Rigidbody::get_angularVelocity_Injected(UnityEngine.Vector3&)
 		void Register_UnityEngine_Rigidbody_get_angularVelocity_Injected();

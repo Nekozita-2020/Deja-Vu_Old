@@ -4143,6 +4143,25 @@ extern "C" IL2CPP_METHOD_ATTR void Rigidbody_Sleep_mFE36499136A22ED98FC53B9EC716
 	_il2cpp_icall_func = (Rigidbody_Sleep_mFE36499136A22ED98FC53B9EC716B380D7A8AD7E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::Sleep()");
 	_il2cpp_icall_func(__this);
 }
+// System.Boolean UnityEngine.Rigidbody::IsSleeping()
+extern "C" IL2CPP_METHOD_ATTR bool Rigidbody_IsSleeping_m1B8DD08C5F9B360D3CA5C60500472FC17CA2DA99 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, const RuntimeMethod* method)
+{
+	typedef bool (*Rigidbody_IsSleeping_m1B8DD08C5F9B360D3CA5C60500472FC17CA2DA99_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *);
+	static Rigidbody_IsSleeping_m1B8DD08C5F9B360D3CA5C60500472FC17CA2DA99_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_IsSleeping_m1B8DD08C5F9B360D3CA5C60500472FC17CA2DA99_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::IsSleeping()");
+	bool retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
+// System.Void UnityEngine.Rigidbody::WakeUp()
+extern "C" IL2CPP_METHOD_ATTR void Rigidbody_WakeUp_m30E4CCC2A1A5829084881EBF52431ADDA4F2B336 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_WakeUp_m30E4CCC2A1A5829084881EBF52431ADDA4F2B336_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *);
+	static Rigidbody_WakeUp_m30E4CCC2A1A5829084881EBF52431ADDA4F2B336_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_WakeUp_m30E4CCC2A1A5829084881EBF52431ADDA4F2B336_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::WakeUp()");
+	_il2cpp_icall_func(__this);
+}
 // System.Void UnityEngine.Rigidbody::AddForce(UnityEngine.Vector3,UnityEngine.ForceMode)
 extern "C" IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mD64ACF772614FE36CFD8A477A07A407B35DF1A54 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, int32_t ___mode1, const RuntimeMethod* method)
 {
