@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        
+        // CommonToolsシーンのオブジェクトを追加する
+        SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        // タイトルBGMを再生
+        SoundManager.Instance.PlayBGM(SoundConfig.BGM_HARUJION_BGM);
     }
+
 }

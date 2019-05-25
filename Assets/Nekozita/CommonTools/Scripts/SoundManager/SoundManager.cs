@@ -8,28 +8,28 @@ using System.Collections.Generic;
 public class SoundManager : SingletonMonoBehaviour<SoundManager>
 {
 
-    //オーディオファイルのパス
-    private const string BGM_PATH = "Audio/BGM";
-    private const string SE_PATH = "Audio/SE";
+    // オーディオファイルのパス
+    private const string BGM_PATH = "Sound/BGM";
+    private const string SE_PATH = "Sound/SE";
 
-    //BGMがフェードするのにかかる時間
+    // BGMがフェードするのにかかる時間
     public const float BGM_FADE_SPEED_RATE_HIGH = 0.9f;
     public const float BGM_FADE_SPEED_RATE_LOW = 0.3f;
     private float _bgmFadeSpeedRate = BGM_FADE_SPEED_RATE_HIGH;
 
-    //次流すBGM名、SE名
+    // 次に流すBGM名、SE名
     private string _nextBGMName;
     private string _nextSEName;
 
-    //BGMをフェードアウト中か
+    // BGMをフェードアウト中か
     private bool _isFadeOut = false;
 
-    //BGM用、SE用に分けてオーディオソースを持つ
+    // BGM用、SE用に分けてオーディオソースを持つ
     private AudioSource _bgmSource;
     private List<AudioSource> _seSourceList;
-    private const int SE_SOURCE_NUM = 10;
+    private const int SE_SOURCE_NUM = 5;
 
-    //全AudioClipを保持
+    // 全AudioClipを保持
     private Dictionary<string, AudioClip> _bgmDic, _seDic;
 
     //=================================================================================
@@ -65,11 +65,13 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
             {
                 audioSourceArray[i].loop = true;
                 _bgmSource = audioSourceArray[i];
-                _bgmSource.volume = PlayerPrefs.GetFloat("BGM_VOLUME_KEY", 0.5f);
+                // BGMのデフォルト音量を設定
+                _bgmSource.volume = PlayerPrefs.GetFloat("BGM_VOLUME_KEY", 0.3f);
             }
             else
             {
                 _seSourceList.Add(audioSourceArray[i]);
+                // SEのデフォルト音量を設定
                 audioSourceArray[i].volume = PlayerPrefs.GetFloat("SE_VOLUME_KEY", 0.5f);
             }
 
@@ -185,7 +187,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         if (_bgmSource.volume <= 0)
         {
             _bgmSource.Stop();
-            _bgmSource.volume = PlayerPrefs.GetFloat("BGM_VOLUME_KEY", 0.5f);
+            _bgmSource.volume = PlayerPrefs.GetFloat("BGM_VOLUME_KEY", 0.3f);
             _isFadeOut = false;
 
             if (!string.IsNullOrEmpty(_nextBGMName))
