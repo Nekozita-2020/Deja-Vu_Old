@@ -12,10 +12,16 @@ public class TitleManager : MonoBehaviour
         SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
     }
 
-    void Start()
+    private void Start()
     {
         // タイトルBGMを再生
         SoundManager.Instance.PlayBGM(SoundConfig.BGM_HARUJION_BGM);
+    }
+
+    public void OnChangeScene()
+    {
+        // SceneController.FadeOut("GameMenu");
+        SceneControllerAfter.Instance.FadeOut("GameMenu");
     }
 
 }
