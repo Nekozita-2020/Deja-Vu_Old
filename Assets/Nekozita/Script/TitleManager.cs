@@ -9,6 +9,7 @@ public class TitleManager : MonoBehaviour
     private void Awake()
     {
         // CommonToolsシーンのオブジェクトを追加する
+        // DontDestroyOnLoad(this.gameObject);
         SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
     }
 
@@ -20,8 +21,7 @@ public class TitleManager : MonoBehaviour
 
     public void OnChangeScene()
     {
-        // SceneController.FadeOut("GameMenu");
-        SceneControllerAfter.Instance.FadeOut("GameMenu");
+        SceneController.Instance.FadeOut("GameMenu");
     }
 
 }
