@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1213804093839925251}
   - component: {fileID: 3745001088978241416}
-  - component: {fileID: 8481439039793533224}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -40,21 +39,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2867835438846263513}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bceb900e0622a4b85b9d1524eec683aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8481439039793533224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2867835438846263513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4060529c25b4348c5be8d2c19ddeddca, type: 3}
+  m_Script: {fileID: 11500000, guid: bceb900e0622a4b85b9d1524eec683aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FadeCanvas: {fileID: 3075304980522450136}

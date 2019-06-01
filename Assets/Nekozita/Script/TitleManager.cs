@@ -8,9 +8,7 @@ public class TitleManager : MonoBehaviour
 
     private void Awake()
     {
-        // CommonToolsシーンのオブジェクトを追加する
-        // DontDestroyOnLoad(this.gameObject);
-        SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
+
     }
 
     private void Start()
@@ -19,9 +17,9 @@ public class TitleManager : MonoBehaviour
         SoundManager.Instance.PlayBGM(SoundConfig.BGM_HARUJION_BGM);
     }
 
-    public void OnChangeScene()
+    public void OnChangeScene(string ChangeScene)
     {
-        SceneController.Instance.FadeOut("GameMenu");
+        SceneController.Instance.FadeOut(ChangeScene);
     }
 
 }
