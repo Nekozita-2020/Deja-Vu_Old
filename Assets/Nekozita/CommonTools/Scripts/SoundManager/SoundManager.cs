@@ -25,8 +25,8 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     private bool _isFadeOut = false;
 
     // BGM用、SE用に分けてオーディオソースを持つ
-    private AudioSource _bgmSource;
-    private List<AudioSource> _seSourceList;
+    private AudioSource _bgmSource = null;
+    private List<AudioSource> _seSourceList = null;
     private const int SE_SOURCE_NUM = 5;
 
     // 全AudioClipを保持
@@ -38,12 +38,14 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
 
     private void Awake()
     {
+        /*
         if (this != Instance)
         {
             Destroy(this);
             return;
         }
-
+        */
+        // シーン遷移後に削除されないようにする
         DontDestroyOnLoad(this.gameObject);
 
         //オーディオリスナーおよびオーディオソースをSE+1(BGMの分)作成

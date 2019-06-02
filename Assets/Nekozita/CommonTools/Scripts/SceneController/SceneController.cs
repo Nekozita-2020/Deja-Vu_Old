@@ -12,7 +12,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
 
     // フェード用のCanvas
     [SerializeField] private Canvas FadeCanvas;
-    private Image FadeImage;
+    private Image FadeImage = null;
 
     // フェード用Imageの透明度
     private float Alpha = 0.0f;
@@ -22,36 +22,40 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     public bool IsFadeOut = false;
 
     // フェードしたい時間（単位は秒）
-    private float FadeTime = 0.2f;
+    private float FadeTime = 0.5f;
 
     // 遷移先のシーン名
-    private string NextScene;
+    private string NextScene = null;
 
 
 
     private void Awake()
     {
+        // シーン遷移後に削除されないようにする
         DontDestroyOnLoad(this.gameObject);
+
         FadeImage = FadeCanvas.GetComponent<Image>();
     }
 
     /// <summary>
     /// シーンをフェードインさせる際などに使う
     /// </summary>
-    public void FadeIn()
+    public void FadeIn(float FadeTime_Secoond = 0.5f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
             FadeCanvas.gameObject.SetActive(true);
         }
         IsFadeIn = true;
+        FadeTime = FadeTime_Secoond;
     }
 
     /// <summary>
     /// フェードアウトさせてシーン遷移を行う
+    /// フェードさせる時間も指定できる
     /// </summary>
     /// <param name="SceneName">Scene name.</param>
-    public void FadeOut(string SceneName)
+    public void FadeOut(string SceneName, float FadeTime_Secoond = 0.5f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
@@ -60,6 +64,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
         NextScene = SceneName;
         FadeCanvas.enabled = true;
         IsFadeOut = true;
+        FadeTime = FadeTime_Secoond;
     }
 
     void Update()
@@ -101,4 +106,5 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
             FadeImage.color = new Color(0.0f, 0.0f, 0.0f, Alpha);
         }
     }
+
 }
