@@ -15,7 +15,7 @@ public static class SoundConfigCreator
 {
 
     private const string COMMAND_NAME = "Tools/Create/SoundConfig_File";        // コマンド名
-    private const string EXPORT_PATH = "Assets/Nekozita/CommonTools/Scripts/SoundManager/SoundConfig.cs"; //作成したスクリプトを保存するパス
+    private const string EXPORT_PATH = "Assets/Nekozita/CommonTools/Resources/Scripts/SoundManager/SoundConfig.cs"; //作成したスクリプトを保存するパス
 
     // ファイル名(拡張子あり、なし)
     private static readonly string FILENAME = Path.GetFileName(EXPORT_PATH);
