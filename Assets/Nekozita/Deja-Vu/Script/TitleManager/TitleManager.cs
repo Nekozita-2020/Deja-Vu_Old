@@ -14,7 +14,7 @@ public class TitleManager : MonoBehaviour
     private void Start()
     {
         // タイトルBGMを再生
-        SoundManager.Instance.PlayBGM(SoundConfig.BGM_HARUJION_BGM);
+        // SoundManager.Instance.PlayBGM(ResourcesFilePath.);
     }
 
     public void OnChangeScene(string ChangeScene)

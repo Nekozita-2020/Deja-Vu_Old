@@ -104,7 +104,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     /// <summary>
     /// 指定したファイル名のSEを流す。第二引数のdelayに指定した時間だけ再生までの間隔を空ける
     /// </summary>
-    public void PlaySE(string seName = SoundConfig.SE_HEARTBEAT, float delay = 0.0f)
+    public void PlaySE(string seName = null, float delay = 0.0f)
     {
         if (!_seDic.ContainsKey(seName))
         {
@@ -144,14 +144,14 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
             return;
         }
 
-        //現在BGMが流れていない時はそのまま流す
+        // 現在BGMが流れていない時はそのまま流す
         if (!_bgmSource.isPlaying)
         {
             _nextBGMName = "";
             _bgmSource.clip = _bgmDic[bgmName] as AudioClip;
             _bgmSource.Play();
         }
-        //違うBGMが流れている時は、流れているBGMをフェードアウトさせてから次を流す。同じBGMが流れている時はスルー
+        // 違うBGMが流れている時は、流れているBGMをフェードアウトさせてから次を流す。同じBGMが流れている時はスルー
         else if (_bgmSource.clip.name != bgmName)
         {
             _nextBGMName = bgmName;
@@ -184,7 +184,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
             return;
         }
 
-        //徐々にボリュームを下げていき、ボリュームが0になったらボリュームを戻し次の曲を流す
+        // 徐々にボリュームを下げていき、ボリュームが0になったらボリュームを戻し次の曲を流す
         _bgmSource.volume -= Time.deltaTime * _bgmFadeSpeedRate;
         if (_bgmSource.volume <= 0)
         {

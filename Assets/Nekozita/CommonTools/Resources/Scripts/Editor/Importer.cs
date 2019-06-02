@@ -52,7 +52,7 @@ public sealed class Importer : AssetPostprocessor
 
     void OnPostprocessAudio(AudioClip Soundfile)
     {
-        EditorUtility.DisplayDialog(Soundfile.ToString(), "ファイルをインポートします" + "\n\nUnityメニュー\n「Tools/Create/SoundConfig.cs」の実行を忘れずに！", "OK");
+        EditorUtility.DisplayDialog(Soundfile.ToString(), "ファイルをインポートします" + "\n\nUnityメニュー\n「Tools/Create/ResourcesPath_File」の実行を忘れずに！", "OK");
     }
 
     //==================================================================

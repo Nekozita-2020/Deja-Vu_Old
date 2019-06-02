@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nekozita/Scene/Title.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/Title.unity
     guid: 71b61967cd39f4a3b97c9668d55c1938
   - enabled: 1
-    path: Assets/Nekozita/Scene/CommonTools.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/CommonTools.unity
     guid: 1021d1ab140f2436f896eefb7b157753
   - enabled: 1
-    path: Assets/Nekozita/Scene/GameMenu.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/GameMenu.unity
     guid: 8af471114e1dc489b8a561b068452bfe
   - enabled: 1
-    path: Assets/Nekozita/Scene/Tutorial.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/Tutorial.unity
     guid: 526e9b883db17465ba9084ca2c1e9492
   - enabled: 1
-    path: Assets/Nekozita/Scene/StoryMenu.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/StoryMenu.unity
     guid: cfeb89939fed046ff9df5b8f249ba2e4
   - enabled: 1
-    path: Assets/Nekozita/Scene/Endless.unity
+    path: Assets/Nekozita/Deja-Vu/Scene/Endless.unity
     guid: 6d947106180bb4b778c473c7f5a3472f
   m_configObjects: {}
