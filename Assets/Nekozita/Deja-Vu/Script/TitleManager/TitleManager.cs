@@ -14,7 +14,7 @@ public class TitleManager : MonoBehaviour
     private void Start()
     {
         // タイトルBGMを再生
-        // SoundManager.Instance.PlayBGM(ResourcesFilePath.);
+        SoundManager.Instance.PlayBGM(ResourcesFilePath.AUDIO_BGM_PIANO);
     }
 
     public void OnChangeScene(string ChangeScene)

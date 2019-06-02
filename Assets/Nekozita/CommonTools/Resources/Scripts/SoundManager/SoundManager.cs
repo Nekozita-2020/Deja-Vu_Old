@@ -48,14 +48,14 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         // シーン遷移後に削除されないようにする
         DontDestroyOnLoad(this.gameObject);
 
-        //オーディオリスナーおよびオーディオソースをSE+1(BGMの分)作成
+        // オーディオリスナーおよびオーディオソースをSE+1(BGMの分)作成
         gameObject.AddComponent<AudioListener>();
         for (int i = 0; i < SE_SOURCE_NUM + 1; i++)
         {
             gameObject.AddComponent<AudioSource>();
         }
 
-        //作成したオーディオソースを取得して各変数に設定、ボリュームも設定
+        // 作成したオーディオソースを取得して各変数に設定、ボリュームも設定
         AudioSource[] audioSourceArray = GetComponents<AudioSource>();
         _seSourceList = new List<AudioSource>();
 
@@ -79,7 +79,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
 
         }
 
-        //リソースフォルダから全SE&BGMのファイルを読み込みセット
+        // リソースフォルダから全SE&BGMのファイルを読み込みセット
         _bgmDic = new Dictionary<string, AudioClip>();
         _seDic = new Dictionary<string, AudioClip>();
 
@@ -89,6 +89,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         foreach (AudioClip bgm in bgmList)
         {
             _bgmDic[bgm.name] = bgm;
+            Debug.Log("aaa " + _bgmDic[bgm.name]);
         }
         foreach (AudioClip se in seList)
         {

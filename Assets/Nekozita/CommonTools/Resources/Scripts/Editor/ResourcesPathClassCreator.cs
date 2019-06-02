@@ -85,7 +85,9 @@ public static class ResourcesPathClassCreator
             {
                 Debug.Log(key + "が重複しています！");
             }
-            _filePathDict[key] = relativePath + fileName;
+            // パスが入ると、BGM鳴らす時に"ファイル名"が指定し辛い
+            // _filePathDict[key] = relativePath + fileName;
+            _filePathDict[key] = fileName;
         }
     }
 
