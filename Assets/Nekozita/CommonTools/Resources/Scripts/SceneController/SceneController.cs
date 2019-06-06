@@ -22,7 +22,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     public bool IsFadeOut = false;
 
     // フェードしたい時間（単位は秒）
-    private float FadeTime = 0.5f;
+    private float FadeTime = 1.0f;
 
     // 遷移先のシーン名
     private string NextScene = null;
@@ -40,7 +40,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     /// <summary>
     /// シーンをフェードインさせる際などに使う
     /// </summary>
-    public void FadeIn(float FadeTime_Secoond = 0.5f)
+    public void FadeIn(float FadeTime_Secoond = 1.0f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
@@ -55,7 +55,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     /// フェードさせる時間も指定できる
     /// </summary>
     /// <param name="SceneName">Scene name.</param>
-    public void FadeOut(string SceneName, float FadeTime_Secoond = 0.5f)
+    public void FadeOut(string SceneName, float FadeTime_Secoond = 1.0f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {

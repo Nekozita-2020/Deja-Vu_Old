@@ -32,19 +32,13 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     // 全AudioClipを保持
     private Dictionary<string, AudioClip> _bgmDic, _seDic;
 
-    //=================================================================================
-    //初期化
-    //=================================================================================
 
+
+    /// <summary>
+    /// 初期化
+    /// </summary>
     private void Awake()
     {
-        /*
-        if (this != Instance)
-        {
-            Destroy(this);
-            return;
-        }
-        */
         // シーン遷移後に削除されないようにする
         DontDestroyOnLoad(this.gameObject);
 
@@ -89,7 +83,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         foreach (AudioClip bgm in bgmList)
         {
             _bgmDic[bgm.name] = bgm;
-            Debug.Log("aaa " + _bgmDic[bgm.name]);
         }
         foreach (AudioClip se in seList)
         {
@@ -97,10 +90,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         }
 
     }
-
-    //=================================================================================
-    //SE
-    //=================================================================================
 
     /// <summary>
     /// 指定したファイル名のSEを流す。第二引数のdelayに指定した時間だけ再生までの間隔を空ける
@@ -128,10 +117,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
             }
         }
     }
-
-    //=================================================================================
-    //BGM
-    //=================================================================================
 
     /// <summary>
     /// 指定したファイル名のBGMを流す。ただし既に流れている場合は前の曲をフェードアウトさせてから。
@@ -200,10 +185,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         }
 
     }
-
-    //=================================================================================
-    //音量変更
-    //=================================================================================
 
     /// <summary>
     /// BGMとSEのボリュームを別々に変更&保存
