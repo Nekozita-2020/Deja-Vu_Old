@@ -18,13 +18,4 @@ public class GameUIManager : MonoBehaviour
         SceneController.Instance.FadeIn();
     }
 
-    private void OnPrefabLoad(string LoadPrefab)
-    {
-        // プレハブを取得
-        GameObject LoadObject = (GameObject)Resources.Load(LoadPrefab);
-
-        // プレハブを元にインスタンスを生成する
-        GameObject Instance = Instantiate(LoadObject, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-    }
-
 }
