@@ -81,27 +81,52 @@ public static class ResourcesPathClassCreator
             // ファイルの種類+ファイル名でパスを設定
             string fileName = Path.GetFileNameWithoutExtension(childPath);
             string key = fileType + fileName;
+
             if (_filePathDict.ContainsKey(key))
             {
                 Debug.Log(key + "が重複しています！");
             }
-            // パスが入ると、BGM鳴らす時に"ファイル名"が指定し辛い
-            // _filePathDict[key] = relativePath + fileName;
-            _filePathDict[key] = fileName;
+
+            // BGM鳴らす時に"ファイル名"が指定し辛いのでパスを
+            if (fileType == "Audio")
+            {
+                // ファイル名のみでアクセスしたいファイルタイプの場合はパスは入れない
+                _filePathDict[key] = fileName;
+            }
+            else
+            {
+                // 基本的には「パス＋ファイル名」でアクセスできるようにする
+                _filePathDict[key] = relativePath + fileName;
+            }
         }
     }
 
     // 拡張子に対応するファイルの種類名を取得
+    // パス管理ファイルが冗長になるので必要なファイルタイプだけにする
     private static string GetFileTypeFromExtention(string extension)
     {
-
-        if (new List<string>() { ".anim" }.Contains(extension))
+    
+        if (new List<string>() { ".prefab" }.Contains(extension))
         {
-            return "Animation";
+            return "Prefab";
         }
         else if (new List<string>() { ".wav", ".mp3", ".ogg", ".aif", ".aiff", ".xm", ".mod", ".it", ".s3m" }.Contains(extension))
         {
             return "Audio";
+        }
+        else if (new List<string>() { ".anim" }.Contains(extension))
+        {
+            return "Animation";
+        }
+        else if (new List<string>() { ".mov", ".mpg", ".mpeg", ".mp4", ".avi", ".asf" }.Contains(extension))
+        {
+            return "Movie";
+        }
+
+        /*
+        else if (new List<string>() { ".physicmaterial" }.Contains(extension))
+        {
+            return "Physicmaterial";
         }
         else if (new List<string>() { ".cubemap", ".hdr" }.Contains(extension))
         {
@@ -111,10 +136,6 @@ public static class ResourcesPathClassCreator
         {
             return "Font";
         }
-        else if (new List<string>() { ".prefab" }.Contains(extension))
-        {
-            return "Prefab";
-        }
         else if (new List<string>() { ".mat", ".material" }.Contains(extension))
         {
             return "Material";
@@ -122,14 +143,6 @@ public static class ResourcesPathClassCreator
         else if (new List<string>() { ".fbx", ".obj", ".max", ".blend" }.Contains(extension))
         {
             return "Mesh";
-        }
-        else if (new List<string>() { ".mov", ".mpg", ".mpeg", ".mp4", ".avi", ".asf" }.Contains(extension))
-        {
-            return "Movie";
-        }
-        else if (new List<string>() { ".physicmaterial" }.Contains(extension))
-        {
-            return "Physicmaterial";
         }
         else if (new List<string>() { ".shader" }.Contains(extension))
         {
@@ -151,7 +164,7 @@ public static class ResourcesPathClassCreator
         {
             return "Scene";
         }
-
+        */
         return "";
     }
 

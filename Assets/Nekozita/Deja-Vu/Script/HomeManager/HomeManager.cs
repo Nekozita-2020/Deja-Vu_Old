@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameUIManager : MonoBehaviour
+public class HomeManager : MonoBehaviour
 {
 
     void Start()
@@ -11,8 +11,8 @@ public class GameUIManager : MonoBehaviour
         Resources.UnloadUnusedAssets();
 
         // シーンに必要なアセットをロード
-        // OnPrefabLoad("Grape");
-        // OnPrefabLoad("WoterFloar");
+        ObjectManager.Instance.OnPrefabLoad(ResourcesFilePath.PREFAB_GRAPE);
+        ObjectManager.Instance.OnPrefabLoad(ResourcesFilePath.PREFAB_WATER_FLOAR);
 
         // シーンをフェードイン
         SceneController.Instance.FadeIn();

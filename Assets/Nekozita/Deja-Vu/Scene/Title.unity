@@ -176,14 +176,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2105435645}
-          m_MethodName: OnChangeScene
+          m_MethodName: OnTapScreen
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: GameMenu
+            m_StringArgument: Home
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -477,75 +477,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &843864015
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6618267974855971444, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_Name
-      value: WaterFloar
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618267974856199764, guid: 25d70fd23134c415d945fdd5dfb43ee2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 25d70fd23134c415d945fdd5dfb43ee2, type: 3}
 --- !u!1 &856388430
 GameObject:
   m_ObjectHideFlags: 0
