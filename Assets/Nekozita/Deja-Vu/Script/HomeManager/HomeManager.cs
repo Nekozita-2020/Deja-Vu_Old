@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class HomeManager : MonoBehaviour
 {
+    [SerializeField] HomeMenu Story = new HomeMenu();
+    [SerializeField] HomeMenu GrapeMemory = null;
+    [SerializeField] HomeMenu Setting = null;
+    [SerializeField] HomeMenu Credit = null;
 
     void Start()
     {
@@ -18,4 +22,10 @@ public class HomeManager : MonoBehaviour
         SceneController.Instance.FadeIn();
     }
 
+}
+
+public class HomeMenu
+{
+    public GameObject Button = null;
+    public GameObject Window = null;
 }
