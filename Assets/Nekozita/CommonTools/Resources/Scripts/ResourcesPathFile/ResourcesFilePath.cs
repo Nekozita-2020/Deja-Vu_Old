@@ -3,9 +3,8 @@
 /// </summary>
 public static class ResourcesFilePath{
 
-	  public const string AUDIO_BGM_BRAVERY_HEART  = "BGM_BraveryHeart";
 	  public const string AUDIO_BGM_HARUJION       = "BGM_Harujion";
-	  public const string AUDIO_BGM_PIANO          = "BGM_Piano";
+	  public const string AUDIO_BGM_HEALING_10     = "BGM_Healing10";
 	  public const string AUDIO_SE_DESTROY_SOUND   = "SE_DestroySound";
 	  public const string AUDIO_SE_EFFECT_07       = "SE_Effect07";
 	  public const string AUDIO_SE_HEARTBEAT       = "SE_Heartbeat";

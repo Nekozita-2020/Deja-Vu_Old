@@ -9,10 +9,13 @@ public class TitleManager : MonoBehaviour
     private void Start()
     {
         // タイトルBGMを再生
-        SoundManager.Instance.PlayBGM(ResourcesFilePath.AUDIO_BGM_PIANO);
+        SoundManager.Instance.PlayBGM(ResourcesFilePath.AUDIO_BGM_HEALING_10);
 
         // 必要なプレハブを生成
         ObjectManager.Instance.OnPrefabLoad(ResourcesFilePath.PREFAB_WATER_FLOAR);
+
+        // フェードインしてスタート
+        SceneController.Instance.FadeIn();
     }
 
     public void OnTapScreen(string ChangeScene)
