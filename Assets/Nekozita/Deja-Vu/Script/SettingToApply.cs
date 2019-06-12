@@ -12,12 +12,7 @@ public class SettingToApply : MonoBehaviour
         Slider_MovementSensitivity.GetComponent<Slider>();
     }
     
-    void Update()
-    {
-        
-    }
-
-    public void OnApply()
+    public void OnClickApplyButton()
     {
         PlayerPrefs.SetFloat("MovementSensitivity", Slider_MovementSensitivity.value);
         PlayerPrefs.Save();

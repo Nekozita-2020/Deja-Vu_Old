@@ -19,11 +19,6 @@ public class StoryGameManagement : MonoBehaviour
 
     }
 
-    void Update()
-    {
-
-    }
-
     public void OnGameOverProcess()
     {
         // カメラ位置を停止させる
@@ -39,7 +34,7 @@ public class StoryGameManagement : MonoBehaviour
         MainCamera.GetComponent<forward>().ForwardSpeed = 0f;
 
         // クリア時にフェードアウトさせる
-        ClearMessage.GetComponent<ObjectActive>().OnObjectActive();
+        // ClearMessage.GetComponent<ObjectActive>().OnObjectActive();
         ClearMessage.GetComponent<FadeController>().isFadeOut = true;
     }
 

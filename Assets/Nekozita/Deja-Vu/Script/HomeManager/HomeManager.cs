@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class HomeManager : MonoBehaviour
 {
-    [SerializeField] HomeMenu Story = new HomeMenu();
+
+    // 現在表示しているWindow
+    [SerializeField] public GameObject NowWindow = null;
+
+    // ゲームメニューのオブジェクト群
+    [SerializeField] HomeMenu Story = null;
     [SerializeField] HomeMenu GrapeMemory = null;
     [SerializeField] HomeMenu Setting = null;
     [SerializeField] HomeMenu Credit = null;
+
+
 
     void Start()
     {
@@ -22,8 +29,55 @@ public class HomeManager : MonoBehaviour
         SceneController.Instance.FadeIn();
     }
 
+    /// <summary>
+    /// 各ゲームメニューWindowの表示および切り替え
+    /// </summary>
+    /// <param name="Menu">Menu.</param>
+    public void OnClickMenuButton(string Menu)
+    {
+        if(NowWindow != null) NowWindow.SetActive(false);
+
+        switch (Menu)
+        {
+            case "Story":
+                NowWindow = Story.Window;
+                Story.Window.SetActive(true);
+                break;
+            case "GrapeMemory":
+                NowWindow = GrapeMemory.Window;
+                GrapeMemory.Window.SetActive(true);
+                break;
+            case "Setting":
+                NowWindow = Setting.Window;
+                Setting.Window.SetActive(true);
+                break;
+            case "Credit":
+                NowWindow = Credit.Window;
+                Credit.Window.SetActive(true);
+                break;
+        }
+    }
+
+    /// <summary>
+    /// 画面をタッチ時Windowがあれば閉じる
+    /// </summary>
+    public void OnCloseNowWindow()
+    {
+        if(NowWindow != null) NowWindow.SetActive(false);
+    }
+
+    /// <summary>
+    /// 指定したシーンへ遷移させる
+    /// </summary>
+    /// <param name="SceneName">Scene name.</param>
+    public void OnSceneChange(string SceneName)
+    {
+        SceneController.Instance.FadeOut(SceneName);
+    }
+
 }
 
+[System.Serializable]
 public class HomeMenu
 {
     public GameObject Button = null;

@@ -9,11 +9,6 @@ public class TagToChange : MonoBehaviour
 
     }
 
-    void Update()
-    {
-      
-    }
-
     public void OnTagChange()
     {
         switch (this.tag)
