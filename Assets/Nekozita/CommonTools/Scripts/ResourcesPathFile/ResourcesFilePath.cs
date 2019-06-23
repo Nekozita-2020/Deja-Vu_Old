@@ -19,14 +19,11 @@ public static class ResourcesFilePath{
 	  public const string PREFAB_FRUITS            = "Prefab/Story/Stage0(Tutorial)/Key/Fruits";
 	  public const string PREFAB_GRAPE             = "Prefab/Common/Grape";
 	  public const string PREFAB_MAIN_CAMERA       = "Prefab/MainCamera";
-	  public const string PREFAB_NODE              = "Prefab/UI/SnapScrollView/Node";
 	  public const string PREFAB_OBJECT_MANAGER    = "Prefab/ObjectManager";
 	  public const string PREFAB_SCENE_CONTROLLER  = "Prefab/SceneController";
-	  public const string PREFAB_SNAP_SCROLL_VIEW  = "Prefab/UI/SnapScrollView/SnapScrollView";
 	  public const string PREFAB_SOUND_MANAGER     = "Prefab/SoundManager";
 	  public const string PREFAB_SPHERE            = "Prefab/Story/Stage0(Tutorial)/Positive/Sphere";
 	  public const string PREFAB_STORY_GRAPE       = "Prefab/Common/StoryGrape";
-	  public const string PREFAB_STORY_SCROLL_VIEW = "Prefab/UI/StoryScrollView";
 	  public const string PREFAB_TUTORIAL_VIEW     = "Prefab/UI/TutorialView";
 	  public const string PREFAB_WATER_FLOAR       = "Prefab/Common/WaterFloar/WaterFloar";
 

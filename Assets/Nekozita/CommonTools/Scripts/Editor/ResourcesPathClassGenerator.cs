@@ -10,7 +10,7 @@ using System.Linq;
 /// <summary>
 /// Resourcesディレクトリ以下のディレクトリとファイルへの「パスを管理するクラス」を自動生成するクラス
 /// </summary>
-public static class ResourcesPathClassCreator
+public static class ResourcesPathClassGenerator
 {
 
     // コマンド名

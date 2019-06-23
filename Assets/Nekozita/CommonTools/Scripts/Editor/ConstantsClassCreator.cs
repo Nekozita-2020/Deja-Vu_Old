@@ -135,7 +135,7 @@ public static class ConstantsClassCreator
         builder.AppendLine().AppendLine("}");
 
         // 【パスを指定】書き出し、ファイル名はクラス名.cs
-        string exportPath = "Assets/Nekozita/CommonTools/Resources/Scripts/ResourcesPathFile/" + className + ".cs";
+        string exportPath = "Assets/Nekozita/CommonTools/Scripts/ResourcesPathFile/" + className + ".cs";
 
 
         // 書き出し先のディレクトリが無ければ作成
