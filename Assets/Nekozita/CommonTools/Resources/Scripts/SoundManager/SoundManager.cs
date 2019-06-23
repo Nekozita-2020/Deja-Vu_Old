@@ -25,7 +25,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     private bool _isFadeOut = false;
 
     // BGM用、SE用に分けてオーディオソースを持つ
-    private AudioSource _bgmSource = null;
+    public AudioSource _bgmSource = null;
     private List<AudioSource> _seSourceList = null;
     private const int SE_SOURCE_NUM = 5;
 
@@ -92,33 +92,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     }
 
     /// <summary>
-    /// 指定したファイル名のSEを流す。第二引数のdelayに指定した時間だけ再生までの間隔を空ける
-    /// </summary>
-    public void PlaySE(string seName = null, float delay = 0.0f)
-    {
-        if (!_seDic.ContainsKey(seName))
-        {
-            Debug.Log(seName + "という名前のSEがありません");
-            return;
-        }
-
-        _nextSEName = seName;
-        Invoke("DelayPlaySE", delay);
-    }
-
-    private void DelayPlaySE()
-    {
-        foreach (AudioSource seSource in _seSourceList)
-        {
-            if (!seSource.isPlaying)
-            {
-                seSource.PlayOneShot(_seDic[_nextSEName] as AudioClip);
-                return;
-            }
-        }
-    }
-
-    /// <summary>
     /// 指定したファイル名のBGMを流す。ただし既に流れている場合は前の曲をフェードアウトさせてから。
     /// 第二引数のfadeSpeedRateに指定した割合でフェードアウトするスピードが変わる
     /// </summary>
@@ -142,6 +115,33 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         {
             _nextBGMName = bgmName;
             FadeOutBGM(fadeSpeedRate);
+        }
+    }
+
+    /// <summary>
+    /// 指定したファイル名のSEを流す。第二引数のdelayに指定した時間だけ再生までの間隔を空ける
+    /// </summary>
+    public void PlaySE(string seName = null, float delay = 0.0f)
+    {
+        if (!_seDic.ContainsKey(seName))
+        {
+            Debug.Log(seName + "という名前のSEがありません");
+            return;
+        }
+
+        _nextSEName = seName;
+        Invoke("DelayPlaySE", delay);
+    }
+
+    private void DelayPlaySE()
+    {
+        foreach (AudioSource seSource in _seSourceList)
+        {
+            if (!seSource.isPlaying)
+            {
+                seSource.PlayOneShot(_seDic[_nextSEName] as AudioClip);
+                return;
+            }
         }
     }
 
