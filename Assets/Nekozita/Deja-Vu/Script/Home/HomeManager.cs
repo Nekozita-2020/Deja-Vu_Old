@@ -30,7 +30,6 @@ public class HomeManager : MonoBehaviour
 
         // BGMを再生(同じBGMが再生されていれば未処理)
         SoundManager.Instance.PlayBGM(ResourcesFilePath.AUDIO_BGM_HEALING_10);
-
     }
 
     /// <summary>
