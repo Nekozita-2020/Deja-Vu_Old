@@ -176,7 +176,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2105435645}
-          m_MethodName: OnTapScreen
+          m_MethodName: OnSceneChange
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleManager : MonoBehaviour
+public class TitleManager : GameManagerBase
 {
 
-    private void Start()
+    void Start()
     {
+        // フェードインしてシーンをスタートさせる
+        // Titleシーン開始時にまだSceneControllerが生成されておらず、一時的にここで記述
+        SceneController.Instance?.FadeIn();
+
         // タイトルBGMを再生
         SoundManager.Instance.PlayBGM(ResourcesPath.AUDIO_BGM_HEALING_10);
 
         // 必要なプレハブを生成
         ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
-
-        // フェードインしてスタート
-        SceneController.Instance.FadeIn();
-    }
-
-    public void OnTapScreen(string ChangeScene)
-    {
-        SceneController.Instance.FadeOut(ChangeScene);
     }
 
 }

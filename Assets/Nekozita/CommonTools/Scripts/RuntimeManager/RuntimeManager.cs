@@ -14,6 +14,7 @@ public class RuntimeManager
     {
         Debug.Log("Runtime処理を実行: BeforeSceneLoad");
 
+        // ゲーム起動時にロードさせるシーン名
         string LoadSceneName = "CommonTools";
 
         // 追加予定のSceneが有効でない時(まだ読み込んでいない時)だけ追加ロードするように

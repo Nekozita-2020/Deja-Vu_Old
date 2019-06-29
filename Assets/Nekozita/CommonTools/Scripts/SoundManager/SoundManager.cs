@@ -183,7 +183,6 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
                 PlayBGM(_nextBGMName);
             }
         }
-
     }
 
     /// <summary>
