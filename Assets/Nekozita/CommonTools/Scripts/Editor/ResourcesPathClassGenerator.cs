@@ -8,13 +8,13 @@ using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
-/// Resourcesディレクトリ以下のディレクトリとファイルへの「パスを管理するクラス」を自動生成するクラス
+/// Resourcesディレクトリ以下のプレハブやファイルへの「パスを管理するクラス」を自動生成するクラス
 /// </summary>
 public static class ResourcesPathClassGenerator
 {
 
     // コマンド名
-    private const string COMMAND_NAME = "Tools/Create/ResourcesPath_File";
+    private const string COMMAND_NAME = "Tools/Create/ResourcesPath";
 
     // パスをまとめるDictionary
     private static Dictionary<string, string> _filePathDict, _directoryPathDict;
@@ -39,8 +39,8 @@ public static class ResourcesPathClassGenerator
         }
 
         // 定数クラス作成
-        ConstantsClassCreator.Create("ResourcesFilePath", "Resources以下のファイルパスを定数で管理するクラス", _filePathDict);
-        ConstantsClassCreator.Create("ResourcesDirectoryPath", "Resources以下のディレクトリパスを定数で管理するクラス", _directoryPathDict);
+        ConstantsClassCreator.Create("ResourcesPath", "Resources以下のプレハブやファイルパスを定数で管理するクラス", _filePathDict);
+        // ConstantsClassCreator.Create("ResourcesDirectoryPath", "Resources以下のディレクトリパスを定数で管理するクラス", _directoryPathDict);
     }
 
     // 指定したパスのResourcesディレクトリ内に含まれる全ディレクトリへのパスを設定

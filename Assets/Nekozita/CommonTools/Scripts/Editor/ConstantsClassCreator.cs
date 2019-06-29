@@ -37,10 +37,13 @@ public static class ConstantsClassCreator
     /// </summary>
     /// <param name="className">クラスの名前</param>
     /// <param name="classInfo">なんのクラスか説明するコメント文</param>
-    /// <param name="variableDic">定数名とその値をセットで登録したDictionary</param>
+    /// <param name="valueDict">定数名とその値をセットで登録したDictionary</param>
     /// <typeparam name="T">定数の型、stringかintかfloat</typeparam>
     public static void Create<T>(string className, string classInfo, Dictionary<string, T> valueDict)
     {
+        // 【"定数を管理するクラス"を書き出すファイルパス】
+        string exportPath = "Assets/Nekozita/CommonTools/Scripts/ResourcesPath/" + className + ".cs";
+
         //入力された型の判定
         string typeName = null;
 
@@ -133,10 +136,6 @@ public static class ConstantsClassCreator
         }
 
         builder.AppendLine().AppendLine("}");
-
-        // 【パスを指定】書き出し、ファイル名はクラス名.cs
-        string exportPath = "Assets/Nekozita/CommonTools/Scripts/ResourcesPathFile/" + className + ".cs";
-
 
         // 書き出し先のディレクトリが無ければ作成
         string directoryName = Path.GetDirectoryName(exportPath);

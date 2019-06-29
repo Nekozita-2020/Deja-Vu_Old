@@ -9,7 +9,15 @@ using System;
 public class WindowViewBase : MonoBehaviour
 {
 
-    // その時表示しているWindow
-    [SerializeField] public GameObject NowWindow = null;
+    // 現在表示しているWindow
+    [SerializeField] internal GameObject NowWindow = null;
 
+    // クリックされたボタンの種類
+    internal Action<string> ButtonName = null;
+
+
+    private void OnClickButton(string ClickButtonName)
+    {
+        ButtonName?.Invoke(ClickButtonName);
+    }
 }

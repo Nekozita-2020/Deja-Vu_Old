@@ -2,35 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowBase : MonoBehaviour
+public class WindowBase : MonoBehaviour, IButtonDistinction
 {
-    protected WindowViewBase m_ViewBase;
+
+    WindowViewBase m_View;
+
+    private void Awake()
+    {
+        m_View = new WindowViewBase();
+        m_View.ButtonName = OnButtonKindDistinction;
+    }
+
+    /// <summary>
+    /// 継承先にてボタンに応じて処理を分けるインタフェース
+    /// </summary>
+    /// <param name="ButtonName"></param>
+    public void OnButtonKindDistinction(string ButtonName)
+    {
+        // 押されたボタンに応じて処理を書く
+    }
 
     /// <summary>
     /// 指定したウインドウを開く
     /// ※既にウインドウがあれば閉じて切り替える
     /// </summary>
     /// <param name="OpenWindowName">Open window.</param>
-    void OnOpenWindow(string OpenWindowName)
+    protected void OnOpenWindow(string OpenWindowName)
     {
-        if (m_ViewBase.NowWindow != null) OnCloseWindow();
-
-        ObjectManager.Instance.OnPrefabLoad(OpenWindowName);
-
-        if (ObjectManager.Instance.OnPrefabLoad(OpenWindowName) != null && !m_ViewBase.NowWindow)
+        if (m_View.NowWindow != null) OnCloseWindow();
+        else
         {
-            //NowWindow = ObjectManager.Instance.LastLoadObject;
+            ObjectManager.Instance.OnPrefabLoad(OpenWindowName);
+
         }
     }
 
     /// <summary>
     /// 指定したウインドウを閉じる
     /// </summary>
-    void OnCloseWindow()
+    protected void OnCloseWindow()
     {
-        if (m_ViewBase.NowWindow == null) return;
+        if (m_View.NowWindow == null) return;
 
-        Destroy(m_ViewBase.NowWindow);
+        Destroy(m_View.NowWindow);
     }
 
+}
+
+public interface IButtonDistinction
+{
+    /// <summary>
+    /// 継承先にてボタンに応じて処理を分けるインタフェース
+    /// </summary>
+    /// <param name="ButtonName"></param>
+    void OnButtonKindDistinction(string ButtonName);
 }
