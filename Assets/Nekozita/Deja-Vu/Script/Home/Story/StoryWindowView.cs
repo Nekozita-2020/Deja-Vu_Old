@@ -1,13 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class StoryWindowView : MonoBehaviour
+public class StoryWindowView : WindowViewBase
 {
 
-    void Start()
-    {
-        
-    }
+    public Action m_ClickStartButton = null;
 
+
+    public void OnClickStartButton()
+    {
+        m_ClickStartButton();
+        // m_ClickStartButton?.Invoke();
+    }
+    
 }

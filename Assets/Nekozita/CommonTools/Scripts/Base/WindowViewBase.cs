@@ -10,14 +10,14 @@ public class WindowViewBase : MonoBehaviour
 {
 
     // 現在表示しているWindow
-    [SerializeField] internal GameObject NowWindow = null;
+    [SerializeField] protected GameObject NowWindow = null;
 
-    // クリックされたボタンの種類
-    internal Action<string> ButtonName = null;
-
-
-    private void OnClickButton(string ClickButtonName)
+    /// <summary>
+    /// このウインドウを閉じる
+    /// </summary>
+    protected void OnCloseThisWindow()
     {
-        ButtonName?.Invoke(ClickButtonName);
+        Destroy(this);
     }
+
 }
