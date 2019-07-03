@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3390856434732441322}
+      - m_Target: {fileID: 901140839942004051}
         m_MethodName: OnClickApplyButton
         m_Mode: 1
         m_Arguments:
@@ -503,7 +503,8 @@ GameObject:
   - component: {fileID: 3390856434732441239}
   - component: {fileID: 3390856434732441321}
   - component: {fileID: 3390856434732441320}
-  - component: {fileID: 3390856434732441322}
+  - component: {fileID: 901140839942004051}
+  - component: {fileID: 5638945899309582362}
   m_Layer: 5
   m_Name: SettingWindow
   m_TagString: Untagged
@@ -570,7 +571,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &3390856434732441322
+--- !u!114 &901140839942004051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -579,10 +580,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3390856434732441238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f39a6ff16304592a53b099bdd9b565, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f38137ece6e94fc9bb96029bf29b789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Slider_MovementSensitivity: {fileID: 3390856435528187536}
+  MovementSensitivity_Value: 0
+--- !u!114 &5638945899309582362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3390856434732441238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b1d9e244cfe49b286bd14e9501adaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3390856435040400027
 GameObject:
   m_ObjectHideFlags: 0
