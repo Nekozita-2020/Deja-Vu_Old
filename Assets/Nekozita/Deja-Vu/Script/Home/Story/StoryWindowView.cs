@@ -12,8 +12,7 @@ public class StoryWindowView : WindowViewBase
 
     public void OnClickStartButton()
     {
-        m_ClickStartButton();
-        // m_ClickStartButton?.Invoke();
+        m_ClickStartButton?.Invoke();
     }
     
 }

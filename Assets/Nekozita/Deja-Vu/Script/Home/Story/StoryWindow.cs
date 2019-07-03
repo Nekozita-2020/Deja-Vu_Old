@@ -5,18 +5,19 @@ using UnityEngine;
 public class StoryWindow : WindowBase
 {
 
-	StoryWindowView m_View;
+	StoryWindowView View;
 
-    void Start()
+    protected override void SettingView()
     {
-        m_View = new StoryWindowView();
-        m_View.m_ClickStartButton = OnClickStartButton;
+        base.SettingView();
+
+        View = m_View as StoryWindowView;
+        View.m_ClickStartButton = OnClickStartButton;
     }
 
     public void OnClickStartButton()
     {
         SceneController.Instance.FadeOut("StoryMenu");
     }
-
 
 }
