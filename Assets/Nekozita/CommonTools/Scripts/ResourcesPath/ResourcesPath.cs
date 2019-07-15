@@ -26,7 +26,6 @@ public static class ResourcesPath{
 	  public const string PREFAB_SETTING_WINDOW      = "Prefab/Home/SettingWindow";
 	  public const string PREFAB_SOUND_MANAGER       = "Prefab/SoundManager";
 	  public const string PREFAB_SPHERE              = "Prefab/Story/Stage0(Tutorial)/Positive/Sphere";
-	  public const string PREFAB_STORY_GRAPE         = "Prefab/Common/StoryGrape";
 	  public const string PREFAB_STORY_WINDOW        = "Prefab/Home/StoryWindow";
 	  public const string PREFAB_TUTORIAL_VIEW       = "Prefab/UI/TutorialView";
 	  public const string PREFAB_WATER_FLOAR         = "Prefab/Common/WaterFloar/WaterFloar";

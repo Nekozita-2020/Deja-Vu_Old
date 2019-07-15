@@ -7,6 +7,8 @@ public class SettingWindow : WindowBase
 
 	SettingWindowView View;
 
+
+
 	protected override void SettingView()
 	{
 		base.SettingView();
@@ -18,7 +20,16 @@ public class SettingWindow : WindowBase
         View.Slider_MovementSensitivity.value = View.MovementSensitivity_Value;
     }
 
-	public void OnClickApplyButton()
+    private void Start()
+    {
+        // グレープを表示させる
+        var Grape_obj = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE);
+
+        // グレープをSettingWindowの子オブジェクトにする
+        Grape_obj.transform.parent = this.gameObject.transform;
+    }
+
+    public void OnClickApplyButton()
 	{
         // 操作感度を設定する
         PlayerPrefs.SetFloat("MovementSensitivity", View.Slider_MovementSensitivity.value);

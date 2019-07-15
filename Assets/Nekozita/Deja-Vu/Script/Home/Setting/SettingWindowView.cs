@@ -14,6 +14,7 @@ public class SettingWindowView : WindowViewBase
     public Action m_ClickApplyButton = null;
 
 
+
     public void OnClickApplyButton()
     {
         m_ClickApplyButton?.Invoke();
