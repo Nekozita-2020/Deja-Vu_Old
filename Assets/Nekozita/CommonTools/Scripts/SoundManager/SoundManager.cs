@@ -42,8 +42,10 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         // シーン遷移後に削除されないようにする
         DontDestroyOnLoad(this.gameObject);
 
-        // オーディオリスナーおよびオーディオソースをSE+1(BGMの分)作成
-        gameObject.AddComponent<AudioListener>();
+        // オーディオリスナーはカメラにデフォで付いているのでここでは付けない
+        // gameObject.AddComponent<AudioListener>();
+
+        // オーディオソースをSE+1(BGMの分)作成
         for (int i = 0; i < SE_SOURCE_NUM + 1; i++)
         {
             gameObject.AddComponent<AudioSource>();

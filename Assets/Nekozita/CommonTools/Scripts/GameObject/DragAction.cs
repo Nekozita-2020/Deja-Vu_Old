@@ -1,25 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DragAction : MonoBehaviour
 {
-    //操作感度(グレープの移動スピードに直結する)
-    private float MovementSensitivity;
+
+    [Tooltip("操作感度")]
+    [SerializeField] private float MovementSensitivity = 0.5f;
     
     void Start()
     {
-        MovementSensitivity = PlayerPrefs.GetFloat("MovementSensitivity", 0.5F);
-    }
-
-    void Update()
-    {
-
-    }
-
-    public void SetMovementSensitivity()
-    {
-        MovementSensitivity = PlayerPrefs.GetFloat("MovementSensitivity", 0.5F);
+        MovementSensitivity = PlayerPrefs.GetFloat("MovementSensitivity", 0.5f);
     }
 
     public void OnDrag()
@@ -27,12 +19,10 @@ public class DragAction : MonoBehaviour
         var x = Input.GetAxis("Mouse X");
         var y = Input.GetAxis("Mouse Y");
         var Direction = new Vector3(x, y, 0);
+
         transform.position += MovementSensitivity * Direction;
 
-        //現在位置をログに表示
-        //Debug.Log(this.transform.position);
-
-        //左右の壁抜け防止
+        // 左右の壁抜け防止
         if (this.transform.position.x < -2.0)
         {
             this.transform.position = new Vector3(-2.0f, this.transform.position.y, this.transform.position.z);
@@ -42,7 +32,7 @@ public class DragAction : MonoBehaviour
             this.transform.position = new Vector3(2.0f, this.transform.position.y, this.transform.position.z);
         }
 
-        //上下の壁抜け防止
+        // 上下の壁抜け防止
         if (this.transform.position.y < 0.0)
         {
             this.transform.position = new Vector3(this.transform.position.x, 0.0f, this.transform.position.z);

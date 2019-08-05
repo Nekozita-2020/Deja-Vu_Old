@@ -7,16 +7,6 @@ public class EffectColorChange : MonoBehaviour
     public Gradient[] ColorToChange;
     int EffectNunber = 0;
 
-    void Start()
-    {
-      
-    }
-
-    void Update()
-    {  
-
-    }
-
     public void OnColorChange()
     {
         switch(EffectNunber)

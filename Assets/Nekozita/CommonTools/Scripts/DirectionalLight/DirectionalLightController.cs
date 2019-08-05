@@ -10,9 +10,4 @@ public class DirectionalLightController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Start()
-    {
-        
-    }
-
 }

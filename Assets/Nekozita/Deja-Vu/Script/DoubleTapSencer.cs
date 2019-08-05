@@ -9,11 +9,6 @@ public class DoubleTapSencer : MonoBehaviour
     // タップ開始からの累積時間
     private float DoubleTapTime;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (IsDoubleTapStart)

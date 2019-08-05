@@ -5,16 +5,6 @@ using UnityEngine;
 public class ObjectDestroy : MonoBehaviour
 {
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public void OnObjectDestroy()
     {
         // オブジェクトを消去
