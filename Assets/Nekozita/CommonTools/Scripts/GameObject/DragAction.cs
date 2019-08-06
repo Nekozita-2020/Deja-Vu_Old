@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class DragAction : MonoBehaviour
 {
 
-    [Tooltip("操作感度")]
+    [Header("操作感度")]
     [SerializeField] private float MovementSensitivity = 0.5f;
     
     void Start()
