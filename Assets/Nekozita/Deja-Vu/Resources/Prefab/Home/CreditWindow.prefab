@@ -308,6 +308,8 @@ GameObject:
   - component: {fileID: 1102225354525688727}
   - component: {fileID: 1102225354525688725}
   - component: {fileID: 1102225354525688724}
+  - component: {fileID: 5003640610973150683}
+  - component: {fileID: 5660786543982936864}
   m_Layer: 5
   m_Name: CreditWindow
   m_TagString: Untagged
@@ -373,3 +375,27 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5003640610973150683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102225354525688726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b33a6e580111420cbd47cd7d1b8e796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5660786543982936864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102225354525688726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dd8c1f4be2c426694b7f9bdb816006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragAction : MonoBehaviour
+public class DragMoving : MonoBehaviour
 {
 
     [Header("操作感度")]
-    [SerializeField] private float MovementSensitivity = 0.5f;
+    [SerializeField] public float MovementSensitivity = 0.5f;
     
     void Start()
     {
@@ -21,7 +21,7 @@ public class DragAction : MonoBehaviour
         var Direction = new Vector3(x, y, 0);
 
         transform.position += MovementSensitivity * Direction;
-
+        /*
         // 左右の壁抜け防止
         if (this.transform.position.x < -2.0)
         {
@@ -41,6 +41,7 @@ public class DragAction : MonoBehaviour
         {
             this.transform.position = new Vector3(this.transform.position.x, 6.7f, this.transform.position.z);
         }
+        */
     }
 
 }

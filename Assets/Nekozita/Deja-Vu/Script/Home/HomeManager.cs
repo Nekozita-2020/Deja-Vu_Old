@@ -8,8 +8,13 @@ public class HomeManager : GameManagerBase
     // 各Windowの親となるオブジェクト
     [SerializeField] private GameObject HomeMenu = null;
 
+    // TouchSencer(SettingWindowで専用のセンサーに切り替える為)
+    [SerializeField] private GameObject HomeScene_TouchSencer = null;
+
     // 現在表示しているWindow
-    [SerializeField] public GameObject NowWindow = null;
+    private GameObject NowWindow = null;
+
+    private bool DragFlug = false;
 
 
 
@@ -38,7 +43,10 @@ public class HomeManager : GameManagerBase
                 NowWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE_MEMORY_WINDOW, HomeMenu);
                 break;
             case "Setting":
+                HomeScene_TouchSencer.SetActive(false);
                 NowWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_SETTING_WINDOW, HomeMenu);
+                NowWindow.GetComponent<SettingWindow>().DeleatSettingWin =
+                    () => HomeScene_TouchSencer.SetActive(true);
                 break;
             case "Credit":
                 NowWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_CREDIT_WINDOW, HomeMenu);
@@ -47,11 +55,26 @@ public class HomeManager : GameManagerBase
     }
 
     /// <summary>
+    /// タッチセンサーをドラッグしたことを検知
+    /// </summary>
+    public void OnDragFrug_TouchSencer()
+    {
+        DragFlug = true;
+    }
+
+    /// <summary>
     /// 表示中のウインドウを閉じる
     /// </summary>
     public void OnCloseWindow()
     {
-        if(NowWindow != null) Destroy(NowWindow);
+        // ドラッグをしていなければ
+        if(DragFlug == false)
+        {
+            // ウインドウが開いていれば閉じる
+            if (NowWindow != null) Destroy(NowWindow);
+        }
+
+        DragFlug = false;
     }
 
 }

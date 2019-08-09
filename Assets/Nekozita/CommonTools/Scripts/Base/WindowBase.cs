@@ -25,9 +25,9 @@ public class WindowBase : MonoBehaviour
         m_View.OnCloseEvent = this.OnCloseWindow;
     }
 
-    void OnCloseWindow()
+    protected virtual void OnCloseWindow()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
 }

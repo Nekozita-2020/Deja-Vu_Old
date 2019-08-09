@@ -22,7 +22,7 @@ public class WindowViewBase : MonoBehaviour
     /// <summary>
     /// このウインドウを閉じる
     /// </summary>
-    protected void OnCloseWindow()
+    public virtual void OnCloseWindow()
     {
         OnCloseEvent?.Invoke();
     }
