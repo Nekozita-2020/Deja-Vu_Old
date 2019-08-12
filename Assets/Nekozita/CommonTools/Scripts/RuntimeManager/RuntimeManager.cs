@@ -12,7 +12,7 @@ public class RuntimeManager
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void RuntimeMethod()
     {
-        Debug.Log("Runtime処理を実行: BeforeSceneLoad");
+        // Debug.Log("Runtime処理を実行: BeforeSceneLoad");
 
         // ゲーム起動時にロードさせるシーン名
         string LoadSceneName = "CommonTools";

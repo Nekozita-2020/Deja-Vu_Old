@@ -19,6 +19,8 @@ public class StoryMenuManager : GameManagerBase
 
     private bool OnDrag = false;
 
+
+
     void Start()
     {
         // シーンに必要なアセットをロード
@@ -44,6 +46,10 @@ public class StoryMenuManager : GameManagerBase
         }
     }
 
+    /// <summary>
+    /// クリックされたボタンに応じ、ストーリー説明を表示する
+    /// </summary>
+    /// <param name="StageName"></param>
     public void OnClickStageNodeButton(string StageName)
     {
         // 表示中のものがあれば非表示に
@@ -54,11 +60,17 @@ public class StoryMenuManager : GameManagerBase
         NowDescription = StageDescriptionDic[StageName];
     }
 
+    /// <summary>
+    /// ドラッグしたかチェックを行う
+    /// </summary>
     public void OnDragCheck()
     {
         OnDrag = true;
     }
 
+    /// <summary>
+    /// 表示中のストーリー説明を非表示にする
+    /// </summary>
     public void OnCloseDescription()
     {
         if (NowDescription != null && OnDrag == false)
