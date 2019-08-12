@@ -8,7 +8,8 @@ public class StoryMenuManager : GameManagerBase
 
     // ステージの説明テキストとスタートボタンを含んだ親オブジェクトとその子オブジェクト群
     [SerializeField] private GameObject StageDescriptionList = null;
-    private List<GameObject> StageDescriptionChildren = new List<GameObject>();
+    private Dictionary<string, GameObject> StageDescriptionDic =
+        new Dictionary<string, GameObject>();
 
     // ステージの選択ボタンリスト
     [SerializeField] private GameObject StageNodeList = null;
@@ -16,7 +17,7 @@ public class StoryMenuManager : GameManagerBase
     // 現在表示されている親オブジェクト(ステージの説明テキストとスタートボタン)
     [SerializeField] private GameObject NowDescription = null;
 
-
+    private bool OnDrag = false;
 
     void Start()
     {
@@ -24,36 +25,49 @@ public class StoryMenuManager : GameManagerBase
         ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
         // BGMを再生(同じBGMが再生されていれば未処理)
-        SoundManager.Instance.PlayBGM(ResourcesPath.AUDIO_BGM_HEALING_10);
+        // SoundManager.Instance.PlayBGM(ResourcesPath.AUDIO_BGM_HEALING_10);
 
-        // ストーリーの進捗度に合わせてボタンを表示
+        // UIをストーリーの進捗度に合わせる
         for(int i = 0; i <= PlayerPrefs.GetInt("ClearStage", 0); i++)
         {
+            // ストーリーノードを表示
             StageNodeList.transform.GetChild(i).gameObject.SetActive(true);
-        }
 
-        // StageDesctiptionListの子オブジェクトを取得していく
-        var transforms = StageDescriptionList.GetComponentsInChildren<Transform>();
-        // 使いやすいようにtransformsからgameObjectを取り出す
-        foreach (Transform t in transforms) StageDescriptionChildren.Add(t.gameObject);
+            // クリアしたステージ説明の名前とそのオブジェクトを取得
+            string DescriptionName =
+                StageDescriptionList.transform.GetChild(i).gameObject.name;
+            GameObject DescriptionObj =
+                StageDescriptionList.transform.GetChild(i).gameObject;
+
+            // 取得内容を元に、クリアしたステージのStageDescriptionを保存
+            StageDescriptionDic.Add(DescriptionName, DescriptionObj);
+        }
     }
 
     public void OnClickStageNodeButton(string StageName)
     {
-        foreach(GameObject x in StageDescriptionChildren)
-        {
-            if(x.name == StageName)
-            {
-                if (NowDescription != null) OnCloseDescription();
-                x.SetActive(true);
-                return;
-            }
-        }
+        // 表示中のものがあれば非表示に
+        if (NowDescription != null) OnCloseDescription();
+
+        // クリックしたステージ説明を表示する
+        StageDescriptionDic[StageName].SetActive(true);
+        NowDescription = StageDescriptionDic[StageName];
+    }
+
+    public void OnDragCheck()
+    {
+        OnDrag = true;
     }
 
     public void OnCloseDescription()
     {
-        if (NowDescription != null) NowDescription.SetActive(false);
+        if (NowDescription != null && OnDrag == false)
+        {
+            NowDescription.SetActive(false);
+            NowDescription = null;
+        }
+
+        OnDrag = false;
     }
 
 }
