@@ -26,9 +26,7 @@ public class Pausable : MonoBehaviour
     // Pauseフラグ　true: 停止　false: 再開
     public bool pausing;
 
-    /// <summary>
-    /// 無視するGameObject
-    /// </summary>
+    [Header("無視するGameObject")]
     public GameObject[] ignoreGameObjects;
 
     /// <summary>
