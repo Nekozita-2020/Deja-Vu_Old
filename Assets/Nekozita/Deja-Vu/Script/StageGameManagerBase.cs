@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class StageGameManagerBase : GameManagerBase
 {
-    [SerializeField] GameObject PausebleObjects = null; 
-    protected GameObject Grape = null;
+    [SerializeField] private GameObject PausebleObjects = null; 
+    [SerializeField] protected GameObject Grape = null;
 
     private void Start()
     {
         // グレープのプレハブを生成
-        Grape = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE);
+        // Grape = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE);
 
         // 指定した親オブジェクトの子にする
-        Grape.transform.parent = PausebleObjects.transform;
+        // Grape.transform.parent = PausebleObjects.transform;
 
         this.Init();
     }
