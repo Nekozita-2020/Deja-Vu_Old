@@ -13,7 +13,7 @@ using UnityEngine;
 /// </summary>
 public static class SoundConfigCreator
 {
-
+    /* ResourcesPathClassGeneratorを採用してクラスが競合する為、こっちは使わない
     private const string COMMAND_NAME = "Tools/Create/SoundConfig_File";        // コマンド名
     private const string EXPORT_PATH = "Assets/Nekozita/CommonTools/Resources/Scripts/SoundManager/SoundConfig.cs"; //作成したスクリプトを保存するパス
 
@@ -86,5 +86,5 @@ public static class SoundConfigCreator
     {
         return !EditorApplication.isPlaying && !Application.isPlaying && !EditorApplication.isCompiling;
     }
-
+    */
 }

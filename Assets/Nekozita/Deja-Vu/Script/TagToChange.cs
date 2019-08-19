@@ -4,11 +4,6 @@ using System.Collections;
 public class TagToChange : MonoBehaviour
 {
 
-    void Start()
-    {
-
-    }
-
     public void OnTagChange()
     {
         switch (this.tag)

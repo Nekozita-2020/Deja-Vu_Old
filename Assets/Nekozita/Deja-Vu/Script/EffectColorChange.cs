@@ -3,12 +3,15 @@
 public class EffectColorChange : MonoBehaviour
 {
 
-    public ParticleSystem EffectToChange;
-    public Gradient[] ColorToChange;
+    public ParticleSystem TargetEffect;
+    public Gradient[] ChangeToColor;
     int EffectNunber = 0;
+
+
 
     public void OnColorChange()
     {
+		/*
         switch(EffectNunber)
         {
             case 0:
@@ -18,8 +21,14 @@ public class EffectColorChange : MonoBehaviour
                 EffectNunber = 0;
                 break;
         }
-        var After = EffectToChange.colorOverLifetime;
-        After.color = new ParticleSystem.MinMaxGradient(ColorToChange[EffectNunber]);
-    }
+        */
+
+		EffectNunber++;
+
+		if (ChangeToColor.Length <= EffectNunber) EffectNunber = 0;
+
+		var After = TargetEffect.colorOverLifetime;
+        After.color = new ParticleSystem.MinMaxGradient(ChangeToColor[EffectNunber]);
+	}
 
 }

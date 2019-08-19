@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class DoubleTapSencer : MonoBehaviour
 {
+
+    // ダブルタップを検知した時のコールバック
+    public Action OnDoubleTap;
+
     // タップ開始時のフラグ用
     private bool IsDoubleTapStart;
 
     // タップ開始からの累積時間
     private float DoubleTapTime;
 
-    void Update()
+
+
+    public void OnDoubleTapCheckStart()
+    {
+        IsDoubleTapStart = true;
+    }
+
+    private void FixedUpdate()
     {
         if (IsDoubleTapStart)
         {
@@ -21,8 +33,8 @@ public class DoubleTapSencer : MonoBehaviour
                 // 1度目のタップから0.5秒以内に再度クリック(=ダブルタップ)
                 if (Input.GetMouseButtonDown(0))
                 {
-                    // GameDirectorにダブルタップを伝える
-                    this.GetComponent<DoubleTapActionController>().OnDoubleTap();
+                    // タブルタップを検知
+                    OnDoubleTap?.Invoke();
 
                     // 初期化
                     IsDoubleTapStart = false;
@@ -38,11 +50,9 @@ public class DoubleTapSencer : MonoBehaviour
         }
         else
         {
-            // タップされたら判定開始
-            if (Input.GetMouseButtonDown(0))
-            {
-                IsDoubleTapStart = true;
-            }
+            // 初期化
+            IsDoubleTapStart = false;
+            DoubleTapTime = 0.0f;
         }
     }
 

@@ -23,7 +23,7 @@ public class Pausable : MonoBehaviour
     /// <summary>
     /// 現在Pause中か？
     /// </summary>
-    // Pauseフラグ　true: 停止　false: 再開
+    // Pauseフラグ　true: 停止中　false: 動作中
     public bool pausing;
 
     [Header("無視するGameObject")]
@@ -51,7 +51,7 @@ public class Pausable : MonoBehaviour
 
     // デフォルトではParticleSystemは止まらないので、単体で指定する必要がある
     // 少しスクリプトを理解すれば他と同じように止められそう
-    public ParticleSystem ClearPoint;
+    // public ParticleSystem ClearPoint;
 
 
 
@@ -101,7 +101,7 @@ public class Pausable : MonoBehaviour
         }
 
         // ParticleSystemの停止
-        ClearPoint.Pause();
+        // ClearPoint.Pause();
     }
 
     /// <summary>
@@ -124,6 +124,6 @@ public class Pausable : MonoBehaviour
         }
 
         // ParticleSystemの停止
-        ClearPoint.Play();
+        // ClearPoint.Play();
     }
 }
