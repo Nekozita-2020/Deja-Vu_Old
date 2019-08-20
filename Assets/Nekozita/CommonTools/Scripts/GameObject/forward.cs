@@ -6,7 +6,7 @@ public class forward : MonoBehaviour
 {
 
     [Tooltip("進行速度")]
-    public float ForwardSpeed = 15F;
+    public float ForwardSpeed = 20F;
         
     void FixedUpdate()
     {

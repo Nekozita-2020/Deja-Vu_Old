@@ -34,7 +34,7 @@ public class StageGameManagerBase : GameManagerBase
     /// 衝突時の処理
     /// </summary>
     /// <param name="m_Collision"></param>
-    private void CollisionAction(Collision m_Collision)
+    private void CollisionAction(Collider m_Collision)
     {
         switch (m_Collision.gameObject.tag)
         {

@@ -9,9 +9,9 @@ using UnityEngine;
 public class CollisionSensor : MonoBehaviour
 {
 
-    public Action<Collision> CallBack = null;
+    public Action<Collider> CallBack = null;
  
-    private void OnCollisionEnter(Collision m_Collision)
+    private void OnTriggerEnter(Collider m_Collision)
     {
         this.CallBack?.Invoke(m_Collision);
     }
