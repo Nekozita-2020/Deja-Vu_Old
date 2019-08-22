@@ -51,11 +51,11 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     }
 
     /// <summary>
-    /// フェードアウトさせてシーン遷移を行う
-    /// フェードさせる時間も指定できる
+    /// 画面をフェードアウトさせる
+    /// 併せてシーン遷移や、フェードさせる時間の指定もできる
     /// </summary>
     /// <param name="SceneName">Scene name.</param>
-    public void FadeOut(string SceneName, float FadeTime_Secoond = 1.0f)
+    public void FadeOut(string SceneName = null, float FadeTime_Secoond = 1.0f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
@@ -98,8 +98,11 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
                 IsFadeOut = false;
                 Alpha = 1.0f;
 
-                // 次のシーンへ遷移
-                SceneManager.LoadScene(NextScene);
+                if(NextScene != null)
+                {
+                    // 次のシーンへ遷移
+                    SceneManager.LoadScene(NextScene);
+                }
             }
 
             // フェード用Imageの透明度設定
