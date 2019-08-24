@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,6 +28,9 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     // 遷移先のシーン名
     private string NextScene = null;
 
+    // コールバック
+    private Action FadeInCallback = null;
+    private Action FadeOutCallback = null;
 
 
     private void Awake()
@@ -40,12 +44,13 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     /// <summary>
     /// シーンをフェードインさせる際などに使う
     /// </summary>
-    public void FadeIn(float FadeTime_Secoond = 1.0f)
+    public void FadeIn(Action Callback = null, float FadeTime_Secoond = 1.0f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
             FadeCanvas.gameObject.SetActive(true);
         }
+        FadeInCallback = Callback;
         IsFadeIn = true;
         FadeTime = FadeTime_Secoond;
     }
@@ -55,13 +60,14 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     /// 併せてシーン遷移や、フェードさせる時間の指定もできる
     /// </summary>
     /// <param name="SceneName">Scene name.</param>
-    public void FadeOut(string SceneName = null, float FadeTime_Secoond = 1.0f)
+    public void FadeOut(string SceneName = null, Action Callback = null, float FadeTime_Secoond = 1.0f)
     {
         if (FadeCanvas.gameObject.activeInHierarchy == false)
         {
             FadeCanvas.gameObject.SetActive(true);
         }
         NextScene = SceneName;
+        FadeOutCallback = Callback;
         FadeCanvas.enabled = true;
         IsFadeOut = true;
         FadeTime = FadeTime_Secoond;
@@ -82,6 +88,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
                 Alpha = 0.0f;
                 FadeCanvas.enabled = false;
                 FadeCanvas.gameObject.SetActive(false);
+                FadeInCallback?.Invoke();
             }
 
             // フェード用Imageの透明度設定
@@ -97,6 +104,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
             {
                 IsFadeOut = false;
                 Alpha = 1.0f;
+                FadeOutCallback?.Invoke();
 
                 if(NextScene != null)
                 {

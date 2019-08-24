@@ -14,6 +14,8 @@ public class StageGameManagerBase : GameManagerBase
     [SerializeField] protected GameObject Grape = null;
     [SerializeField] private ParticleSystem DestroyEffect = null;
 
+
+
     private void Start()
     {
         this.Init();
@@ -133,7 +135,13 @@ public class StageGameManagerBase : GameManagerBase
     /// </summary>
     private void OnStageClear()
     {
-        OnGameOver();
+        // 【テスト用】
+        // OnGameOver();
+
+        SceneController.Instance.FadeOut(Callback: () =>
+        {
+            StageClearUI.SetActive(true);
+        });
     }
 
 }
