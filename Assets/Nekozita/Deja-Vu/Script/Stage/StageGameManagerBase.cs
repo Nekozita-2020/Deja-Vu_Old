@@ -12,6 +12,7 @@ public class StageGameManagerBase : GameManagerBase
     [SerializeField] private GameObject TouchSenser = null;
     [SerializeField] private GameObject PausebleObjects = null; 
     [SerializeField] protected GameObject Grape = null;
+    [SerializeField] private ParticleSystem DestroyEffect = null;
 
     private void Start()
     {
@@ -119,6 +120,9 @@ public class StageGameManagerBase : GameManagerBase
         Grape.SetActive(false);
 
         // デストロイエフェクトを再生
+        Vector3 DestroyEffectPosition = new Vector3(Grape.transform.position.x,
+             Grape.transform.position.y + 2, Grape.transform.position.z);
+        Instantiate(DestroyEffect, DestroyEffectPosition, Quaternion.identity);
 
         // ゲームオーバーUIを表示
         GameOverUI.SetActive(true);

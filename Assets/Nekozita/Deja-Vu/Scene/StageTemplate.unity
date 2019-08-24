@@ -2368,6 +2368,8 @@ MonoBehaviour:
   TouchSenser: {fileID: 391493437}
   PausebleObjects: {fileID: 92058633}
   Grape: {fileID: 531594797}
+  DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
+    type: 3}
 --- !u!1 &1909381573
 GameObject:
   m_ObjectHideFlags: 0
