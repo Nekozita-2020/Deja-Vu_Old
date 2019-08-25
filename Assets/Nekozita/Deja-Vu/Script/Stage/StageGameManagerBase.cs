@@ -136,8 +136,8 @@ public class StageGameManagerBase : GameManagerBase
     /// </summary>
     private void OnStageClear()
     {
-        // 【テスト用】
-        // OnGameOver();
+        // ポーズボタンを非表示
+        PauseButton.SetActive(false);
 
         // SEを鳴らす
         SoundManager.Instance.PlaySE(ResourcesPath.AUDIO_SE_DESTROY_SOUND);
