@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StageGameManagerBase : GameManagerBase
 {
 
+    [SerializeField] private GameObject MainCamera = null;
     [SerializeField] private GameObject GameOverUI = null;
     [SerializeField] private GameObject StageClearUI = null;
     [SerializeField] private GameObject PauseButton = null;
@@ -138,9 +139,20 @@ public class StageGameManagerBase : GameManagerBase
         // 【テスト用】
         // OnGameOver();
 
+        // SEを鳴らす
+        SoundManager.Instance.PlaySE(ResourcesPath.AUDIO_SE_DESTROY_SOUND);
+
+        // カメラの移動を止める
+        MainCamera.GetComponent<FollowTarget_Z>().enabled = false;
+
         SceneController.Instance.FadeOut(Callback: () =>
         {
+            // グレープを非表示にする
+            Grape.SetActive(false);
+
+            // ゲームクリアUIを表示してからフェードインを開始
             StageClearUI.SetActive(true);
+            SceneController.Instance.FadeIn();
         });
     }
 

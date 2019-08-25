@@ -47,6 +47,27 @@ public class UIMessageController : MonoBehaviour
 
     void Start()
     {
+        // メッセージがあれば処理を始めるが、無ければ自身を非表示にして何もせず終了
+        if (0 < MessageList_Parent.transform.childCount)
+        {
+            // 表示するメッセージデータをセットする(全データの取得まで待ってる)
+            GetMessageData(() =>
+            {
+
+                // 最初のメッセージを表示する
+                MessageList[NowMessageNum].SetActive(true);
+
+                // フェードイン開始
+                FadeIn_Flag = true;
+            });
+        }
+        else
+        {
+            // 自身を非表示にして終了
+            this.gameObject.SetActive(false);
+            return;
+        }
+
         // もしバックグラウンドが非表示なら表示させる
         if (!BackGroundCanvas.gameObject.activeInHierarchy) BackGroundCanvas.gameObject.SetActive(true);
 
@@ -55,16 +76,6 @@ public class UIMessageController : MonoBehaviour
 
         // 指定したエフェクト群を停止させる
         PauseEffect();
-
-        // 表示するメッセージデータをセットする(全データの取得まで待ってる)
-        GetMessageData(() =>
-        {
-            // 最初のメッセージを表示する
-            MessageList[NowMessageNum].SetActive(true);
-
-            // フェードイン開始
-            FadeIn_Flag = true;
-        });
     }
 
     void Update()
@@ -84,8 +95,12 @@ public class UIMessageController : MonoBehaviour
                         // 開始時に準備するし後処理は要らないかも？
                         // AfterCare();
 
+                        // エフェクトを再開
+                        PauseEffect();
+
                         // 自身を非表示にして終了
                         this.gameObject.SetActive(false);
+                        return;
                     }
                     else
                     {
@@ -183,22 +198,19 @@ public class UIMessageController : MonoBehaviour
     }
 
     /// <summary>
-    /// メッセージデータをセット
+    /// メッセージデータを取得
     /// </summary>
     private void GetMessageData(Action m_Callback = null)
     {
-        if(MessageList != null)
+        foreach (Transform Child in MessageList_Parent.transform)
         {
-            foreach (Transform Child in MessageList_Parent.transform)
-            {
-                // 1つずつ表示させるため、一度falseにして追加する
-                Child.gameObject.SetActive(false);
+            // 1つずつ表示させるため、一度falseにして追加する
+            Child.gameObject.SetActive(false);
 
-                // 表示するクリアメッセージを取得
-                MessageList.Add(Child.gameObject);
-            }
-            m_Callback?.Invoke();
+            // 表示するクリアメッセージを取得
+            MessageList.Add(Child.gameObject);
         }
+        m_Callback?.Invoke();
     }
 
     /// <summary>
