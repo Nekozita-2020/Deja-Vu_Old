@@ -11,4 +11,13 @@ public class GrapeMemoryWindowView : WindowViewBase
     [SerializeField] public List<Text> MemoryList = new List<Text>();
     [SerializeField] public List<Text> Memory_20 = new List<Text>();
 
+    public Action m_OnEndMovieButton = null;
+
+
+
+    public void OnClickEndMovieButton()
+    {
+        m_OnEndMovieButton?.Invoke();
+    }
+
 }

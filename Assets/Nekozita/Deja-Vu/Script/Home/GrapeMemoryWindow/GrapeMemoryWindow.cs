@@ -14,6 +14,8 @@ public class GrapeMemoryWindow : WindowBase
         base.SettingView();
 
         View = m_View as GrapeMemoryWindowView;
+
+        View.m_OnEndMovieButton = OnClickEndMovieButton;
     }
 
     void Start()
@@ -39,6 +41,12 @@ public class GrapeMemoryWindow : WindowBase
                 View.StillLostMemoryText.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void OnClickEndMovieButton()
+    {
+        // エンドムービーを再生
+
     }
 
 }
