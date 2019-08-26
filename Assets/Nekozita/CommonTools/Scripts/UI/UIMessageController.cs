@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIMessageController : MonoBehaviour
 {
 
     // UIMessageの背景
-    [SerializeField] private Canvas BackGroundCanvas = null;
+    [SerializeField] private Image BackGroundImage = null;
 
     // 画面の蓋
-    [SerializeField] private Image FadeCanvas = null;
+    [SerializeField] private Image FadeImage = null;
 
     // クリアメッセージの親オブジェクト
     [SerializeField] private GameObject MessageList_Parent = null;
@@ -37,11 +38,11 @@ public class UIMessageController : MonoBehaviour
     // 終了フラグ true: 最後にフェードインして終了 false:まだ処理は続いている
     private bool Finish_Flag = false;
 
-    // FadeCanvasの色情報
-    private float FadeCanvasColor_Red, FadeCanvasColor_Green, FadeCanvasColor_Blue, FadeCanvasColor_Alpha;
+    // FadeImageの色情報
+    private float FadeImageColor_Red, FadeImageColor_Green, FadeImageColor_Blue, FadeImageColor_Alpha;
 
-    // 実際に変化させるFadeCanvasのアルファ値
-    private float NowFadeCanvasColor_Alpha;
+    // 実際に変化させるFadeImageのアルファ値
+    private float NowFadeImageColor_Alpha;
 
 
 
@@ -69,10 +70,10 @@ public class UIMessageController : MonoBehaviour
         }
 
         // もしバックグラウンドが非表示なら表示させる
-        if (!BackGroundCanvas.gameObject.activeInHierarchy) BackGroundCanvas.gameObject.SetActive(true);
+        if (!BackGroundImage.gameObject.activeInHierarchy) BackGroundImage.gameObject.SetActive(true);
 
-        // FadeCanvasの色情報(アルファ値を含む)を取得
-        GetFadeCanvasColor();
+        // FadeImageの色情報(アルファ値を含む)を取得
+        GetFadeImageColor();
 
         // 指定したエフェクト群を停止させる
         PauseEffect();
@@ -86,10 +87,13 @@ public class UIMessageController : MonoBehaviour
             if (FadeIn_Flag)
             {
                 // アルファ値を減らす
-                NowFadeCanvasColor_Alpha -= Time.deltaTime / FadeTime;
+                NowFadeImageColor_Alpha -= Time.deltaTime / FadeTime;
 
-                if (NowFadeCanvasColor_Alpha <= 0.0f)
+                if (NowFadeImageColor_Alpha <= 0.0f)
                 {
+                    // フェードイン終了
+                    FadeIn_Flag = false;
+
                     if (Finish_Flag)
                     {
                         // 開始時に準備するし後処理は要らないかも？
@@ -105,17 +109,20 @@ public class UIMessageController : MonoBehaviour
                     else
                     {
                         // コルーチンでタッチ待ち
-                        StartCoroutine("OnTapStay");
+                        StartCoroutine("OnStayToTap");
                     }
                 }
             }
             else if (FadeOut_Flag)
             {
                 // アルファ値を増やす
-                NowFadeCanvasColor_Alpha += Time.deltaTime / FadeTime;
+                NowFadeImageColor_Alpha += Time.deltaTime / FadeTime;
 
-                if (1.0F <= NowFadeCanvasColor_Alpha)
+                if (1.0F <= NowFadeImageColor_Alpha)
                 {
+                    // フェードアウト終了
+                    FadeOut_Flag = false;
+
                     // 表示中のメッセージを非表示
                     MessageList[NowMessageNum].SetActive(false);
 
@@ -134,7 +141,7 @@ public class UIMessageController : MonoBehaviour
                     else
                     {
                         // 背景を非表示
-                        BackGroundCanvas.gameObject.SetActive(false);
+                        BackGroundImage.gameObject.SetActive(false);
 
                         // 終了フラグを立てる
                         Finish_Flag = true;
@@ -145,8 +152,8 @@ public class UIMessageController : MonoBehaviour
                 }
             }
 
-            // FadeCanvasの色をセットする
-            SetFadeCanvasColor();
+            // FadeImageの色をセットする
+            SetFadeImageColor();
         }
     }
 
@@ -155,20 +162,20 @@ public class UIMessageController : MonoBehaviour
     /// </summary>
     private void AfterCare()
     {
-        BackGroundCanvas.gameObject.SetActive(true);
-        FadeCanvas.color = new Color(FadeCanvasColor_Red, FadeCanvasColor_Green, FadeCanvasColor_Blue, FadeCanvasColor_Alpha);
+        BackGroundImage.gameObject.SetActive(true);
+        FadeImage.color = new Color(FadeImageColor_Red, FadeImageColor_Green, FadeImageColor_Blue, FadeImageColor_Alpha);
     }
 
     /// <summary>
-    /// FadeCanvasの色情報(アルファ値を含む)を取得
+    /// FadeImageの色情報(アルファ値を含む)を取得
     /// </summary>
-    private void GetFadeCanvasColor()
+    private void GetFadeImageColor()
     {
-        FadeCanvasColor_Red = FadeCanvas.color.r;
-        FadeCanvasColor_Green = FadeCanvas.color.g;
-        FadeCanvasColor_Blue = FadeCanvas.color.b;
-        FadeCanvasColor_Alpha = FadeCanvas.color.a;
-        NowFadeCanvasColor_Alpha = FadeCanvasColor_Alpha;
+        FadeImageColor_Red = FadeImage.color.r;
+        FadeImageColor_Green = FadeImage.color.g;
+        FadeImageColor_Blue = FadeImage.color.b;
+        FadeImageColor_Alpha = FadeImage.color.a;
+        NowFadeImageColor_Alpha = FadeImageColor_Alpha;
     }
 
     /// <summary>
@@ -214,34 +221,63 @@ public class UIMessageController : MonoBehaviour
     }
 
     /// <summary>
-    /// FadeCanvasの色をセットする
+    /// FadeImageの色をセットする
     /// </summary>
-    private void SetFadeCanvasColor()
+    private void SetFadeImageColor()
     {
-        FadeCanvas.color = new Color(FadeCanvasColor_Red, FadeCanvasColor_Green, FadeCanvasColor_Blue, NowFadeCanvasColor_Alpha);
+        FadeImage.color = new Color(FadeImageColor_Red, FadeImageColor_Green, FadeImageColor_Blue, NowFadeImageColor_Alpha);
     }
 
+
+
+
+
+    // タップしたかのフラグ
+    private bool TapFlag = false;
+
+    // ドラッグしたかのフラグ
+    private bool DragFlag = false;
+
     /// <summary>
-    /// 指定されたActionがTrueかFalseを返すまで待機させるコルーチン
+    /// 指定されたデリゲートがTrueかFalseを返すまで待機させるコルーチン
     /// </summary>
     /// <returns></returns>
     IEnumerator OnStayToTap()
     {
-        Debug.Log("タップ待ち");
+        // Debug.Log("タップ待ち");
 
-        // 指定されたデリゲートが True に判定されるまでコルーチンの実行を中断する
+        // 指定されたデリゲートがTrueに判定されるまでコルーチンの実行を中断する
         yield return new WaitUntil(Tap);
 
-        // 指定されたデリゲートが False に判定されるまでコルーチンの実行を中断する
-        yield return new WaitWhile(Tap);
+        TapFlag = false;
+
+        // 指定されたデリゲートが"Trueに判定されている間"(=Falseになるまで)コルーチンの実行を中断する
+        // yield return new WaitWhile(Tap);
 
         // 処理が再開(タップを検知)したらフェードアウト開始
         FadeOut_Flag = true;
     }
 
+    public void OnTapEvent()
+    {
+        if (DragFlag == false)
+        {
+            TapFlag = true;
+            Tap();
+        }
+        DragFlag = false;
+    }
+
+    public void OnDragEvent()
+    {
+        DragFlag = true;
+        TapFlag = false;
+    }
+
     private bool Tap()
     {
-        return Input.GetMouseButtonDown(0);
+        // return Input.GetMouseButtonDown(0);
+        return TapFlag;
     }
 
 }
