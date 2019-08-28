@@ -44,6 +44,12 @@ public class UIMessageController : MonoBehaviour
     // 実際に変化させるFadeImageのアルファ値
     private float NowFadeImageColor_Alpha;
 
+        // タップしたかのフラグ
+    private bool TapFlag = false;
+
+    // ドラッグしたかのフラグ
+    private bool DragFlag = false;
+
 
 
     void Start()
@@ -154,6 +160,9 @@ public class UIMessageController : MonoBehaviour
 
             // FadeImageの色をセットする
             SetFadeImageColor();
+
+            // タップフラグを戻す
+            TapFlag = false;
         }
     }
 
@@ -227,16 +236,6 @@ public class UIMessageController : MonoBehaviour
     {
         FadeImage.color = new Color(FadeImageColor_Red, FadeImageColor_Green, FadeImageColor_Blue, NowFadeImageColor_Alpha);
     }
-
-
-
-
-
-    // タップしたかのフラグ
-    private bool TapFlag = false;
-
-    // ドラッグしたかのフラグ
-    private bool DragFlag = false;
 
     /// <summary>
     /// 指定されたデリゲートがTrueかFalseを返すまで待機させるコルーチン
