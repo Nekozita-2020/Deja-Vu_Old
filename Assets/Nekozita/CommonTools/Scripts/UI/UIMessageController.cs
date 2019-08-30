@@ -105,9 +105,6 @@ public class UIMessageController : MonoBehaviour
                         // 開始時に準備するし後処理は要らないかも？
                         // AfterCare();
 
-                        // エフェクトを再開
-                        PauseEffect();
-
                         // 自身を非表示にして終了
                         this.gameObject.SetActive(false);
                         return;
@@ -146,11 +143,14 @@ public class UIMessageController : MonoBehaviour
                     // もうメッセージが無い
                     else
                     {
+                        // 終了フラグを立てる
+                        Finish_Flag = true;
+
                         // 背景を非表示
                         BackGroundImage.gameObject.SetActive(false);
 
-                        // 終了フラグを立てる
-                        Finish_Flag = true;
+                        // エフェクトを再開
+                        PauseEffect();
 
                         // フェードインを開始
                         FadeIn_Flag = true;

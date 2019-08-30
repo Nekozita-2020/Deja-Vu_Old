@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// オブジェクトをドラッグで動かす(X軸,Y軸 & 移動制限を指定)
+/// </summary>
 public class DragMoving : MonoBehaviour
 {
 
     [Header("操作感度")]
     [SerializeField] public float MovementSensitivity = 0.5f;
-    
+
+    [Header("移動範囲")]
+    [SerializeField] private float LimitTop = 10.0f;
+    [SerializeField] private float LimitBottom = -10.0f;
+    [SerializeField] private float LimitRight = 10.0f;
+    [SerializeField] private float LimitLeft = -10.0f;
+
     void Start()
     {
         MovementSensitivity = PlayerPrefs.GetFloat("MovementSensitivity", 0.5f);
@@ -18,30 +27,13 @@ public class DragMoving : MonoBehaviour
     {
         var x = Input.GetAxis("Mouse X");
         var y = Input.GetAxis("Mouse Y");
-        var Direction = new Vector3(x, y, 0);
 
-        transform.position += MovementSensitivity * Direction;
-        /*
-        // 左右の壁抜け防止
-        if (this.transform.position.x < -2.0)
-        {
-            this.transform.position = new Vector3(-2.0f, this.transform.position.y, this.transform.position.z);
-        }
-        else if (2.0 < this.transform.position.x)
-        {
-            this.transform.position = new Vector3(2.0f, this.transform.position.y, this.transform.position.z);
-        }
-
-        // 上下の壁抜け防止
-        if (this.transform.position.y < 0.0)
-        {
-            this.transform.position = new Vector3(this.transform.position.x, 0.0f, this.transform.position.z);
-        }
-        else if (6.7 < this.transform.position.y)
-        {
-            this.transform.position = new Vector3(this.transform.position.x, 6.7f, this.transform.position.z);
-        }
-        */
+        transform.position = new Vector3
+            (Mathf.Clamp(transform.position.x +
+            (x * MovementSensitivity), LimitLeft, LimitRight),
+            Mathf.Clamp(transform.position.y +
+            (y * MovementSensitivity), LimitBottom, LimitTop),
+            transform.position.z);
     }
 
 }
