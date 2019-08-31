@@ -117,7 +117,7 @@ public class StageGameManagerBase : GameManagerBase
         PauseButton.SetActive(false);
 
         // ゲームを停止させる
-        OnPause();
+        // OnPause();
 
         // グレープを非表示
         Grape.SetActive(false);
@@ -126,6 +126,9 @@ public class StageGameManagerBase : GameManagerBase
         Vector3 DestroyEffectPosition = new Vector3(Grape.transform.position.x,
              Grape.transform.position.y + 2, Grape.transform.position.z);
         Instantiate(DestroyEffect, DestroyEffectPosition, Quaternion.identity);
+
+        // SEを鳴らす
+        SoundManager.Instance.PlaySE(ResourcesPath.AUDIO_SE_DESTROY_SOUND);
 
         // ゲームオーバーUIを表示
         GameOverUI.SetActive(true);
