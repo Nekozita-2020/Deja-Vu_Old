@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameManagerBase : MonoBehaviour
 {
 
+    [Header("再生するBGM")]
+    [SerializeField] private AudioClip PlayBGM = null;
+
     private void Awake()
     {
         // 使用していないアセットをアンロードしてメモリを解放
@@ -12,6 +15,12 @@ public class GameManagerBase : MonoBehaviour
 
         // フェードインしてシーンをスタートさせる
         SceneController.Instance?.FadeIn();
+
+        if(PlayBGM != null)
+        {
+            // BGMを再生(同じBGMが再生されていれば未処理)
+            SoundManager.Instance.PlayBGM(PlayBGM.name);
+        }
     }
 
     /// <summary>

@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309178177885843db93ddf848c4ee05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayBGM: {fileID: 8300000, guid: 1fb30883219c547e09622a333ca0fa38, type: 3}
   StageDescriptionList: {fileID: 908542889}
   StageNodeList: {fileID: 1623335066475973026}
   NowDescription: {fileID: 0}

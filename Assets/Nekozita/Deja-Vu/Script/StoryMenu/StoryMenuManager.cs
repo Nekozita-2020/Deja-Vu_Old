@@ -26,9 +26,6 @@ public class StoryMenuManager : GameManagerBase
         // シーンに必要なアセットをロード
         ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
-        // BGMを再生(同じBGMが再生されていれば未処理)
-        SoundManager.Instance.PlayBGM(ResourcesPath.AUDIO_BGM_HEALING_10);
-
         // UIをストーリーの進捗度に合わせる
         for(int i = 0; i <= PlayerPrefs.GetInt("ClearStage", 0); i++)
         {

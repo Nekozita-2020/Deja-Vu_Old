@@ -867,6 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e98d5363d774332b6b5b769f7ad0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayBGM: {fileID: 0}
   ClearMessageUI: {fileID: 1484370541}
   GrapeMemoryWin_BackGround: {fileID: 63981333}
   ClearStegeNum: 0
@@ -3324,6 +3325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96407f0b52bb649c09340895589d9203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayBGM: {fileID: 0}
 --- !u!1 &1258592201
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,6 +3991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9d2b1a19ffd4f1483b6c46feb884a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayBGM: {fileID: 8300000, guid: d139139b508774f8e88c32b48d5c5463, type: 3}
   MainCamera: {fileID: 1406901884}
   GameOverUI: {fileID: 1233633380}
   StageClearUI: {fileID: 174936945}
