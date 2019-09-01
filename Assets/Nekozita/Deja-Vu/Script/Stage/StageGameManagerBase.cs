@@ -47,12 +47,12 @@ public class StageGameManagerBase : GameManagerBase
         {
             case "Positive":
                 // タグがNegativeならゲームオーバー
-                if (m_Collision.gameObject.tag == "Negative") OnGameOver();
+                if (Grape.tag == "Negative") OnGameOver();
                 break;
 
             case "Negative":
                 // タグがPositiveならゲームオーバー
-                if (m_Collision.gameObject.tag == "Positive") OnGameOver();
+                if (Grape.gameObject.tag == "Positive") OnGameOver();
                 break;
 
             case "Key":
