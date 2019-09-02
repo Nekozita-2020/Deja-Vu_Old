@@ -1,19 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections;
 
 /// <summary>
 /// ゲーム起動時に実行させる処理をまとめたクラス
-/// コンポーネントに設定しなくてもちゃんと呼ばれる！
 /// </summary>
-public class RuntimeManager
+public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
 {
 
-    // ゲーム開始時(シーン読み込み前)に実行される
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void RuntimeMethod()
-    {
-        // Debug.Log("Runtime処理を実行: BeforeSceneLoad");
+    [SerializeField] private GameObject Logo = null;
+    [SerializeField] private GameObject TitleManager = null;
 
+
+    private IEnumerator Start()
+    {
+        // CommonToolsをロード
+        OnMakeTools();
+
+        // 【応急処置】1フレーム待つ
+        yield return null;
+
+        // ロゴをフェードイン
+        SceneController.Instance.FadeIn();
+
+        // ロゴを1秒間表示させる想定
+        yield return new WaitForSeconds(1.0f);
+
+        // ロゴをフェードアウト
+        SceneController.Instance.FadeOut(Callback:() =>
+        {
+            // ロゴを非表示
+            Logo.SetActive(false);
+
+            // ゲームのタイトル画面をフェードインしてゲーム開始
+            SceneController.Instance.FadeIn();
+            TitleManager.SetActive(true);
+        });
+    }
+
+    private void OnMakeTools()
+    {
         // ゲーム起動時にロードさせるシーン名
         string LoadSceneName = "CommonTools";
 
