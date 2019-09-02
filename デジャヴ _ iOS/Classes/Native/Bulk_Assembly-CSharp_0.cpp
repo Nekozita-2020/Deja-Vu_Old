@@ -33684,11 +33684,11 @@ extern "C" IL2CPP_METHOD_ATTR bool U3CStartU3Ed__2_MoveNext_mFF1C65534F0CE020E4D
 			}
 			case 1:
 			{
-				goto IL_003f;
+				goto IL_0048;
 			}
 			case 2:
 			{
-				goto IL_006f;
+				goto IL_0078;
 			}
 		}
 	}
@@ -33702,33 +33702,35 @@ IL_0022:
 		RuntimeManager_t84E5B19AC5BAB8ECF9F2F1413AABBF8A38C6BB96 * L_3 = V_1;
 		NullCheck(L_3);
 		RuntimeManager_OnMakeTools_m3CFCB3B3DF1F6E31DB2D12F5A57B7C2F03E134DF(L_3, /*hidden argument*/NULL);
-		__this->set_U3CU3E2__current_1(NULL);
+		WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 * L_4 = (WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 *)il2cpp_codegen_object_new(WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m8E4BA3E27AEFFE5B74A815F26FF8AAB99743F559(L_4, (1.0f), /*hidden argument*/NULL);
+		__this->set_U3CU3E2__current_1(L_4);
 		__this->set_U3CU3E1__state_0(1);
 		return (bool)1;
 	}
 
-IL_003f:
+IL_0048:
 	{
 		__this->set_U3CU3E1__state_0((-1));
-		SceneController_t5827DDFEB507363FD30290DC041EEE4EAE6251E4 * L_4 = SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305(/*hidden argument*/SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305_RuntimeMethod_var);
-		NullCheck(L_4);
-		SceneController_FadeIn_mF2FE99F30D02A5F4CAA99AAD654ED8CD2DA5935B(L_4, (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 *)NULL, (1.0f), /*hidden argument*/NULL);
-		WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 * L_5 = (WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 *)il2cpp_codegen_object_new(WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_m8E4BA3E27AEFFE5B74A815F26FF8AAB99743F559(L_5, (1.0f), /*hidden argument*/NULL);
-		__this->set_U3CU3E2__current_1(L_5);
+		SceneController_t5827DDFEB507363FD30290DC041EEE4EAE6251E4 * L_5 = SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305(/*hidden argument*/SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305_RuntimeMethod_var);
+		NullCheck(L_5);
+		SceneController_FadeIn_mF2FE99F30D02A5F4CAA99AAD654ED8CD2DA5935B(L_5, (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 *)NULL, (1.0f), /*hidden argument*/NULL);
+		WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 * L_6 = (WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 *)il2cpp_codegen_object_new(WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m8E4BA3E27AEFFE5B74A815F26FF8AAB99743F559(L_6, (1.0f), /*hidden argument*/NULL);
+		__this->set_U3CU3E2__current_1(L_6);
 		__this->set_U3CU3E1__state_0(2);
 		return (bool)1;
 	}
 
-IL_006f:
+IL_0078:
 	{
 		__this->set_U3CU3E1__state_0((-1));
-		SceneController_t5827DDFEB507363FD30290DC041EEE4EAE6251E4 * L_6 = SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305(/*hidden argument*/SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305_RuntimeMethod_var);
-		RuntimeManager_t84E5B19AC5BAB8ECF9F2F1413AABBF8A38C6BB96 * L_7 = V_1;
-		Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * L_8 = (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 *)il2cpp_codegen_object_new(Action_t591D2A86165F896B4B800BB5C25CE18672A55579_il2cpp_TypeInfo_var);
-		Action__ctor_m570E96B2A0C48BC1DC6788460316191F24572760(L_8, L_7, (intptr_t)((intptr_t)RuntimeManager_U3CStartU3Eb__2_0_m4245B3978CFA4D49241D280114595C8B2BDBCCCF_RuntimeMethod_var), /*hidden argument*/NULL);
-		NullCheck(L_6);
-		SceneController_FadeOut_m891161B1AFB4D03F0E495F08ECCD5DAC448FC471(L_6, (String_t*)NULL, L_8, (1.0f), /*hidden argument*/NULL);
+		SceneController_t5827DDFEB507363FD30290DC041EEE4EAE6251E4 * L_7 = SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305(/*hidden argument*/SingletonMonoBehaviour_1_get_Instance_mB326FAF961E09E1479E74FE9A7273EB61C705305_RuntimeMethod_var);
+		RuntimeManager_t84E5B19AC5BAB8ECF9F2F1413AABBF8A38C6BB96 * L_8 = V_1;
+		Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * L_9 = (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 *)il2cpp_codegen_object_new(Action_t591D2A86165F896B4B800BB5C25CE18672A55579_il2cpp_TypeInfo_var);
+		Action__ctor_m570E96B2A0C48BC1DC6788460316191F24572760(L_9, L_8, (intptr_t)((intptr_t)RuntimeManager_U3CStartU3Eb__2_0_m4245B3978CFA4D49241D280114595C8B2BDBCCCF_RuntimeMethod_var), /*hidden argument*/NULL);
+		NullCheck(L_7);
+		SceneController_FadeOut_m891161B1AFB4D03F0E495F08ECCD5DAC448FC471(L_7, (String_t*)NULL, L_9, (1.0f), /*hidden argument*/NULL);
 		return (bool)0;
 	}
 }

@@ -16,7 +16,7 @@ public class SceneController : SingletonMonoBehaviour<SceneController>
     private Image FadeImage = null;
 
     // フェード用Imageの透明度
-    private float Alpha = 0.0f;
+    private float Alpha = 1.0f;
 
     // フェードインアウトのフラグ
     public bool IsFadeIn = false;

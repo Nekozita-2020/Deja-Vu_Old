@@ -19,24 +19,12 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         OnMakeTools();
 
         // 【応急処置】1フレーム待つ
-        // yield return null;
-        yield return new WaitForSeconds(1.0f);
+        yield return null;
 
         // ロゴをフェードイン
-        SceneController.Instance.FadeIn();
-
-        // ロゴを1秒間表示させる想定
-        yield return new WaitForSeconds(1.0f);
-
-        // ロゴをフェードアウト
-        SceneController.Instance.FadeOut(Callback:() =>
+        SceneController.Instance.FadeIn(() =>
         {
-            // ロゴを非表示
-            Logo.SetActive(false);
-
-            // ゲームのタイトル画面をフェードインしてゲーム開始
-            SceneController.Instance.FadeIn();
-            TitleManager.SetActive(true);
+            StartCoroutine("OnLogoWait");
         });
     }
 
@@ -50,6 +38,24 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         {
             SceneManager.LoadScene(LoadSceneName, LoadSceneMode.Additive);
         }
+    }
+
+    private IEnumerator OnLogoWait()
+    {
+        // ロゴを1秒間表示させる想定
+        yield return new WaitForSeconds(1.0f);
+
+        // ロゴをフェードアウト
+        SceneController.Instance.FadeOut(Callback: () =>
+        {
+            // ロゴを非表示
+            Logo.SetActive(false);
+
+            // ゲームのタイトル画面をフェードインしてゲーム開始
+            SceneController.Instance.FadeIn();
+            TitleManager.SetActive(true);
+        });
+
     }
 
 }
