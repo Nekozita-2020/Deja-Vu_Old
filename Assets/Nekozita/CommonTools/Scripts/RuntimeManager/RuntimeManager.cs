@@ -19,7 +19,8 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         OnMakeTools();
 
         // 【応急処置】1フレーム待つ
-        yield return null;
+        // yield return null;
+        yield return new WaitForSeconds(1.0f);
 
         // ロゴをフェードイン
         SceneController.Instance.FadeIn();
