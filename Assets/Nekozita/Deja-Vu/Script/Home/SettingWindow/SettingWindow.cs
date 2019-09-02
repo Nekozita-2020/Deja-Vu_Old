@@ -9,7 +9,7 @@ public class SettingWindow : WindowBase
     [SerializeField] private float MovementSensitivity_Value;
     public GameObject Grape_Demo = null;
     SettingWindowView View;
-    public Action DeleatSettingWin = null;
+    public Action DeleteSettingWin = null;
 
     private bool DragFlug = false;
 
@@ -36,7 +36,7 @@ public class SettingWindow : WindowBase
     private void OnDestroy()
     {
         Grape_Demo.SetActive(false);
-        DeleatSettingWin?.Invoke();
+        DeleteSettingWin?.Invoke();
     }
 
     private void OnChengeValue_Slider_MovementSensitivity()

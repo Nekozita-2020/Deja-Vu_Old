@@ -45,7 +45,7 @@ public class HomeManager : GameManagerBase
             case "Setting":
                 HomeScene_TouchSencer.SetActive(false);
                 NowWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_SETTING_WINDOW, HomeMenu);
-                NowWindow.GetComponent<SettingWindow>().DeleatSettingWin =
+                NowWindow.GetComponent<SettingWindow>().DeleteSettingWin =
                     () => HomeScene_TouchSencer.SetActive(true);
                 break;
             case "Credit":
