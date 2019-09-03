@@ -15,6 +15,7 @@ public static class ResourcesPath{
 	  public const string PREFAB_FRUITS              = "Prefab/Story/Stage0(Tutorial)/Key/Fruits";
 	  public const string PREFAB_GRAPE               = "Prefab/Common/Grape";
 	  public const string PREFAB_GRAPE_MEMORY_WINDOW = "Prefab/Home/GrapeMemoryWindow";
+	  public const string PREFAB_LOGO_WINDOW         = "Prefab/LogoWindow";
 	  public const string PREFAB_OBJECT_MANAGER      = "Prefab/ObjectManager";
 	  public const string PREFAB_SCENE_CONTROLLER    = "Prefab/SceneController";
 	  public const string PREFAB_SETTING_WINDOW      = "Prefab/Home/SettingWindow";

@@ -9,17 +9,26 @@ using System.Collections;
 public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
 {
 
-    [SerializeField] private GameObject Logo = null;
     [SerializeField] private GameObject TitleManager = null;
+    private bool MakeToolsFlag = false;
+    private GameObject LogoWindow = null;
 
 
     private IEnumerator Start()
     {
-        // CommonToolsをロード
-        OnMakeTools();
+        // 追加予定のCommonToolsが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
+        if (!SceneManager.GetSceneByName("CommonTools").IsValid())
+        {
+            // イベントにイベントハンドラーを追加
+            SceneManager.sceneLoaded += OnMakeTools;
+            SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
+        }
 
-        // 【応急処置】1フレーム待つ
-        yield return null;
+        // CommonToolsが生成されるまで待つ
+        yield return new WaitUntil(() => MakeToolsFlag);
+
+        // ロゴを表示
+        LogoWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_LOGO_WINDOW);
 
         // ロゴをフェードイン
         SceneController.Instance.FadeIn(() =>
@@ -28,16 +37,9 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         });
     }
 
-    private void OnMakeTools()
+    private void OnMakeTools(Scene m_LoadScene, LoadSceneMode m_mode)
     {
-        // ゲーム起動時にロードさせるシーン名
-        string LoadSceneName = "CommonTools";
-
-        // 追加予定のSceneが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
-        if (!SceneManager.GetSceneByName(LoadSceneName).IsValid())
-        {
-            SceneManager.LoadScene(LoadSceneName, LoadSceneMode.Additive);
-        }
+        MakeToolsFlag = true;
     }
 
     private IEnumerator OnLogoWait()
@@ -48,8 +50,8 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         // ロゴをフェードアウト
         SceneController.Instance.FadeOut(Callback: () =>
         {
-            // ロゴを非表示
-            Logo.SetActive(false);
+            // ロゴを削除
+            Destroy(LogoWindow);
 
             // ゲームのタイトル画面をフェードインしてゲーム開始
             SceneController.Instance.FadeIn();
