@@ -40,7 +40,7 @@ public static class ResourcesPathClassGenerator
 
         // 定数クラス作成
         ConstantsClassCreator.Create("ResourcesPath", "Resources以下のプレハブやファイルパスを定数で管理するクラス", _filePathDict);
-        // ConstantsClassCreator.Create("ResourcesDirectoryPath", "Resources以下のディレクトリパスを定数で管理するクラス", _directoryPathDict);
+        ConstantsClassCreator.Create("ResourcesDirectoryPath", "Resources以下のディレクトリパスを定数で管理するクラス", _directoryPathDict);
     }
 
     // 指定したパスのResourcesディレクトリ内に含まれる全ディレクトリへのパスを設定

@@ -22,7 +22,7 @@ public class StageGameManagerBase : GameManagerBase
         this.Init();
     }
 
-    private void Init()
+    protected virtual void Init()
     {
         // コールバックをセット
         SetCallBack();

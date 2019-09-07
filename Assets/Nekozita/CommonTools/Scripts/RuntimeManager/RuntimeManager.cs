@@ -37,6 +37,11 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
         });
     }
 
+    /// <summary>
+    /// CommonToolsが生成されたフラグを立てる
+    /// </summary>
+    /// <param name="m_LoadScene"></param>
+    /// <param name="m_mode"></param>
     private void OnMakeTools(Scene m_LoadScene, LoadSceneMode m_mode)
     {
         MakeToolsFlag = true;
