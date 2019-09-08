@@ -111,13 +111,13 @@ public class StageGameManagerBase : GameManagerBase
     /// <summary>
     /// ゲームオーバー処理
     /// </summary>
-    private void OnGameOver()
+    protected virtual void OnGameOver()
     {
         // ポーズボタンを非表示
         PauseButton.SetActive(false);
 
         // ゲームを停止させる
-        // OnPause();
+        OnPause();
 
         // グレープを非表示
         Grape.SetActive(false);

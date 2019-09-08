@@ -13,10 +13,10 @@ public class DragMoving : MonoBehaviour
     [SerializeField] public float MovementSensitivity = 0.5f;
 
     [Header("移動範囲")]
-    [SerializeField] private float LimitTop = 10.0f;
-    [SerializeField] private float LimitBottom = -10.0f;
-    [SerializeField] private float LimitRight = 10.0f;
-    [SerializeField] private float LimitLeft = -10.0f;
+    [SerializeField] public float LimitTop = 10.0f;
+    [SerializeField] public float LimitBottom = -10.0f;
+    [SerializeField] public float LimitRight = 10.0f;
+    [SerializeField] public float LimitLeft = -10.0f;
 
     void Start()
     {
