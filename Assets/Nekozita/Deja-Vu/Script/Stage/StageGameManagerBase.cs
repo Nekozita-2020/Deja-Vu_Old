@@ -117,7 +117,10 @@ public class StageGameManagerBase : GameManagerBase
         PauseButton.SetActive(false);
 
         // ゲームを停止させる
-        OnPause();
+        // OnPause();
+
+        // TouchSenserを非表示
+        TouchSenser.SetActive(false);
 
         // グレープを非表示
         Grape.SetActive(false);

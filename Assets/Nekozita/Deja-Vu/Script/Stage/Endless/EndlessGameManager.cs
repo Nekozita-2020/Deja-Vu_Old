@@ -36,7 +36,7 @@ public class EndlessGameManager : StageGameManagerBase
     private float ObjectLifetime = 3.0f;
 
     // グレープの前にオブジェクトがランダム生成される距離
-    private int ObjectBorder = 10;
+    private int ObjectBorder = 15;
 
     // 移動する地面の位置
     private int GrandMovingBorder;
@@ -73,13 +73,9 @@ public class EndlessGameManager : StageGameManagerBase
 
         // 動かす地面の管理変数の初期値を設定(この位置をカメラが超えたら移動)
         GrandMovingBorder = (int)Grand1.transform.localPosition.z * 2;
-        /*
+
         // ストーリーの進捗度を取得(クリアしたステージ数)
         StoryProgress = PlayerPrefs.GetInt("ClearStage", 0);
-
-        // 地面をセッティング
-        // Grand1 = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
-        // Grand2 = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
         // Storyディレクトリ以下のGameObjectを全て取得
         string StoryDirectoryPath = m_ResoucesPath + ResourcesDirectoryPath.PREFAB_STORY;
@@ -92,7 +88,6 @@ public class EndlessGameManager : StageGameManagerBase
         // ハイスコアを表示
         HighScoreNum = PlayerPrefs.GetInt("HighScore", 0);
         HighScore.text = HighScoreNum.ToString();
-        */
     }
 
     /// <summary>
@@ -114,7 +109,7 @@ public class EndlessGameManager : StageGameManagerBase
             {
                 string TargetPath = FilePath.Replace(m_ResoucesPath, "");
                 TargetPath = TargetPath.Replace(".prefab", "");
-                GameObject obj = ObjectManager.Instance.OnPrefabLoad(TargetPath);
+                GameObject obj = (GameObject)Resources.Load(TargetPath);
 
                 if (obj != null)
                 {
@@ -134,10 +129,10 @@ public class EndlessGameManager : StageGameManagerBase
 
         Destroy(Instantiate(RandomGenerateObject[GenerateObjectNumber],
             new Vector3(Random.Range(m_DragMoving.LimitLeft, m_DragMoving.LimitRight),
-            Random.Range(m_DragMoving.LimitBottom, m_DragMoving.LimitTop), ObjectBorder + 30.0f),
+            Random.Range(m_DragMoving.LimitBottom, m_DragMoving.LimitTop), ObjectBorder + 50.0f),
             RandomGenerateObject[GenerateObjectNumber].transform.rotation), ObjectLifetime);
 
-        ObjectBorder += Random.Range(1, 20);
+        ObjectBorder += Random.Range(5, 30);
     }
 
     /// <summary>

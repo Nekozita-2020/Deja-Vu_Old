@@ -33,7 +33,7 @@ public class ObjectManager : SingletonMonoBehaviour<ObjectManager>
         LoadObject = (GameObject)Resources.Load(LoadPrefabName);
 
         // プレハブを元にインスタンスを生成する
-        LoadObject = Instantiate(LoadObject, LoadObject.transform.position, Quaternion.identity);
+        LoadObject = Instantiate(LoadObject, LoadObject.transform.position, LoadObject.transform.rotation);
 
         // 親を設定
         if (Parent != null)

@@ -221,7 +221,7 @@ RectTransform:
   - {fileID: 664315166}
   - {fileID: 1988616957}
   m_Father: {fileID: 908542890}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -317,12 +317,12 @@ GameObject:
   m_Component:
   - component: {fileID: 311089743}
   m_Layer: 5
-  m_Name: StageName
+  m_Name: Endless
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &311089743
 RectTransform:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ RectTransform:
   - {fileID: 162508244}
   - {fileID: 983304960}
   m_Father: {fileID: 908542890}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 472613127}
   - component: {fileID: 472613126}
   m_Layer: 5
-  m_Name: (3)Stage_Node
+  m_Name: Stage2_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 775820097}
   - component: {fileID: 775820096}
   m_Layer: 5
-  m_Name: (2)Stage_Node
+  m_Name: Stage1_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1432,8 +1432,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 243340130}
   - {fileID: 311089743}
+  - {fileID: 243340130}
   - {fileID: 896589514}
   - {fileID: 1928535827}
   m_Father: {fileID: 662317053}
@@ -2363,7 +2363,7 @@ GameObject:
   - component: {fileID: 1658638435}
   - component: {fileID: 1658638434}
   m_Layer: 5
-  m_Name: (1)Stage_Node
+  m_Name: "Stage\u221E_Endless"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2382,7 +2382,7 @@ RectTransform:
   m_Children:
   - {fileID: 1527064906}
   m_Father: {fileID: 1623335066475973027}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3250,8 +3250,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6036472396475148152}
   - {fileID: 1658638433}
+  - {fileID: 6036472396475148152}
   - {fileID: 775820095}
   - {fileID: 472613125}
   m_Father: {fileID: 1623335064898255356}
@@ -3455,7 +3455,7 @@ RectTransform:
   m_Children:
   - {fileID: 984060077262180758}
   m_Father: {fileID: 1623335066475973027}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3556,7 +3556,7 @@ GameObject:
   - component: {fileID: 6995616705531270892}
   - component: {fileID: 8472354748453892771}
   m_Layer: 5
-  m_Name: (0)Tutorial_Node
+  m_Name: Stage0_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
