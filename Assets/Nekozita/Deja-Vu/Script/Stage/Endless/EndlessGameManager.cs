@@ -36,7 +36,13 @@ public class EndlessGameManager : StageGameManagerBase
     private float ObjectLifetime = 3.0f;
 
     // グレープの前にオブジェクトがランダム生成される距離
-    private int ObjectBorder = 15;
+    private int ObjectBorder = 30;
+
+    // 現在のオブジェクト生成数
+    private int NowGenerateCount = 1;
+
+    // オブジェクトがランダム生成されたz座標(ここに到達したら次を生成する方針)
+    private float GenerateVector_z;
 
     // 移動する地面の位置
     private int GrandMovingBorder;
@@ -54,15 +60,31 @@ public class EndlessGameManager : StageGameManagerBase
             this.MoveTerrain();
         }
 
+        // ランダム生成オブジェクト群があれば
         if (0 < RandomGenerateObject.Count)
         {
-            if (ObjectBorder < EndlessMainCamera.transform.position.z)
+            if (GenerateVector_z < EndlessMainCamera.transform.position.z)
             {
-                // オブジェクトのランダム生成
-                RandomObjectGenerate();
+                for(int i = 0; i < NowGenerateCount; i++)
+                {
+                    // オブジェクトのランダム生成
+                    RandomObjectGenerate();
+                }
 
                 // オブジェクトの出力時スコアを加算
                 AddScore();
+
+                // スコアが一定の値に到達する毎にスピードを上げる
+                if(NowScoreNum % 5 == 0)
+                {
+                    Grape.GetComponent<forward>().ForwardSpeed++;
+                }
+
+                // スコアが一定の値に到達する毎にオブジェクト生成数を増やす
+                if (NowScoreNum % 20 == 0)
+                {
+                    NowGenerateCount++;
+                }
             }
         }
     }
@@ -88,6 +110,9 @@ public class EndlessGameManager : StageGameManagerBase
         // ハイスコアを表示
         HighScoreNum = PlayerPrefs.GetInt("HighScore", 0);
         HighScore.text = HighScoreNum.ToString();
+
+        // ランダム生成初期位置を設定
+        GenerateVector_z = Grape.transform.localPosition.z + ObjectBorder;
     }
 
     /// <summary>
@@ -121,7 +146,7 @@ public class EndlessGameManager : StageGameManagerBase
 
     /// <summary>
     /// 指定秒後に消滅するオブジェクトをランダム生成
-    /// 座標は(Grapeの移動範囲, ObjectBorder + 1〜20)からランダム
+    /// 座標は(Grapeの移動範囲, Grapeのz座標 + ObjectBorder(20〜50))からランダム
     /// </summary>
     private void RandomObjectGenerate()
     {
@@ -129,10 +154,15 @@ public class EndlessGameManager : StageGameManagerBase
 
         Destroy(Instantiate(RandomGenerateObject[GenerateObjectNumber],
             new Vector3(Random.Range(m_DragMoving.LimitLeft, m_DragMoving.LimitRight),
-            Random.Range(m_DragMoving.LimitBottom, m_DragMoving.LimitTop), ObjectBorder + 50.0f),
+            Random.Range(m_DragMoving.LimitBottom, m_DragMoving.LimitTop),
+            Grape.transform.localPosition.z + ObjectBorder),
             RandomGenerateObject[GenerateObjectNumber].transform.rotation), ObjectLifetime);
 
-        ObjectBorder += Random.Range(5, 30);
+        // グレープの前にオブジェクトがランダム生成される距離を更新
+        ObjectBorder = Random.Range(30, 50);
+
+        // ランダム生成位置を更新
+        GenerateVector_z = Grape.transform.localPosition.z + ObjectBorder;
     }
 
     /// <summary>
