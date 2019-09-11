@@ -134,10 +134,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
-		//System.String UnityEngine.Application::get_dataPath()
-		void Register_UnityEngine_Application_get_dataPath();
-		Register_UnityEngine_Application_get_dataPath();
-
 		//System.Void UnityEngine.Application::OpenURL(System.String)
 		void Register_UnityEngine_Application_OpenURL();
 		Register_UnityEngine_Application_OpenURL();

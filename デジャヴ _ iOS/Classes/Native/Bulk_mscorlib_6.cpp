@@ -749,7 +749,6 @@ extern String_t* _stringLiteral44AC91F010ECDD855BA22A4FE5878DA9B04839E4;
 extern String_t* _stringLiteral494A9C022A41BBB268B9E6A4D30F8C83DB59DA41;
 extern String_t* _stringLiteral499BD19676ED0375DFC02972BD412D172C94B244;
 extern String_t* _stringLiteral4A7A24AA6544C2B808048E37199B26E148FDEDF2;
-extern String_t* _stringLiteral4C52415544BD7A47889EA5906C103BFF299DA5A1;
 extern String_t* _stringLiteral4E0B5AF978C4CA1675410CD16C92560ADCB2C1E2;
 extern String_t* _stringLiteral4F070C36B0D557D60AE090BD489DF2ACA6B93542;
 extern String_t* _stringLiteral4FF0B1538469338A0073E2CDAAB6A517801B6AB4;
@@ -923,7 +922,6 @@ extern const RuntimeMethod* Directory_CreateDirectory_m0C9CAA2ECA801C4D07EA35820
 extern const RuntimeMethod* Directory_Delete_m16617F8A342EBC2DCFFC33CD941D2A498B18FCC2_RuntimeMethod_var;
 extern const RuntimeMethod* Directory_GetDirectories_m84609D68FA13B4FE93B9FEE2EFAB40AF94C4A646_RuntimeMethod_var;
 extern const RuntimeMethod* Directory_GetDirectories_mCBF2C7658E73844322903C41767D970E174318B7_RuntimeMethod_var;
-extern const RuntimeMethod* Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_RuntimeMethod_var;
 extern const RuntimeMethod* Directory_GetFiles_mFC09A86D660CAD8490DB44B25A8D8E981816048E_RuntimeMethod_var;
 extern const RuntimeMethod* Directory_InsecureGetCurrentDirectory_m70DACB85FC187296D721E5426239AC97EEB68CFB_RuntimeMethod_var;
 extern const RuntimeMethod* FileStreamAsyncResult_CBWrapper_mC807789033D2FC2052193DA354F5DC84B56CE1C6_RuntimeMethod_var;
@@ -1061,7 +1059,6 @@ extern const uint32_t Directory_Exists_mB77956D89305E16FEFCBDFC55CCC98F03AEE4D84
 extern const uint32_t Directory_GetDemandDir_m22408CC0B12D7EA32C78128CC412BA653684468E_MetadataUsageId;
 extern const uint32_t Directory_GetDirectories_m84609D68FA13B4FE93B9FEE2EFAB40AF94C4A646_MetadataUsageId;
 extern const uint32_t Directory_GetDirectories_mCBF2C7658E73844322903C41767D970E174318B7_MetadataUsageId;
-extern const uint32_t Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_MetadataUsageId;
 extern const uint32_t Directory_GetFiles_mFC09A86D660CAD8490DB44B25A8D8E981816048E_MetadataUsageId;
 extern const uint32_t Directory_InsecureGetCurrentDirectory_m70DACB85FC187296D721E5426239AC97EEB68CFB_MetadataUsageId;
 extern const uint32_t Directory_InternalGetFileDirectoryNames_mCE4269722CC88D934E07CC2DE99620122F260E02_MetadataUsageId;
@@ -31574,73 +31571,6 @@ IL_000e:
 		String_t* L_2 = ___path0;
 		StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* L_3 = Directory_InternalGetFiles_m9EE0830994A8BC92808CFECCAE2C53DDA4463D70(L_2, _stringLiteralDF58248C414F342C81E056B40BEE12D17A08BF61, 0, /*hidden argument*/NULL);
 		return L_3;
-	}
-}
-// System.String[] System.IO.Directory::GetFiles(System.String,System.String,System.IO.SearchOption)
-extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531 (String_t* ___path0, String_t* ___searchPattern1, int32_t ___searchOption2, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		String_t* L_0 = ___path0;
-		if (L_0)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD * L_1 = (ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD *)il2cpp_codegen_object_new(ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_mEE0C0D6FCB2D08CD7967DBB1329A0854BBED49ED(L_1, _stringLiteral3150ECD5E0294534A81AE047DDAC559DE481D774, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_RuntimeMethod_var);
-	}
-
-IL_000e:
-	{
-		String_t* L_2 = ___searchPattern1;
-		if (L_2)
-		{
-			goto IL_001c;
-		}
-	}
-	{
-		ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD * L_3 = (ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD *)il2cpp_codegen_object_new(ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD_il2cpp_TypeInfo_var);
-		ArgumentNullException__ctor_mEE0C0D6FCB2D08CD7967DBB1329A0854BBED49ED(L_3, _stringLiteral01B2D7B16FAF18CF9529438F5864B7AB31BC4F94, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, NULL, Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_RuntimeMethod_var);
-	}
-
-IL_001c:
-	{
-		int32_t L_4 = ___searchOption2;
-		if (!L_4)
-		{
-			goto IL_0038;
-		}
-	}
-	{
-		int32_t L_5 = ___searchOption2;
-		if ((((int32_t)L_5) == ((int32_t)1)))
-		{
-			goto IL_0038;
-		}
-	}
-	{
-		String_t* L_6 = Environment_GetResourceString_m2C75C2AF268F01E2BF34AD1C2E1352CF4BA51AD9(_stringLiteral328B8E8918DCC5480BFFCEC1BCF1A68EFF1C3293, /*hidden argument*/NULL);
-		ArgumentOutOfRangeException_t94D19DF918A54511AEDF4784C9A08741BAD1DEDA * L_7 = (ArgumentOutOfRangeException_t94D19DF918A54511AEDF4784C9A08741BAD1DEDA *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t94D19DF918A54511AEDF4784C9A08741BAD1DEDA_il2cpp_TypeInfo_var);
-		ArgumentOutOfRangeException__ctor_m300CE4D04A068C209FD858101AC361C1B600B5AE(L_7, _stringLiteral4C52415544BD7A47889EA5906C103BFF299DA5A1, L_6, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, NULL, Directory_GetFiles_mF7A1573C8A6D64E4C33BE54A8E8767BF90CAA531_RuntimeMethod_var);
-	}
-
-IL_0038:
-	{
-		String_t* L_8 = ___path0;
-		String_t* L_9 = ___searchPattern1;
-		int32_t L_10 = ___searchOption2;
-		StringU5BU5D_t933FB07893230EA91C40FF900D5400665E87B14E* L_11 = Directory_InternalGetFiles_m9EE0830994A8BC92808CFECCAE2C53DDA4463D70(L_8, L_9, L_10, /*hidden argument*/NULL);
-		return L_11;
 	}
 }
 // System.String[] System.IO.Directory::InternalGetFiles(System.String,System.String,System.IO.SearchOption)
