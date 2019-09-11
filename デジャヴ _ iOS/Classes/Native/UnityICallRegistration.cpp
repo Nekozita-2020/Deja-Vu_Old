@@ -134,6 +134,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
+		//System.String UnityEngine.Application::get_dataPath()
+		void Register_UnityEngine_Application_get_dataPath();
+		Register_UnityEngine_Application_get_dataPath();
+
 		//System.Void UnityEngine.Application::OpenURL(System.String)
 		void Register_UnityEngine_Application_OpenURL();
 		Register_UnityEngine_Application_OpenURL();
@@ -301,10 +305,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.AudioSource::set_playOnAwake(System.Boolean)
 		void Register_UnityEngine_AudioSource_set_playOnAwake();
 		Register_UnityEngine_AudioSource_set_playOnAwake();
-
-		//System.Void UnityEngine.AudioSource::set_spatialBlend(System.Single)
-		void Register_UnityEngine_AudioSource_set_spatialBlend();
-		Register_UnityEngine_AudioSource_set_spatialBlend();
 
 		//System.Void UnityEngine.AudioSource::set_time(System.Single)
 		void Register_UnityEngine_AudioSource_set_time();
@@ -565,10 +565,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Canvas::set_referencePixelsPerUnit(System.Single)
 		void Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 		Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
-
-		//System.Void UnityEngine.Canvas::set_renderMode(UnityEngine.RenderMode)
-		void Register_UnityEngine_Canvas_set_renderMode();
-		Register_UnityEngine_Canvas_set_renderMode();
 
 		//System.Void UnityEngine.Canvas::set_scaleFactor(System.Single)
 		void Register_UnityEngine_Canvas_set_scaleFactor();

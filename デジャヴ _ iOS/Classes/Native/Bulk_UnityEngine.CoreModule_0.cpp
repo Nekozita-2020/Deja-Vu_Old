@@ -17851,6 +17851,16 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Application_get_platform_m6AFFFF3B077F4D5C
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.String UnityEngine.Application::get_dataPath()
+extern "C" IL2CPP_METHOD_ATTR String_t* Application_get_dataPath_m33D721D71C0687F0013C8953FDB0807B7B3F2A01 (const RuntimeMethod* method)
+{
+	typedef String_t* (*Application_get_dataPath_m33D721D71C0687F0013C8953FDB0807B7B3F2A01_ftn) ();
+	static Application_get_dataPath_m33D721D71C0687F0013C8953FDB0807B7B3F2A01_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_get_dataPath_m33D721D71C0687F0013C8953FDB0807B7B3F2A01_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_dataPath()");
+	String_t* retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // System.Void UnityEngine.Application::OpenURL(System.String)
 extern "C" IL2CPP_METHOD_ATTR void Application_OpenURL_m2888DA5BDF68B1BC23E983469157783F390D7BC8 (String_t* ___url0, const RuntimeMethod* method)
 {
