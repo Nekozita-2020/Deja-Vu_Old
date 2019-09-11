@@ -30,7 +30,7 @@ public class EndlessGameManager : StageGameManagerBase
     private List<GameObject> RandomGenerateObject = new List<GameObject>();
 
     // Resoucesディレクトリのパス
-    private const string m_ResoucesPath = "Assets/Nekozita/Deja-Vu/Resources/";
+    private string m_ResoucesPath;
 
     // 生成したオブジェクトが消えるまでの時間(秒)
     private float ObjectLifetime = 3.0f;
@@ -92,6 +92,9 @@ public class EndlessGameManager : StageGameManagerBase
     protected override void Init()
     {
         base.Init();
+
+        // Resourcesディレクトリのパスを設定
+        m_ResoucesPath = Application.dataPath + "/Nekozita/Deja-Vu/Resources/";
 
         // 動かす地面の管理変数の初期値を設定(この位置をカメラが超えたら移動)
         GrandMovingBorder = (int)Grand1.transform.localPosition.z * 2;
