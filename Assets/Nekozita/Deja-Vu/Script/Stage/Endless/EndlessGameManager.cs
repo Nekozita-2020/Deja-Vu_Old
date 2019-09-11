@@ -30,7 +30,7 @@ public class EndlessGameManager : StageGameManagerBase
     private List<GameObject> RandomGenerateObject = new List<GameObject>();
 
     // Resoucesディレクトリのパス
-    private string m_ResoucesPath;
+    // private string m_ResoucesPath;
 
     // 生成したオブジェクトが消えるまでの時間(秒)
     private float ObjectLifetime = 3.0f;
@@ -94,7 +94,7 @@ public class EndlessGameManager : StageGameManagerBase
         base.Init();
 
         // Resourcesディレクトリのパスを設定
-        m_ResoucesPath = Application.dataPath + "/Nekozita/Deja-Vu/Resources/";
+        // m_ResoucesPath = Application.dataPath + "/Nekozita/Deja-Vu/Resources/";
 
         // 動かす地面の管理変数の初期値を設定(この位置をカメラが超えたら移動)
         GrandMovingBorder = (int)Grand1.transform.localPosition.z * 2;
@@ -103,7 +103,7 @@ public class EndlessGameManager : StageGameManagerBase
         StoryProgress = PlayerPrefs.GetInt("ClearStage", 0);
 
         // Storyディレクトリ以下のGameObjectを全て取得
-        string StoryDirectoryPath = m_ResoucesPath + ResourcesDirectoryPath.PREFAB_STORY;
+        string StoryDirectoryPath = ResourcesDirectoryPath.PREFAB_STORY;
         SetObjectList(StoryDirectoryPath + "/Stage");
 
         // 現在のスコアを初期化
@@ -129,12 +129,17 @@ public class EndlessGameManager : StageGameManagerBase
             _DirectoryPath = _DirectoryPath + i;
 
             // クリアしたステージまでのディレクトリに入っている全オブジェクトパスを取得
-            string[] FilePathArray =
-                Directory.GetFiles(_DirectoryPath, "*.prefab", SearchOption.AllDirectories);
+            // string[] FilePathArray =
+            //     Directory.GetFiles(_DirectoryPath, "*.prefab", SearchOption.AllDirectories);
+
+            GameObject[] FilePathArray =
+                Resources.LoadAll<GameObject>(_DirectoryPath);
 
             // 取得したファイルの中からアセットだけリストに追加する
-            foreach (string FilePath in FilePathArray)
+            foreach (GameObject FilePath in FilePathArray)
             {
+                RandomGenerateObject.Add(FilePath);
+                /*
                 string TargetPath = FilePath.Replace(m_ResoucesPath, "");
                 TargetPath = TargetPath.Replace(".prefab", "");
                 GameObject obj = (GameObject)Resources.Load(TargetPath);
@@ -143,6 +148,7 @@ public class EndlessGameManager : StageGameManagerBase
                 {
                     RandomGenerateObject.Add(obj);
                 }
+                */
             }
         }
     }
