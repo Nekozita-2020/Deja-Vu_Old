@@ -642,7 +642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausing: 0
   ignoreGameObjects:
-  - {fileID: 1547382278}
+  - {fileID: 6618267973521157811}
+  - {fileID: 6618267974669254934}
 --- !u!114 &92058635
 MonoBehaviour:
   m_ObjectHideFlags: 0

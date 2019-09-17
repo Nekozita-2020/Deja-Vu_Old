@@ -29,20 +29,20 @@ public class EndlessGameManager : StageGameManagerBase
     // ランダムに生成するオブジェクトリスト
     private List<GameObject> RandomGenerateObject = new List<GameObject>();
 
-    // Resoucesディレクトリのパス
-    // private string m_ResoucesPath;
+    // 時間の管理変数
+    private float m_Timer = 0.0f;
+
+    // オブジェクトランダム生成のタイミング(秒)
+    private float GenerateTiming = 3.0f;
 
     // 生成したオブジェクトが消えるまでの時間(秒)
-    private float ObjectLifetime = 3.0f;
+    private float ObjectLifetime = 5.0f;
 
     // グレープの前にオブジェクトがランダム生成される距離
-    private int ObjectBorder = 30;
+    private int ObjectBorder = 50;
 
     // 現在のオブジェクト生成数
     private int NowGenerateCount = 1;
-
-    // オブジェクトがランダム生成されたz座標(ここに到達したら次を生成する方針)
-    private float GenerateVector_z;
 
     // 移動する地面の位置
     private int GrandMovingBorder;
@@ -60,10 +60,13 @@ public class EndlessGameManager : StageGameManagerBase
             this.MoveTerrain();
         }
 
-        // ランダム生成オブジェクト群があれば
-        if (0 < RandomGenerateObject.Count)
+        // ランダム生成オブジェクト群があり、かつグレープが表示されている場合
+        if (0 < RandomGenerateObject.Count && Grape.activeInHierarchy == true)
         {
-            if (GenerateVector_z < EndlessMainCamera.transform.position.z)
+            m_Timer += Time.deltaTime;
+
+            // オブジェクトランダム生成タイミング
+            if (GenerateTiming < m_Timer)
             {
                 for(int i = 0; i < NowGenerateCount; i++)
                 {
@@ -81,10 +84,16 @@ public class EndlessGameManager : StageGameManagerBase
                 }
 
                 // スコアが一定の値に到達する毎にオブジェクト生成数を増やす
-                if (NowScoreNum % 20 == 0)
+                if (NowScoreNum % 10 == 0)
                 {
+                    // 最大数を守りつつ、数を増やす
                     NowGenerateCount++;
+                    NowGenerateCount = Mathf.Clamp(NowGenerateCount, 1, 3);
                 }
+
+                // 値の更新(次回のランダム生成タイミングをランダム設定)
+                m_Timer = 0.0f;
+                GenerateTiming = Random.Range(1.0f, 2.0f);
             }
         }
     }
@@ -92,9 +101,6 @@ public class EndlessGameManager : StageGameManagerBase
     protected override void Init()
     {
         base.Init();
-
-        // Resourcesディレクトリのパスを設定
-        // m_ResoucesPath = Application.dataPath + "/Nekozita/Deja-Vu/Resources/";
 
         // 動かす地面の管理変数の初期値を設定(この位置をカメラが超えたら移動)
         GrandMovingBorder = (int)Grand1.transform.localPosition.z * 2;
@@ -113,9 +119,6 @@ public class EndlessGameManager : StageGameManagerBase
         // ハイスコアを表示
         HighScoreNum = PlayerPrefs.GetInt("HighScore", 0);
         HighScore.text = HighScoreNum.ToString();
-
-        // ランダム生成初期位置を設定
-        GenerateVector_z = Grape.transform.localPosition.z + ObjectBorder;
     }
 
     /// <summary>
@@ -129,9 +132,6 @@ public class EndlessGameManager : StageGameManagerBase
             _DirectoryPath = _DirectoryPath + i;
 
             // クリアしたステージまでのディレクトリに入っている全オブジェクトパスを取得
-            // string[] FilePathArray =
-            //     Directory.GetFiles(_DirectoryPath, "*.prefab", SearchOption.AllDirectories);
-
             GameObject[] FilePathArray =
                 Resources.LoadAll<GameObject>(_DirectoryPath);
 
@@ -139,16 +139,6 @@ public class EndlessGameManager : StageGameManagerBase
             foreach (GameObject FilePath in FilePathArray)
             {
                 RandomGenerateObject.Add(FilePath);
-                /*
-                string TargetPath = FilePath.Replace(m_ResoucesPath, "");
-                TargetPath = TargetPath.Replace(".prefab", "");
-                GameObject obj = (GameObject)Resources.Load(TargetPath);
-
-                if (obj != null)
-                {
-                    RandomGenerateObject.Add(obj);
-                }
-                */
             }
         }
     }
@@ -168,10 +158,7 @@ public class EndlessGameManager : StageGameManagerBase
             RandomGenerateObject[GenerateObjectNumber].transform.rotation), ObjectLifetime);
 
         // グレープの前にオブジェクトがランダム生成される距離を更新
-        ObjectBorder = Random.Range(30, 50);
-
-        // ランダム生成位置を更新
-        GenerateVector_z = Grape.transform.localPosition.z + ObjectBorder;
+        ObjectBorder = Random.Range(50, 100);
     }
 
     /// <summary>
