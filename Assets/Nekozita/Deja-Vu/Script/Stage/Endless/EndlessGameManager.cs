@@ -26,6 +26,9 @@ public class EndlessGameManager : StageGameManagerBase
     [SerializeField] private GameObject Grand1 = null;
     [SerializeField] private GameObject Grand2 = null;
 
+    // 生成するオブジェクトを格納しているディレクトリのパス
+    string StoryDirectoryPath = ResourcesDirectoryPath.PREFAB_STORY;
+
     // ランダムに生成するオブジェクトリスト
     private List<GameObject> RandomGenerateObject = new List<GameObject>();
 
@@ -109,7 +112,6 @@ public class EndlessGameManager : StageGameManagerBase
         StoryProgress = PlayerPrefs.GetInt("ClearStage", 0);
 
         // Storyディレクトリ以下のGameObjectを全て取得
-        string StoryDirectoryPath = ResourcesDirectoryPath.PREFAB_STORY;
         SetObjectList(StoryDirectoryPath + "/Stage");
 
         // 現在のスコアを初期化
