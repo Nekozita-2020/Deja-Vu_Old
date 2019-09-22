@@ -18,9 +18,12 @@ EditorBuildSettings:
     path: Assets/Nekozita/Deja-Vu/Scene/StoryMenu.unity
     guid: cfeb89939fed046ff9df5b8f249ba2e4
   - enabled: 1
+    path: Assets/Nekozita/Deja-Vu/Scene/Endless.unity
+    guid: 2651e69295a2140ca8c24e4f960844d2
+  - enabled: 1
     path: Assets/Nekozita/Deja-Vu/Scene/Stage0.unity
     guid: 5d8c5e19882614177b068a79c9f5eb9d
   - enabled: 1
-    path: Assets/Nekozita/Deja-Vu/Scene/Endless.unity
-    guid: 2651e69295a2140ca8c24e4f960844d2
+    path: Assets/Nekozita/Deja-Vu/Scene/Stage1.unity
+    guid: f449a415534b041268782a489527c67f
   m_configObjects: {}

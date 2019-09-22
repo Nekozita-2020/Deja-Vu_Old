@@ -21,7 +21,7 @@ public class GrapeMemoryWindow : WindowBase
     void Start()
     {
         // ストーリーの進捗度を取得(クリアしたステージ数)
-        int StoryProgress = PlayerPrefs.GetInt("ClearStage", 20);
+        int StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
         // 記憶が欠けているテキストを表示
         View.StillLostMemoryText.gameObject.SetActive(true);

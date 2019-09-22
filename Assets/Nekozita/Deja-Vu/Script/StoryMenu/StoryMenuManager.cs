@@ -27,7 +27,7 @@ public class StoryMenuManager : GameManagerBase
         ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
         // UIをストーリーの進捗度に合わせる(エンドレスとチュートリアルで最少は2)
-        for(int i = 0; i <= PlayerPrefs.GetInt("ClearStage", 0) + 1; i++)
+        for(int i = 0; i <= PlayerPrefs.GetInt("ClearStage", -1) + 2; i++)
         {
             // ストーリーノードを表示
             StageNodeList.transform.GetChild(i).gameObject.SetActive(true);
