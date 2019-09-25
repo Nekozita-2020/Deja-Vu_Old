@@ -16,9 +16,6 @@ public class EndlessGameManager : StageGameManagerBase
     [SerializeField] private Text NowScore = null;
     [SerializeField] private int NowScoreNum;
 
-    // グレープの移動範囲を参照する
-    [SerializeField] private DragMoving m_DragMoving = null;
-
     // ストーリーの進捗度(クリアしたステージ数)
     private int StoryProgress;
 
@@ -155,8 +152,8 @@ public class EndlessGameManager : StageGameManagerBase
         int GenerateObjectNumber = Random.Range(0, RandomGenerateObject.Count);
 
         Destroy(Instantiate(RandomGenerateObject[GenerateObjectNumber],
-            new Vector3(Random.Range(m_DragMoving.LimitLeft, m_DragMoving.LimitRight),
-            Random.Range(m_DragMoving.LimitBottom, m_DragMoving.LimitTop),
+            new Vector3(Random.Range(DataStore.MovementRange.LimitLeft, DataStore.MovementRange.LimitRight),
+            Random.Range(DataStore.MovementRange.LimitBottom, DataStore.MovementRange.LimitTop),
             Grape.transform.localPosition.z + ObjectBorder),
             RandomGenerateObject[GenerateObjectNumber].transform.rotation), ObjectLifetime);
 

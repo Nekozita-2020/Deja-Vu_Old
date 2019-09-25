@@ -12,11 +12,7 @@ public class DragMoving : MonoBehaviour
     [Header("操作感度")]
     [SerializeField] public float MovementSensitivity = 0.5f;
 
-    [Header("移動範囲")]
-    [SerializeField] public float LimitTop = 10.0f;
-    [SerializeField] public float LimitBottom = -10.0f;
-    [SerializeField] public float LimitRight = 10.0f;
-    [SerializeField] public float LimitLeft = -10.0f;
+
 
     void Start()
     {
@@ -30,9 +26,9 @@ public class DragMoving : MonoBehaviour
 
         transform.position = new Vector3
             (Mathf.Clamp(transform.position.x +
-            (x * MovementSensitivity), LimitLeft, LimitRight),
+            (x * MovementSensitivity), DataStore.MovementRange.LimitLeft, DataStore.MovementRange.LimitRight),
             Mathf.Clamp(transform.position.y +
-            (y * MovementSensitivity), LimitBottom, LimitTop),
+            (y * MovementSensitivity), DataStore.MovementRange.LimitBottom, DataStore.MovementRange.LimitTop),
             transform.position.z);
     }
 
