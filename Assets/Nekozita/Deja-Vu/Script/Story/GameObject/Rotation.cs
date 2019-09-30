@@ -12,7 +12,7 @@ public class Rotation : MonoBehaviour
     [SerializeField] private bool IsClockwise = true;
 
     [Header("1秒間に回転させる角度")]
-    [SerializeField] private int Angle;
+    [SerializeField] private int Angle = 90;
 
     private void FixedUpdate()
     {
