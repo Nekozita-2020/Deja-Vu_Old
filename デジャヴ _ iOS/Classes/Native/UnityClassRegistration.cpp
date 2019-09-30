@@ -402,16 +402,16 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<TextRenderingPrivate::GUIText>("TextRendering");
 	//50. TextRendering::Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//51. ParticleSystem
-	RegisterUnityClass<ParticleSystem>("ParticleSystem");
-	//52. ParticleSystemRenderer
-	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
-	//53. UI::Canvas
+	//51. UI::Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//54. UI::CanvasGroup
+	//52. UI::CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//55. UI::CanvasRenderer
+	//53. UI::CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
+	//54. ParticleSystem
+	RegisterUnityClass<ParticleSystem>("ParticleSystem");
+	//55. ParticleSystemRenderer
+	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
 	//56. WheelCollider
 	RegisterUnityClass<WheelCollider>("Vehicles");
 	//57. Animator
