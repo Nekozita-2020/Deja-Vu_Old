@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1489843906033113703}
   - component: {fileID: 1489843906033113697}
-  - component: {fileID: 1489843906033113702}
+  - component: {fileID: 2892768960518511893}
   m_Layer: 5
   m_Name: Terrain
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialType: 0
@@ -68,7 +68,7 @@ Terrain:
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_AllowAutoConnect: 1
---- !u!154 &1489843906033113702
+--- !u!154 &2892768960518511893
 TerrainCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 0
   m_TerrainData: {fileID: 15600000, guid: 9331b57af23b74319b0f310596a1e24a, type: 2}
-  m_EnableTreeColliders: 0
+  m_EnableTreeColliders: 1
 --- !u!1 &1489843906116420537
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1489843907003330421}
   m_Layer: 5
-  m_Name: 1.Intoroduction
+  m_Name: TerrainPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
