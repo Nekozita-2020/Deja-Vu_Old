@@ -24,8 +24,8 @@ public class DoubleTapSencer : MonoBehaviour
         {
             DoubleTapTime += Time.deltaTime;
 
-            // 1度目のタップから判定時間「0.5秒」以内
-            if (DoubleTapTime < 0.5f && IsDrag == false)
+            // 1度目のタップから判定時間「0.3秒」以内
+            if (DoubleTapTime < 0.3f && IsDrag == false)
             {
                 if (Input.GetMouseButtonUp(0))
                 {

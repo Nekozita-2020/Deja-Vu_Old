@@ -741,12 +741,12 @@ GameObject:
   - component: {fileID: 100610881}
   - component: {fileID: 100610880}
   m_Layer: 5
-  m_Name: 1.Left
+  m_Name: Left
   m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &100610879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -908,7 +908,7 @@ PrefabInstance:
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
@@ -1229,12 +1229,12 @@ GameObject:
   - component: {fileID: 544950543}
   - component: {fileID: 544950542}
   m_Layer: 5
-  m_Name: 1.Grand
+  m_Name: Grand
   m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &544950541
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1266,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 848918a99d11f25f110026ca44295342, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
@@ -1877,7 +1877,7 @@ PrefabInstance:
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
@@ -2457,12 +2457,12 @@ GameObject:
   - component: {fileID: 1136915034}
   - component: {fileID: 1136915033}
   m_Layer: 5
-  m_Name: 1.Ceiling
+  m_Name: Ceiling
   m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1136915032
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2531,12 +2531,12 @@ GameObject:
   - component: {fileID: 1202055166}
   - component: {fileID: 1202055165}
   m_Layer: 5
-  m_Name: 1.Right
+  m_Name: Right
   m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1202055164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3175,7 +3175,7 @@ PrefabInstance:
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
@@ -3799,6 +3799,11 @@ PrefabInstance:
     - target: {fileID: 1489843907003330421, guid: ac959f00459a345a5a687149629c8905,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489843906033113700, guid: ac959f00459a345a5a687149629c8905,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

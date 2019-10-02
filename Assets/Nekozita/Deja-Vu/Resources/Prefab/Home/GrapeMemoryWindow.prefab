@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 284295144592140722}
   - component: {fileID: 284295144592140723}
   m_Layer: 5
-  m_Name: Memory_18
+  m_Name: Memory_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,8 +981,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5723746896885938444}
   m_HandleRect: {fileID: 5723746896885938443}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.81632656
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1417,13 +1417,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StillLostMemoryText: {fileID: 6478968878687992727}
   MemoryList:
-  - {fileID: 8221739507316041552}
+  - {fileID: 284295144592140723}
   - {fileID: 2705781791013808245}
   - {fileID: 3119095051061480876}
   - {fileID: 9059447854793259005}
   - {fileID: 849718806409821027}
   - {fileID: 3946849992474355656}
-  - {fileID: 284295144592140723}
+  - {fileID: 8221739507316041552}
   - {fileID: 6603122725835636574}
   Memory_20:
   - {fileID: 7566884801961899873}
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 8221739507316041553}
   - component: {fileID: 8221739507316041552}
   m_Layer: 5
-  m_Name: Memory_3
+  m_Name: Memory_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
