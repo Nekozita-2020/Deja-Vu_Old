@@ -22,7 +22,7 @@ public class StageClearUIManager : GameManagerBase
         // ストーリーの進捗度を取得(クリアしたステージ数)
         StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
-        if(ClearStegeNum != 0 && StoryProgress < ClearStegeNum)
+        if(StoryProgress < ClearStegeNum)
         {
             // 【重要】このステージを初めてクリアした時のみ、ストーリー進捗度を進める
             AddStoryProgress();
