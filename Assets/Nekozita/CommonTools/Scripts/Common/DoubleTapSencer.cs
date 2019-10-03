@@ -35,6 +35,7 @@ public class DoubleTapSencer : MonoBehaviour
                     // 初期化
                     IsSingleTap = false;
                     DoubleTapTime = 0.0f;
+                    IsDrag = false;
                 }
             }
             else
@@ -42,6 +43,7 @@ public class DoubleTapSencer : MonoBehaviour
                 // 初期化
                 IsSingleTap = false;
                 DoubleTapTime = 0.0f;
+                IsDrag = false;
             }
         }
         else

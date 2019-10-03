@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7715216475632832168}
   m_Layer: 0
   m_Name: Trophy
-  m_TagString: Untagged
+  m_TagString: Positive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

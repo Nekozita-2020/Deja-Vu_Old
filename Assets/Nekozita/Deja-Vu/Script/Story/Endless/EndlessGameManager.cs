@@ -107,7 +107,7 @@ public class EndlessGameManager : StageGameManagerBase
 
         // ストーリーの進捗度を取得(クリアしたステージ数)
         // エンドレスモードだけはデフォルト値は0(-1だと生成するオブジェクトが無くなってしまうので)
-        StoryProgress = PlayerPrefs.GetInt("ClearStage", 0);
+        StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
         // Storyディレクトリ以下のGameObjectを全て取得
         SetObjectList(StoryDirectoryPath + "/Stage");
