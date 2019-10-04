@@ -315,6 +315,8 @@ struct DataStore_t6CE32B6330CB3BFB831D9E189A12D48422708798;
 struct MovementRange_tA0BB896538A58371B48D29C1651FA33EBD295041;
 // DoubleTapSencer
 struct DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608;
+// DoubleTapSencerOld
+struct DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B;
 // DragMoving
 struct DragMoving_t9B77A51D49236653245EDD0FF4460A19719B2740;
 // EffectColorChange
@@ -14674,6 +14676,66 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DOUBLETAPSENCER_T8EDCB9A16D7AF1C4D54A4397735D1897AC160608_H
+#ifndef DOUBLETAPSENCEROLD_T187D093EBB1E1ABE97BCFC8448F1779F2906824B_H
+#define DOUBLETAPSENCEROLD_T187D093EBB1E1ABE97BCFC8448F1779F2906824B_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// DoubleTapSencerOld
+struct  DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
+{
+public:
+	// System.Action DoubleTapSencerOld::OnDoubleTap
+	Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * ___OnDoubleTap_4;
+	// System.Single DoubleTapSencerOld::DoubleTapTime
+	float ___DoubleTapTime_5;
+	// System.Boolean DoubleTapSencerOld::IsSingleTap
+	bool ___IsSingleTap_6;
+	// System.Boolean DoubleTapSencerOld::IsDrag
+	bool ___IsDrag_7;
+
+public:
+	inline static int32_t get_offset_of_OnDoubleTap_4() { return static_cast<int32_t>(offsetof(DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B, ___OnDoubleTap_4)); }
+	inline Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * get_OnDoubleTap_4() const { return ___OnDoubleTap_4; }
+	inline Action_t591D2A86165F896B4B800BB5C25CE18672A55579 ** get_address_of_OnDoubleTap_4() { return &___OnDoubleTap_4; }
+	inline void set_OnDoubleTap_4(Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * value)
+	{
+		___OnDoubleTap_4 = value;
+		Il2CppCodeGenWriteBarrier((&___OnDoubleTap_4), value);
+	}
+
+	inline static int32_t get_offset_of_DoubleTapTime_5() { return static_cast<int32_t>(offsetof(DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B, ___DoubleTapTime_5)); }
+	inline float get_DoubleTapTime_5() const { return ___DoubleTapTime_5; }
+	inline float* get_address_of_DoubleTapTime_5() { return &___DoubleTapTime_5; }
+	inline void set_DoubleTapTime_5(float value)
+	{
+		___DoubleTapTime_5 = value;
+	}
+
+	inline static int32_t get_offset_of_IsSingleTap_6() { return static_cast<int32_t>(offsetof(DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B, ___IsSingleTap_6)); }
+	inline bool get_IsSingleTap_6() const { return ___IsSingleTap_6; }
+	inline bool* get_address_of_IsSingleTap_6() { return &___IsSingleTap_6; }
+	inline void set_IsSingleTap_6(bool value)
+	{
+		___IsSingleTap_6 = value;
+	}
+
+	inline static int32_t get_offset_of_IsDrag_7() { return static_cast<int32_t>(offsetof(DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B, ___IsDrag_7)); }
+	inline bool get_IsDrag_7() const { return ___IsDrag_7; }
+	inline bool* get_address_of_IsDrag_7() { return &___IsDrag_7; }
+	inline void set_IsDrag_7(bool value)
+	{
+		___IsDrag_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // DOUBLETAPSENCEROLD_T187D093EBB1E1ABE97BCFC8448F1779F2906824B_H
 #ifndef DRAGMOVING_T9B77A51D49236653245EDD0FF4460A19719B2740_H
 #define DRAGMOVING_T9B77A51D49236653245EDD0FF4460A19719B2740_H
 #ifdef __clang__
@@ -22219,10 +22281,10 @@ extern "C" IL2CPP_METHOD_ATTR TweenerCore_3_tB8E672121CDE6F3B5895C573FE30EF8B421
 extern "C" IL2CPP_METHOD_ATTR TweenerCore_3_tB8E672121CDE6F3B5895C573FE30EF8B42170AB1 * ShortcutExtensions_DOLocalPath_m013A73B1B719B979EE123BFCB85EB704338386BB (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * p0, Path_tCE251EA0F45EA8B91CAD11018E275B451FAC6FA2 * p1, float p2, int32_t p3, const RuntimeMethod* method);
 // System.Single UnityEngine.Time::get_deltaTime()
 extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E (const RuntimeMethod* method);
-// System.Boolean UnityEngine.Input::GetMouseButtonUp(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR bool Input_GetMouseButtonUp_m726EDCD35F8DECF774810AB1E9ED590B85DB10F1 (int32_t p0, const RuntimeMethod* method);
 // System.Void System.Action::Invoke()
 extern "C" IL2CPP_METHOD_ATTR void Action_Invoke_mC8D676E5DDF967EC5D23DD0E96FB52AA499817FD (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Input::GetMouseButtonUp(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR bool Input_GetMouseButtonUp_m726EDCD35F8DECF774810AB1E9ED590B85DB10F1 (int32_t p0, const RuntimeMethod* method);
 // System.Single UnityEngine.PlayerPrefs::GetFloat(System.String,System.Single)
 extern "C" IL2CPP_METHOD_ATTR float PlayerPrefs_GetFloat_m12CB947B09D44C8415E9EE085B7211D376B86AA0 (String_t* p0, float p1, const RuntimeMethod* method);
 // System.Single UnityEngine.Input::GetAxis(System.String)
@@ -31059,6 +31121,132 @@ extern "C" IL2CPP_METHOD_ATTR void MovementRange__cctor_m28B1881278A2C8D1C4D73B7
 // System.Void DoubleTapSencer::FixedUpdate()
 extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer_FixedUpdate_m1C23B4E863BAE98E67CD9A11ECD2F6E52FAF0090 (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
 {
+	{
+		bool L_0 = __this->get_IsSingleTap_6();
+		if (!L_0)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		float L_1 = __this->get_DoubleTapTime_5();
+		float L_2 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
+		__this->set_DoubleTapTime_5(((float)il2cpp_codegen_add((float)L_1, (float)L_2)));
+	}
+
+IL_001a:
+	{
+		return;
+	}
+}
+// System.Void DoubleTapSencer::OnTap()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer_OnTap_m1E6032DA85F6A4270F0EADD48070B949884B4415 (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
+{
+	Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * G_B5_0 = NULL;
+	Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * G_B4_0 = NULL;
+	{
+		bool L_0 = __this->get_IsSingleTap_6();
+		if (!L_0)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		float L_1 = __this->get_DoubleTapTime_5();
+		if ((!(((float)L_1) < ((float)(0.3f)))))
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		bool L_2 = __this->get_IsDrag_7();
+		if (L_2)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * L_3 = __this->get_OnDoubleTap_4();
+		Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * L_4 = L_3;
+		G_B4_0 = L_4;
+		if (L_4)
+		{
+			G_B5_0 = L_4;
+			goto IL_0029;
+		}
+	}
+	{
+		goto IL_002e;
+	}
+
+IL_0029:
+	{
+		NullCheck(G_B5_0);
+		Action_Invoke_mC8D676E5DDF967EC5D23DD0E96FB52AA499817FD(G_B5_0, /*hidden argument*/NULL);
+	}
+
+IL_002e:
+	{
+		__this->set_IsSingleTap_6((bool)0);
+		__this->set_DoubleTapTime_5((0.0f));
+		__this->set_IsDrag_7((bool)0);
+		return;
+	}
+
+IL_0048:
+	{
+		__this->set_IsSingleTap_6((bool)0);
+		__this->set_DoubleTapTime_5((0.0f));
+		__this->set_IsDrag_7((bool)0);
+		return;
+	}
+
+IL_0062:
+	{
+		bool L_5 = __this->get_IsDrag_7();
+		if (L_5)
+		{
+			goto IL_0072;
+		}
+	}
+	{
+		__this->set_IsSingleTap_6((bool)1);
+		return;
+	}
+
+IL_0072:
+	{
+		__this->set_IsDrag_7((bool)0);
+		return;
+	}
+}
+// System.Void DoubleTapSencer::OnDrag()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer_OnDrag_m2D17D77274A879638872DDF24F6875F4E5FCF71C (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_IsDrag_7((bool)1);
+		return;
+	}
+}
+// System.Void DoubleTapSencer::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer__ctor_m35FAFBDD470BD2E5B36C32EDCEEB9B7699832CFF (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void DoubleTapSencerOld::FixedUpdate()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencerOld_FixedUpdate_m4338121FEAF8EA1B1E487E1CB28EAF679BBB104C (DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B * __this, const RuntimeMethod* method)
+{
 	Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * G_B6_0 = NULL;
 	Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * G_B5_0 = NULL;
 	{
@@ -31158,16 +31346,16 @@ IL_009b:
 		return;
 	}
 }
-// System.Void DoubleTapSencer::OnDrag()
-extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer_OnDrag_m2D17D77274A879638872DDF24F6875F4E5FCF71C (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
+// System.Void DoubleTapSencerOld::OnDrag()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencerOld_OnDrag_m5638A07D9ED129D0B0227B1F9F6467627439A34D (DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B * __this, const RuntimeMethod* method)
 {
 	{
 		__this->set_IsDrag_7((bool)1);
 		return;
 	}
 }
-// System.Void DoubleTapSencer::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencer__ctor_m35FAFBDD470BD2E5B36C32EDCEEB9B7699832CFF (DoubleTapSencer_t8EDCB9A16D7AF1C4D54A4397735D1897AC160608 * __this, const RuntimeMethod* method)
+// System.Void DoubleTapSencerOld::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void DoubleTapSencerOld__ctor_m740D386A1EE43900ABE2DB8B97C9DB6203F1A886 (DoubleTapSencerOld_t187D093EBB1E1ABE97BCFC8448F1779F2906824B * __this, const RuntimeMethod* method)
 {
 	{
 		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
