@@ -106,7 +106,6 @@ public class EndlessGameManager : StageGameManagerBase
         GrandMovingBorder = (int)Grand1.transform.localPosition.z * 2;
 
         // ストーリーの進捗度を取得(クリアしたステージ数)
-        // エンドレスモードだけはデフォルト値は0(-1だと生成するオブジェクトが無くなってしまうので)
         StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
         // Storyディレクトリ以下のGameObjectを全て取得
@@ -127,7 +126,9 @@ public class EndlessGameManager : StageGameManagerBase
     /// <param name="_DirectoryPath"></param>
     private void SetObjectList(string _DirectoryPath)
     {
-        for(int i = 0; i <= StoryProgress; i++)
+        // チュートリアル未クリアの-1のままだと生成するオブジェクトが無くなってしまうので+1する
+        StoryProgress++;
+        for (int i = 0; i <= StoryProgress; i++)
         {
             _DirectoryPath = _DirectoryPath + i;
 
