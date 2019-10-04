@@ -18,25 +18,33 @@ public class DoubleTapSencer : MonoBehaviour
     private bool IsDrag;
 
 
+
     private void FixedUpdate()
     {
         if (IsSingleTap)
         {
             DoubleTapTime += Time.deltaTime;
+        }
+    }
 
-            // 1度目のタップから判定時間「0.3秒」以内
+    /// <summary>
+    /// タップ処理
+    /// </summary>
+    public void OnTap()
+    {
+        // タップのフラグ
+        if (IsSingleTap)
+        {
+            // 1度目のタップから判定時間「0.3秒」以内かつドラッグしていない場合
             if (DoubleTapTime < 0.3f && IsDrag == false)
             {
-                if (Input.GetMouseButtonUp(0))
-                {
-                    // タブルタップを検知
-                    OnDoubleTap?.Invoke();
+                // タブルタップを検知
+                OnDoubleTap?.Invoke();
 
-                    // 初期化
-                    IsSingleTap = false;
-                    DoubleTapTime = 0.0f;
-                    IsDrag = false;
-                }
+                // 初期化
+                IsSingleTap = false;
+                DoubleTapTime = 0.0f;
+                IsDrag = false;
             }
             else
             {
@@ -48,15 +56,11 @@ public class DoubleTapSencer : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButtonUp(0))
+            if (IsDrag == false)
             {
-                // ドラッグしていなければ
-                if (IsDrag == false)
-                {
-                    IsSingleTap = true;
-                }
-                else IsDrag = false;
+                IsSingleTap = true;
             }
+            else IsDrag = false;
         }
     }
 
