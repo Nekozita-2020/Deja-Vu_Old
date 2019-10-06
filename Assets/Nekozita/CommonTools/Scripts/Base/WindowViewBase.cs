@@ -14,7 +14,7 @@ public class WindowViewBase : MonoBehaviour
 
 
 
-    public void Init()
+    public virtual void Init()
     {
 
     }
