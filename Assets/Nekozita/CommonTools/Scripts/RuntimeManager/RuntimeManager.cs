@@ -16,9 +16,6 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
 
     private IEnumerator Start()
     {
-        // ロゴウインドウのフェードが完了するまで待つ
-        yield return new WaitUntil(() => m_LogoWindowView.FadeCompleteFlag);
-
         // 追加予定のCommonToolsが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
         if (!SceneManager.GetSceneByName("CommonTools").IsValid())
         {
@@ -26,6 +23,9 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
             SceneManager.sceneLoaded += OnMakeCommonTools;
             SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
         }
+
+        // ロゴウインドウのフェードが完了するまで待つ
+        yield return new WaitUntil(() => m_LogoWindowView.FadeCompleteFlag);
 
         // CommonToolsが生成されるまで待つ
         yield return new WaitUntil(() => MakeToolsFlag);
