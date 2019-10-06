@@ -13,7 +13,10 @@ public class LogoWindowView : WindowViewBase
     [SerializeField] private Color BackgroundColor;
 
     // フェードイン/フェードアウトのフラグ(フェードインでロゴを表示させる)
-    [NonSerialized] public bool FadeInFlug, FadeOutFlug;
+    [NonSerialized] public bool FadeInFlag, FadeOutFlag;
+
+    // フェードイン/フェードアウトの完了フラグ
+    [NonSerialized] public bool FadeCompleteFlag;
 
     // 元々のアルファ値の保存用(フェードアウト完了判定に用いる)
     [NonSerialized] public float DefaultAlphaNum;
@@ -29,20 +32,20 @@ public class LogoWindowView : WindowViewBase
 
 
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(FadeInFlug == true || FadeOutFlug == true)
+        if(FadeInFlag == true || FadeOutFlag == true)
         {
             // 現在のアルファ値を保存
             NowAlphaNum = Blocker.color.a;
 
             // フェードイン
-            if (FadeInFlug)
+            if (FadeInFlag)
             {
                 NowAlphaNum -= Time.deltaTime / FadeTime;
             }
             // フェードアウト
-            else if (FadeOutFlug)
+            else if (FadeOutFlag)
             {
                 NowAlphaNum += Time.deltaTime / FadeTime;
             }
@@ -51,6 +54,7 @@ public class LogoWindowView : WindowViewBase
             UpdateFadeImageColor(Blocker, Blocker.color.r, Blocker.color.g, Blocker.color.b, NowAlphaNum);
 
             // フラグの切り替えチェック
+            FadeFlagChack();
         }
     }
 
@@ -83,32 +87,37 @@ public class LogoWindowView : WindowViewBase
     /// <summary>
     /// フェードフラグの切り替えチェック
     /// </summary>
-    private void FadeFlugChack()
+    private void FadeFlagChack()
     {
         // フェードイン完了時
-        if(Blocker.color.a <= 0)
+        if(Blocker.color.a <= 0.0f)
         {
-            FadeInFlug = false;
+            FadeInFlag = false;
 
             // ロゴ表示時間分待機させる
-
+            StartCoroutine("WaitForSecond");
         }
-        else if (FadeInFlug == false && DefaultAlphaNum <= Blocker.color.a)
+        else if (FadeInFlag == false && DefaultAlphaNum <= Blocker.color.a)
         {
             // ここでフェードイン/フェードアウトどちらも完了する想定
+            // コールバックがあれば実行
+            CompleteCallback?.Invoke();
+
+            // フェード完了フラグ
+            FadeCompleteFlag = true;
 
             // このウインドウを閉じる
-            CompleteCallback?.Invoke();
-            Destroy(this);
+            // Destroy(this);
         }
     }
 
     /// <summary>
-    /// 指定された秒数待機させる
+    /// 指定した秒数待機させる
     /// </summary>
     /// <returns></returns>
     private IEnumerator WaitForSecond()
     {
-        yield return 0;
+        yield return new WaitForSeconds(1.0f);
+        FadeOutFlag = true;
     }
 }

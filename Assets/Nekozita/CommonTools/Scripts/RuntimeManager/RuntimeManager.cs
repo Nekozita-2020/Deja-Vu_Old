@@ -8,61 +8,40 @@ using System.Collections;
 /// </summary>
 public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
 {
-
-    [SerializeField] private GameObject TitleManager = null;
+    [SerializeField] private LogoWindowView m_LogoWindowView = null;
+    [SerializeField] private TitleManager m_TitleManager = null;
     private bool MakeToolsFlag = false;
-    private GameObject LogoWindow = null;
+
 
 
     private IEnumerator Start()
     {
+        // ロゴウインドウのフェードが完了するまで待つ
+        yield return new WaitUntil(() => m_LogoWindowView.FadeCompleteFlag);
+
         // 追加予定のCommonToolsが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
         if (!SceneManager.GetSceneByName("CommonTools").IsValid())
         {
             // イベントにイベントハンドラーを追加
-            SceneManager.sceneLoaded += OnMakeTools;
+            SceneManager.sceneLoaded += OnMakeCommonTools;
             SceneManager.LoadScene("CommonTools", LoadSceneMode.Additive);
         }
 
         // CommonToolsが生成されるまで待つ
         yield return new WaitUntil(() => MakeToolsFlag);
 
-        // ロゴを表示
-        LogoWindow = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_LOGO_WINDOW);
-
-        // ロゴをフェードイン
-        SceneController.Instance.FadeIn(() =>
-        {
-            StartCoroutine("OnLogoWait");
-        });
+        // タイトルスタート
+        m_TitleManager.gameObject.SetActive(true);
     }
 
     /// <summary>
-    /// CommonToolsが生成されたフラグを立てる
+    /// CommonToolsが生成された時の処理
     /// </summary>
     /// <param name="m_LoadScene"></param>
     /// <param name="m_mode"></param>
-    private void OnMakeTools(Scene m_LoadScene, LoadSceneMode m_mode)
+    private void OnMakeCommonTools(Scene m_LoadScene, LoadSceneMode m_mode)
     {
         MakeToolsFlag = true;
-    }
-
-    private IEnumerator OnLogoWait()
-    {
-        // ロゴを1秒間表示させる想定
-        yield return new WaitForSeconds(1.0f);
-
-        // ロゴをフェードアウト
-        SceneController.Instance.FadeOut(Callback: () =>
-        {
-            // ロゴを削除
-            Destroy(LogoWindow);
-
-            // ゲームのタイトル画面をフェードインしてゲーム開始
-            SceneController.Instance.FadeIn();
-            TitleManager.SetActive(true);
-        });
-
     }
 
 }

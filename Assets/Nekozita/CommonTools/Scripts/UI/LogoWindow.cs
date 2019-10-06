@@ -12,6 +12,8 @@ public class LogoWindow : WindowBase
         base.SettingView();
 
         View = m_View as LogoWindowView;
+
+        Init();
     }
 
     private void Init()
@@ -23,6 +25,6 @@ public class LogoWindow : WindowBase
         View.SetFadeImageColor();
 
         // フェードインをスタートさせる
-        View.FadeInFlug = true;
+        View.FadeInFlag = true;
     }
 }
