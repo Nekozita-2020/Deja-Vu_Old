@@ -5152,7 +5152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404e534987e994b8caac1e22bca5dc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayBGM: {fileID: 0}
+  PlayBGM: {fileID: 8300000, guid: f4270208f0be141beab524b738772df9, type: 3}
   MainCamera: {fileID: 1406901884}
   GameOverUI: {fileID: 1233633380}
   StageClearUI: {fileID: 174936945}
