@@ -7267,8 +7267,13 @@ extern const int32_t g_FieldOffsetTable2692[32] =
 	0,
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2693 = { sizeof (ResourcesPath_t70F5A27ABDD57174FB0DFFB3673C3218B297EDBA), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2693[25] = 
+extern const int32_t g_FieldOffsetTable2693[30] = 
 {
+	0,
+	0,
+	0,
+	0,
+	0,
 	0,
 	0,
 	0,

@@ -61,7 +61,7 @@
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
-    <string>d4b58b2c-d6c2-40c3-afa2-812fdc171ced</string>
+    <string></string>
     <key>UnityCrashSubmissionURL</key>
     <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>
