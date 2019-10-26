@@ -1165,7 +1165,7 @@ MonoBehaviour:
   PlayBGM: {fileID: 0}
   ClearMessageUI: {fileID: 1484370541}
   GrapeMemoryWin_BackGround: {fileID: 63981333}
-  ClearStegeNum: 1
+  ClearStegeNum: 9
 --- !u!1001 &218368194
 PrefabInstance:
   m_ObjectHideFlags: 0
