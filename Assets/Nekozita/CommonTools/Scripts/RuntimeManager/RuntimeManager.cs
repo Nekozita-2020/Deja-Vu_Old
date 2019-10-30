@@ -16,6 +16,9 @@ public class RuntimeManager : SingletonMonoBehaviour<RuntimeManager>
 
     private IEnumerator Start()
     {
+        // フレームレートを60FPSに設定
+        Application.targetFrameRate = 60;
+
         // 追加予定のCommonToolsが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
         if (!SceneManager.GetSceneByName("CommonTools").IsValid())
         {
