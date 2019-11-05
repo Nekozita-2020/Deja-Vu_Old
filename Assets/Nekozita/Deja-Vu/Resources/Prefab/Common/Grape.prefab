@@ -1017,6 +1017,7 @@ GameObject:
   - component: {fileID: 2192940022899969686}
   - component: {fileID: 7785900273259331808}
   - component: {fileID: 4722308723865304662}
+  - component: {fileID: 4706656844743841444}
   m_Layer: 5
   m_Name: Grape
   m_TagString: Positive
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardSpeed: 20
+  IsForward: 1
 --- !u!114 &5810528798118530472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,10 +1124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSensitivity: 0.5
-  LimitTop: 11
-  LimitBottom: -4
-  LimitRight: 7
-  LimitLeft: -7
 --- !u!114 &2192940022899969686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1218,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e5d347ee1774e0fa7bb06aa690ca0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4706656844743841444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887303777349478238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa03eb8053fd644adab924a3304d3b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Axis_X: 0
+  Axis_Y: 1
+  Axis_Z: 0
 --- !u!1 &4973117589718162306
 GameObject:
   m_ObjectHideFlags: 0
