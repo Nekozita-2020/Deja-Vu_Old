@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class EndlessGameManager : StageGameManagerBase
 {
 
-    // エンドレスモードのカメラ
-    [SerializeField] private GameObject EndlessMainCamera = null;
-
     // スコア表示
     [SerializeField] private Text HighScore = null;
     [SerializeField] private int HighScoreNum;
@@ -55,7 +52,7 @@ public class EndlessGameManager : StageGameManagerBase
     private void FixedUpdate()
     {
         // カメラがBorderまできたら前にいるTerrainを移動
-        if (GrandMovingBorder < EndlessMainCamera.transform.position.z)
+        if (GrandMovingBorder < MainCamera.transform.position.z)
         {
             this.MoveTerrain();
         }

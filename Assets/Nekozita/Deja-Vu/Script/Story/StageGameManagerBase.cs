@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StageGameManagerBase : GameManagerBase
 {
 
-    [SerializeField] private GameObject MainCamera = null;
+    [SerializeField] protected GameObject MainCamera = null;
     [SerializeField] private GameObject GameOverUI = null;
     [SerializeField] private GameObject StageClearUI = null;
     [SerializeField] private GameObject PauseButton = null;
