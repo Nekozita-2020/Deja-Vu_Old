@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class forward : MonoBehaviour
+public class Forward : MonoBehaviour
 {
 
     [Tooltip("進行速度")]
-    public float ForwardSpeed = 20F;
+    public float ForwardSpeed = 20.0f;
 
     [Tooltip("進行方向　true: 奥へ false: 手前へ")]
     [SerializeField] private bool IsForward = true;

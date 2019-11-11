@@ -32,7 +32,7 @@ public class StageGameManagerBase : GameManagerBase
     /// <summary>
     /// コールバックをセット
     /// </summary>
-    private void SetCallBack()
+    protected virtual void SetCallBack()
     {
         TouchSenser.GetComponent<DoubleTapSencer>().OnDoubleTap = OnDoubleTapAction;
         Grape.GetComponent<CollisionSensor>().CallBack = CollisionAction;

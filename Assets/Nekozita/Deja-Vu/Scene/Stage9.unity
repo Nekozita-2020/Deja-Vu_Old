@@ -3612,6 +3612,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c2d69677fc241429b8401d2a197377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &1156553579 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1619760688109874268, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+    type: 3}
+  m_PrefabInstance: {fileID: 1156553561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1233633380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4152,7 +4158,7 @@ MonoBehaviour:
   FadeImage: {fileID: 76382145}
   MessageList_Parent: {fileID: 1458938522}
   PauseEffectList:
-  - {fileID: 0}
+  - {fileID: 1156553579}
 --- !u!1001 &1623399728
 PrefabInstance:
   m_ObjectHideFlags: 0

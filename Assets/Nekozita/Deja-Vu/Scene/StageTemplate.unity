@@ -2270,7 +2270,7 @@ MonoBehaviour:
   FadeImage: {fileID: 76382145}
   MessageList_Parent: {fileID: 1458938522}
   PauseEffectList:
-  - {fileID: 0}
+  - {fileID: 1974141044}
 --- !u!1 &1848919693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,6 +2616,12 @@ GameObject:
 --- !u!1 &1974141043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7317122920013244571, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+    type: 3}
+  m_PrefabInstance: {fileID: 1974141041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1974141044 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1619760688109874268, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
     type: 3}
   m_PrefabInstance: {fileID: 1974141041}
   m_PrefabAsset: {fileID: 0}

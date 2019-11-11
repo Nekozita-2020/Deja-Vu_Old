@@ -77,7 +77,7 @@ public class EndlessGameManager : StageGameManagerBase
                 // スコアが一定の値に到達する毎にスピードを上げる
                 if(NowScoreNum % 5 == 0)
                 {
-                    Grape.GetComponent<forward>().ForwardSpeed++;
+                    Grape.GetComponent<Forward>().ForwardSpeed++;
                 }
 
                 // スコアが一定の値に到達する毎にオブジェクト生成数を増やす
