@@ -24,12 +24,6 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Physics2D();
 	RegisterModule_Physics2D();
 
-	void RegisterModule_Terrain();
-	RegisterModule_Terrain();
-
-	void RegisterModule_TerrainPhysics();
-	RegisterModule_TerrainPhysics();
-
 	void RegisterModule_TextRendering();
 	RegisterModule_TextRendering();
 
@@ -159,7 +153,7 @@ class ReflectionProbe; template <> void RegisterUnityClass<ReflectionProbe>(cons
 class Skybox; template <> void RegisterUnityClass<Skybox>(const char*);
 class SortingGroup; 
 class StreamingController; 
-class Terrain; template <> void RegisterUnityClass<Terrain>(const char*);
+class Terrain; 
 class VideoPlayer; 
 class VisualEffect; 
 class WindZone; 
@@ -170,7 +164,7 @@ class CapsuleCollider; template <> void RegisterUnityClass<CapsuleCollider>(cons
 class CharacterController; template <> void RegisterUnityClass<CharacterController>(const char*);
 class MeshCollider; 
 class SphereCollider; template <> void RegisterUnityClass<SphereCollider>(const char*);
-class TerrainCollider; template <> void RegisterUnityClass<TerrainCollider>(const char*);
+class TerrainCollider; 
 class WheelCollider; template <> void RegisterUnityClass<WheelCollider>(const char*);
 namespace Unity { class Joint; } template <> void RegisterUnityClass<Unity::Joint>(const char*);
 namespace Unity { class CharacterJoint; } 
@@ -245,8 +239,8 @@ class SpeedTreeWindAsset;
 class Sprite; template <> void RegisterUnityClass<Sprite>(const char*);
 class SpriteAtlas; template <> void RegisterUnityClass<SpriteAtlas>(const char*);
 class SubstanceArchive; 
-class TerrainData; template <> void RegisterUnityClass<TerrainData>(const char*);
-class TerrainLayer; template <> void RegisterUnityClass<TerrainLayer>(const char*);
+class TerrainData; 
+class TerrainLayer; 
 class TextAsset; template <> void RegisterUnityClass<TextAsset>(const char*);
 class CGProgram; 
 class MonoScript; template <> void RegisterUnityClass<MonoScript>(const char*);
@@ -299,7 +293,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 100 non stripped classes
+	//Total: 96 non stripped classes
 	//0. Behaviour
 	RegisterUnityClass<Behaviour>("Core");
 	//1. Unity::Component
@@ -428,77 +422,69 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Rigidbody2D>("Physics2D");
 	//63. Collider2D
 	RegisterUnityClass<Collider2D>("Physics2D");
-	//64. Terrain
-	RegisterUnityClass<Terrain>("Terrain");
-	//65. TerrainData
-	RegisterUnityClass<TerrainData>("Terrain");
-	//66. GUITexture
+	//64. GUITexture
 	RegisterUnityClass<GUITexture>("Core");
-	//67. FlareLayer
+	//65. FlareLayer
 	RegisterUnityClass<FlareLayer>("Core");
-	//68. TrailRenderer
+	//66. TrailRenderer
 	RegisterUnityClass<TrailRenderer>("Core");
-	//69. TagManager
+	//67. TagManager
 	RegisterUnityClass<TagManager>("Core");
-	//70. GraphicsSettings
+	//68. GraphicsSettings
 	RegisterUnityClass<GraphicsSettings>("Core");
-	//71. DelayedCallManager
+	//69. DelayedCallManager
 	RegisterUnityClass<DelayedCallManager>("Core");
-	//72. InputManager
+	//70. InputManager
 	RegisterUnityClass<InputManager>("Core");
-	//73. TimeManager
+	//71. TimeManager
 	RegisterUnityClass<TimeManager>("Core");
-	//74. BuildSettings
+	//72. BuildSettings
 	RegisterUnityClass<BuildSettings>("Core");
-	//75. PlayerSettings
+	//73. PlayerSettings
 	RegisterUnityClass<PlayerSettings>("Core");
-	//76. ResourceManager
+	//74. ResourceManager
 	RegisterUnityClass<ResourceManager>("Core");
-	//77. RuntimeInitializeOnLoadManager
+	//75. RuntimeInitializeOnLoadManager
 	RegisterUnityClass<RuntimeInitializeOnLoadManager>("Core");
-	//78. ScriptMapper
+	//76. ScriptMapper
 	RegisterUnityClass<ScriptMapper>("Core");
-	//79. PhysicsManager
+	//77. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//80. MonoManager
+	//78. MonoManager
 	RegisterUnityClass<MonoManager>("Core");
-	//81. TextAsset
+	//79. TextAsset
 	RegisterUnityClass<TextAsset>("Core");
-	//82. MonoScript
+	//80. MonoScript
 	RegisterUnityClass<MonoScript>("Core");
-	//83. UnityConnectSettings
+	//81. UnityConnectSettings
 	RegisterUnityClass<UnityConnectSettings>("UnityConnect");
-	//84. NavMeshProjectSettings
+	//82. NavMeshProjectSettings
 	RegisterUnityClass<NavMeshProjectSettings>("AI");
-	//85. AudioManager
+	//83. AudioManager
 	RegisterUnityClass<AudioManager>("Audio");
-	//86. Physics2DSettings
+	//84. Physics2DSettings
 	RegisterUnityClass<Physics2DSettings>("Physics2D");
-	//87. SkinnedMeshRenderer
+	//85. SkinnedMeshRenderer
 	RegisterUnityClass<SkinnedMeshRenderer>("Core");
-	//88. Avatar
+	//86. Avatar
 	RegisterUnityClass<Avatar>("Animation");
-	//89. LevelGameManager
+	//87. LevelGameManager
 	RegisterUnityClass<LevelGameManager>("Core");
-	//90. BoxCollider
+	//88. BoxCollider
 	RegisterUnityClass<BoxCollider>("Physics");
-	//91. LightProbes
+	//89. LightProbes
 	RegisterUnityClass<LightProbes>("Core");
-	//92. LightmapSettings
+	//90. LightmapSettings
 	RegisterUnityClass<LightmapSettings>("Core");
-	//93. Motion
+	//91. Motion
 	RegisterUnityClass<Motion>("Animation");
-	//94. RenderSettings
+	//92. RenderSettings
 	RegisterUnityClass<RenderSettings>("Core");
-	//95. AnimationClip
+	//93. AnimationClip
 	RegisterUnityClass<AnimationClip>("Animation");
-	//96. AnimatorController
+	//94. AnimatorController
 	RegisterUnityClass<AnimatorController>("Animation");
-	//97. TerrainLayer
-	RegisterUnityClass<TerrainLayer>("Terrain");
-	//98. TerrainCollider
-	RegisterUnityClass<TerrainCollider>("TerrainPhysics");
-	//99. NavMeshSettings
+	//95. NavMeshSettings
 	RegisterUnityClass<NavMeshSettings>("AI");
 
 }

@@ -134,8 +134,6 @@ struct Water_t34C059AB7B34E4F8E45DB6C1B602261F39DB1B00;
 struct WindowBase_t9DDB2475C974019E39732095B4F17B94CFF42A63;
 // WindowViewBase
 struct WindowViewBase_t0751C6B936C4F86B667E1464B667BC148E665B77;
-// forward
-struct forward_tD43013ABD34D86694281D8AE87065D076C01F519;
 
 extern RuntimeClass* Action_t591D2A86165F896B4B800BB5C25CE18672A55579_il2cpp_TypeInfo_var;
 extern RuntimeClass* CrossPlatformInputManager_t13D200EB7A01CDDE2A4EADCDB5306E3F525EFE0B_il2cpp_TypeInfo_var;
@@ -231,7 +229,6 @@ extern const uint32_t WindowBase_Awake_m1DFAC4B20CBDFE13ECE05F7975E0CBBC637BAA6A
 extern const uint32_t WindowBase_OnCloseWindow_m5CEACF007C44588135C5642EC47CC3A11DA7858D_MetadataUsageId;
 extern const uint32_t WindowBase_SettingView_mA40ACB790DFC013F0740EE067C7F66DEFBE363F5_MetadataUsageId;
 extern const uint32_t WindowBase__ctor_m6E812384CED5B77B8DDD1708E12B352C5869E2F6_MetadataUsageId;
-extern const uint32_t forward_FixedUpdate_mE85A153724E64678480C7E543FD4B723AD047C5C_MetadataUsageId;
 
 struct ObjectU5BU5D_t3C9242B5C88A48B2A5BD9FDA6CD0024E792AF08A;
 struct TypeU5BU5D_t7FE623A666B49176DE123306221193E888A12F5F;
@@ -3554,45 +3551,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WINDOWVIEWBASE_T0751C6B936C4F86B667E1464B667BC148E665B77_H
-#ifndef FORWARD_TD43013ABD34D86694281D8AE87065D076C01F519_H
-#define FORWARD_TD43013ABD34D86694281D8AE87065D076C01F519_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// forward
-struct  forward_tD43013ABD34D86694281D8AE87065D076C01F519  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
-{
-public:
-	// System.Single forward::ForwardSpeed
-	float ___ForwardSpeed_4;
-	// System.Boolean forward::IsForward
-	bool ___IsForward_5;
-
-public:
-	inline static int32_t get_offset_of_ForwardSpeed_4() { return static_cast<int32_t>(offsetof(forward_tD43013ABD34D86694281D8AE87065D076C01F519, ___ForwardSpeed_4)); }
-	inline float get_ForwardSpeed_4() const { return ___ForwardSpeed_4; }
-	inline float* get_address_of_ForwardSpeed_4() { return &___ForwardSpeed_4; }
-	inline void set_ForwardSpeed_4(float value)
-	{
-		___ForwardSpeed_4 = value;
-	}
-
-	inline static int32_t get_offset_of_IsForward_5() { return static_cast<int32_t>(offsetof(forward_tD43013ABD34D86694281D8AE87065D076C01F519, ___IsForward_5)); }
-	inline bool get_IsForward_5() const { return ___IsForward_5; }
-	inline bool* get_address_of_IsForward_5() { return &___IsForward_5; }
-	inline void set_IsForward_5(bool value)
-	{
-		___IsForward_5 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FORWARD_TD43013ABD34D86694281D8AE87065D076C01F519_H
 // UnityEngine.Collider2D[]
 struct Collider2DU5BU5D_tE7ADA0C1D125B4C684675B9A026E18C3857903AE  : public RuntimeArray
 {
@@ -4104,8 +4062,6 @@ extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D453
 extern "C" IL2CPP_METHOD_ATTR void WindowViewBase__ctor_m58C9A90B9E625AD391BF64CD551CBAD5B9D09229 (WindowViewBase_t0751C6B936C4F86B667E1464B667BC148E665B77 * __this, const RuntimeMethod* method);
 // System.Void System.Action::Invoke()
 extern "C" IL2CPP_METHOD_ATTR void Action_Invoke_mC8D676E5DDF967EC5D23DD0E96FB52AA499817FD (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Transform::get_forward()
-extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_forward_m0BE1E88B86049ADA39391C3ACED2314A624BC67F (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -6752,79 +6708,6 @@ IL_000b:
 extern "C" IL2CPP_METHOD_ATTR void WindowViewBase__ctor_m58C9A90B9E625AD391BF64CD551CBAD5B9D09229 (WindowViewBase_t0751C6B936C4F86B667E1464B667BC148E665B77 * __this, const RuntimeMethod* method)
 {
 	{
-		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void forward::FixedUpdate()
-extern "C" IL2CPP_METHOD_ATTR void forward_FixedUpdate_mE85A153724E64678480C7E543FD4B723AD047C5C (forward_tD43013ABD34D86694281D8AE87065D076C01F519 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (forward_FixedUpdate_mE85A153724E64678480C7E543FD4B723AD047C5C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		bool L_0 = __this->get_IsForward_5();
-		if (!L_0)
-		{
-			goto IL_003f;
-		}
-	}
-	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_1 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_2 = L_1;
-		NullCheck(L_2);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_3 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_2, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_4 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_5 = Transform_get_forward_m0BE1E88B86049ADA39391C3ACED2314A624BC67F(L_4, /*hidden argument*/NULL);
-		float L_6 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_7 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_5, L_6, /*hidden argument*/NULL);
-		float L_8 = __this->get_ForwardSpeed_4();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_9 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_7, L_8, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_10 = Vector3_op_Addition_m929F9C17E5D11B94D50B4AFF1D730B70CB59B50E(L_3, L_9, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		Transform_set_position_mDA89E4893F14ECA5CBEEE7FB80A5BF7C1B8EA6DC(L_2, L_10, /*hidden argument*/NULL);
-		return;
-	}
-
-IL_003f:
-	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_11 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_12 = L_11;
-		NullCheck(L_12);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_13 = Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294(L_12, /*hidden argument*/NULL);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_14 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_15 = Transform_get_forward_m0BE1E88B86049ADA39391C3ACED2314A624BC67F(L_14, /*hidden argument*/NULL);
-		float L_16 = Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E(/*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_17 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_15, L_16, /*hidden argument*/NULL);
-		float L_18 = __this->get_ForwardSpeed_4();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_19 = Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E(L_17, L_18, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_20 = Vector3_op_Subtraction_mF9846B723A5034F8B9F5F5DCB78E3D67649143D3(L_13, L_19, /*hidden argument*/NULL);
-		NullCheck(L_12);
-		Transform_set_position_mDA89E4893F14ECA5CBEEE7FB80A5BF7C1B8EA6DC(L_12, L_20, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void forward::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void forward__ctor_mE05BA3C0AB5AF68AA383BF87F8969E037CF8C472 (forward_tD43013ABD34D86694281D8AE87065D076C01F519 * __this, const RuntimeMethod* method)
-{
-	{
-		__this->set_ForwardSpeed_4((20.0f));
-		__this->set_IsForward_5((bool)1);
 		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
 		return;
 	}
