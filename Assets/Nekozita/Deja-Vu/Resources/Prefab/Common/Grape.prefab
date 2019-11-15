@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcb3979044dd4e57a515edc94611ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardSpeed: 20
+  ForwardSpeed: 25
   IsForward: 1
 --- !u!114 &5810528798118530472
 MonoBehaviour:
