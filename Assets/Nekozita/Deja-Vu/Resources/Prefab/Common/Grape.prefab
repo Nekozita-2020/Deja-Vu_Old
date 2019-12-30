@@ -1012,8 +1012,8 @@ GameObject:
   - component: {fileID: 9167375019048631108}
   - component: {fileID: 813592652239084636}
   - component: {fileID: 5932251235019208658}
-  - component: {fileID: 1801947833977510054}
   - component: {fileID: 5810528798118530472}
+  - component: {fileID: 4152480807894508177}
   - component: {fileID: 2192940022899969686}
   - component: {fileID: 7785900273259331808}
   - component: {fileID: 4722308723865304662}
@@ -1097,20 +1097,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1801947833977510054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4887303777349478238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcb3979044dd4e57a515edc94611ac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ForwardSpeed: 25
-  IsForward: 1
 --- !u!114 &5810528798118530472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,6 +1110,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSensitivity: 0.5
+--- !u!114 &4152480807894508177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887303777349478238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bdcc8e12c3a45e396f30269d9a9d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardSpeed: 20
+  IsForward: 1
 --- !u!114 &2192940022899969686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,11 +1862,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3160411539851039486}
     m_Modifications:
-    - target: {fileID: 8316813621258352580, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
-        type: 3}
-      propertyPath: m_Name
-      value: MentalEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 8316813621258352583, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1921,6 +1916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316813621258352580, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
+        type: 3}
+      propertyPath: m_Name
+      value: MentalEffect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0580bbae24d794cd1bc4ca9b1461db2a, type: 3}

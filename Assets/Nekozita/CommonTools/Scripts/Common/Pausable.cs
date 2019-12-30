@@ -94,10 +94,15 @@ public class Pausable : MonoBehaviour
             obj => obj.enabled &&
                    obj != this &&
                    Array.FindIndex(ignoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
+
         pausingMonoBehaviours = Array.FindAll(transform.GetComponentsInChildren<MonoBehaviour>(), monoBehaviourPredicate);
-        foreach (var monoBehaviour in pausingMonoBehaviours)
+
+        if (pausingMonoBehaviours != null)
         {
-            monoBehaviour.enabled = false;
+            foreach (var monoBehaviour in pausingMonoBehaviours)
+            {
+                monoBehaviour.enabled = false;
+            }
         }
 
         // ParticleSystemの停止
@@ -118,9 +123,12 @@ public class Pausable : MonoBehaviour
         }
 
         // MonoBehaviourの再開
-        foreach (var monoBehaviour in pausingMonoBehaviours)
+        if(pausingMonoBehaviours != null)
         {
-            monoBehaviour.enabled = true;
+            foreach (var monoBehaviour in pausingMonoBehaviours)
+            {
+                monoBehaviour.enabled = true;
+            }
         }
 
         // ParticleSystemの停止
