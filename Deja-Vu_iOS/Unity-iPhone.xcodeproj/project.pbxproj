@@ -1307,7 +1307,7 @@
 					CoreMotion,
 					"-weak-lSystem",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "comTest.NekozitaBuild.Deja-Vu-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nekozita.Deja-Vu";
 				PRODUCT_NAME = "Deja-Vu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1383,7 +1383,7 @@
 					CoreMotion,
 					"-weak-lSystem",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "comTest.NekozitaBuild.Deja-Vu-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nekozita.Deja-Vu";
 				PRODUCT_NAME = "Deja-Vu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1602,7 +1602,7 @@
 					CoreMotion,
 					"-weak-lSystem",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "comTest.NekozitaBuild.Deja-Vu-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nekozita.Deja-Vu";
 				PRODUCT_NAME = "Deja-Vu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1758,7 +1758,7 @@
 					CoreMotion,
 					"-weak-lSystem",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "comTest.NekozitaBuild.Deja-Vu-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nekozita.Deja-Vu";
 				PRODUCT_NAME = "Deja-Vu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
