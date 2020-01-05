@@ -15,19 +15,19 @@ public class TutorialWindow : WindowBase
 
         View = m_View as TutorialWindowView;
 
-        View.m_OnClickReturnStoryMenuButton = this.OnReturnStoryMenuScene;
-        View.m_OnClickCloseButton = this.OnClickClose;
+        View.m_OnClickRetireButton = this.OnClickRetireButton;
+        View.m_OnClickCloseButton = this.OnClickCloseButton;
     }
 
-    public void OnReturnStoryMenuScene()
+    public void OnClickRetireButton()
     {
         // ステージセレクト画面へ飛ばす
         SceneController.Instance.FadeOut("StoryMenu");
     }
 
-    public void OnClickClose()
+    public void OnClickCloseButton()
     {
-        this.gameObject.SetActive(false);
+        // this.gameObject.SetActive(false);
     }
 
 }

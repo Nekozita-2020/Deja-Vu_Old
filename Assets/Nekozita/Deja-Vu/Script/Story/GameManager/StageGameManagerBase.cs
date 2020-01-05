@@ -14,7 +14,7 @@ public class StageGameManagerBase : GameManagerBase
     [SerializeField] private GameObject PausebleObjects = null; 
     [SerializeField] protected GameObject Grape = null;
     [SerializeField] private ParticleSystem DestroyEffect = null;
-    [SerializeField] private GameObject Deja_Vu_Tutorial = null;
+    [SerializeField] private GameObject TutorialWindow = null;
 
 
 
@@ -103,14 +103,16 @@ public class StageGameManagerBase : GameManagerBase
             // ゲームを停止させる
             TouchSenser.SetActive(false);
             PausebleObjects.GetComponent<Pausable>().pausing = true;
-            Deja_Vu_Tutorial.SetActive(true);
+            TutorialWindow.GetComponent<TutorialWindowView>().m_RestartCallback = this.OnPause;
+            TutorialWindow.SetActive(true);
         }
         else
         {
             // ゲームを再開させる
             TouchSenser.SetActive(true);
             PausebleObjects.GetComponent<Pausable>().pausing = false;
-            Deja_Vu_Tutorial.SetActive(false);
+            TutorialWindow.GetComponent<TutorialWindowView>().m_RestartCallback = this.OnPause;
+            TutorialWindow.SetActive(false);
         }
     }
 

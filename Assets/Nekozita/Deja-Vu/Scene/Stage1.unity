@@ -4441,21 +4441,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2763121525912395383, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763121526363724703, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2763121526363724703, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 4000
-      objectReference: {fileID: 0}
     - target: {fileID: 2763121524788307223, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -4471,6 +4456,21 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 5ae37248b12de794bbb63b14b8b1fbd7, type: 3}
+    - target: {fileID: 2763121525912395383, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763121526363724703, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763121526363724703, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc6b3ecb6bb94dbabfff20b355b9799, type: 3}
 --- !u!4 &1351570850 stripped
@@ -5600,7 +5600,7 @@ MonoBehaviour:
   Grape: {fileID: 1922550207}
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
     type: 3}
-  Deja_Vu_Tutorial: {fileID: 6320964176291267329}
+  TutorialWindow: {fileID: 6320964176291267329}
   TriggerAreaList:
   - {fileID: 4043770659255467102}
   - {fileID: 1210817259}
@@ -6746,7 +6746,7 @@ PrefabInstance:
     - target: {fileID: 6320964176291267329, guid: 8a23dd8318f0c4f95a97ff4ecd46d0ca,
         type: 3}
       propertyPath: m_Name
-      value: Deja-Vu_Tutorial
+      value: TutorialWindow
       objectReference: {fileID: 0}
     - target: {fileID: 6320964176291267328, guid: 8a23dd8318f0c4f95a97ff4ecd46d0ca,
         type: 3}
