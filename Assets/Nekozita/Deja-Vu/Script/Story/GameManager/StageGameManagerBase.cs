@@ -16,6 +16,9 @@ public class StageGameManagerBase : GameManagerBase
     [SerializeField] private ParticleSystem DestroyEffect = null;
     [SerializeField] private GameObject TutorialWindow = null;
 
+    // Pauseフラグ　true: 停止中　false: 動作中
+    public bool PausebleFlug = false;
+
 
 
     private void Start()
@@ -95,9 +98,6 @@ public class StageGameManagerBase : GameManagerBase
     /// </summary>
     public virtual void OnPause()
     {
-        // Pauseフラグ　true: 停止中　false: 動作中
-        bool PausebleFlug = PausebleObjects.GetComponent<Pausable>().pausing;
-
         if (PausebleFlug == false)
         {
             // ゲームを停止させる
@@ -114,6 +114,9 @@ public class StageGameManagerBase : GameManagerBase
             TutorialWindow.GetComponent<TutorialWindowView>().m_RestartCallback = this.OnPause;
             TutorialWindow.SetActive(false);
         }
+
+        // Pauseフラグ　true: 停止中　false: 動作中
+        PausebleFlug = PausebleObjects.GetComponent<Pausable>().pausing;
     }
 
     /// <summary>

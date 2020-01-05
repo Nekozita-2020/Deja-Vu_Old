@@ -51,46 +51,50 @@ public class EndlessGameManager : StageGameManagerBase
 
     private void FixedUpdate()
     {
-        // カメラがBorderまできたら前にいるTerrainを移動
-        if (GrandMovingBorder < MainCamera.transform.position.z)
+        // ポーズになっていなければ処理する
+        if(PausebleFlug == false)
         {
-            this.MoveTerrain();
-        }
-
-        // ランダム生成オブジェクト群があり、かつグレープが表示されている場合
-        if (0 < RandomGenerateObject.Count && Grape.activeInHierarchy == true)
-        {
-            m_Timer += Time.deltaTime;
-
-            // オブジェクトランダム生成タイミング
-            if (GenerateTiming < m_Timer)
+            // カメラがBorderまできたら前にいるTerrainを移動
+            if (GrandMovingBorder < MainCamera.transform.position.z)
             {
-                for(int i = 0; i < NowGenerateCount; i++)
+                this.MoveTerrain();
+            }
+
+            // ランダム生成オブジェクト群があり、かつグレープが表示されている場合
+            if (0 < RandomGenerateObject.Count && Grape.activeInHierarchy == true)
+            {
+                m_Timer += Time.deltaTime;
+
+                // オブジェクトランダム生成タイミング
+                if (GenerateTiming < m_Timer)
                 {
-                    // オブジェクトのランダム生成
-                    RandomObjectGenerate();
+                    for (int i = 0; i < NowGenerateCount; i++)
+                    {
+                        // オブジェクトのランダム生成
+                        RandomObjectGenerate();
+                    }
+
+                    // オブジェクトの出力時スコアを加算
+                    AddScore();
+
+                    // スコアが一定の値に到達する毎にスピードを上げる
+                    if (NowScoreNum % 5 == 0)
+                    {
+                        Grape.GetComponent<Forward>().ForwardSpeed++;
+                    }
+
+                    // スコアが一定の値に到達する毎にオブジェクト生成数を増やす
+                    if (NowScoreNum % 10 == 0)
+                    {
+                        // 最大数を守りつつ、数を増やす
+                        NowGenerateCount++;
+                        NowGenerateCount = Mathf.Clamp(NowGenerateCount, 1, 3);
+                    }
+
+                    // 値の更新(次回のランダム生成タイミングをランダム設定)
+                    m_Timer = 0.0f;
+                    GenerateTiming = Random.Range(1.0f, 2.0f);
                 }
-
-                // オブジェクトの出力時スコアを加算
-                AddScore();
-
-                // スコアが一定の値に到達する毎にスピードを上げる
-                if(NowScoreNum % 5 == 0)
-                {
-                    Grape.GetComponent<Forward>().ForwardSpeed++;
-                }
-
-                // スコアが一定の値に到達する毎にオブジェクト生成数を増やす
-                if (NowScoreNum % 10 == 0)
-                {
-                    // 最大数を守りつつ、数を増やす
-                    NowGenerateCount++;
-                    NowGenerateCount = Mathf.Clamp(NowGenerateCount, 1, 3);
-                }
-
-                // 値の更新(次回のランダム生成タイミングをランダム設定)
-                m_Timer = 0.0f;
-                GenerateTiming = Random.Range(1.0f, 2.0f);
             }
         }
     }
