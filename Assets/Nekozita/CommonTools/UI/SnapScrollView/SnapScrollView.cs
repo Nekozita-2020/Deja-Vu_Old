@@ -25,11 +25,5 @@ namespace SnapScrollView
                 indicators[i].color = new Color(1, 1, 1, a);
             }
         }
-
-        public void OnClickClose()
-        {
-            this.gameObject.SetActive(false);
-        }
-
     }
 }

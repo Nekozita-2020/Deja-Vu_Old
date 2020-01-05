@@ -25,6 +25,9 @@ public class StageGameManagerBase : GameManagerBase
 
     protected virtual void Init()
     {
+        // チュートリアルを表示させるため、ポーズして開始させる
+        OnPause();
+
         // コールバックをセット
         SetCallBack();
     }
