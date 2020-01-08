@@ -67,13 +67,13 @@ public class StageGameManagerBase : GameManagerBase
                 OnGameOver();
                 break;
 
-            case "Scenery":
-                // 処理はなし
-                break;
-
             case "Finish":
                 // ステージクリア
                 OnStageClear();
+                break;
+
+            default:
+                // その他は処理しない
                 break;
         }
     }
