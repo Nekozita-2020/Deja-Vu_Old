@@ -77,4 +77,10 @@ public class HomeManager : GameManagerBase
         DragFlug = false;
     }
 
+    // 【デバッグ】
+    public void OnClickAllClearButton()
+    {
+        PlayerPrefs.SetInt("ClearStage", 15);
+        PlayerPrefs.Save();
+    }
 }
