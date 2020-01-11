@@ -104,6 +104,8 @@ struct RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6;
 struct Renderer_t0556D67DD582620D1F495627EDE30D03284151F4;
 // UnityEngine.Rigidbody2D
 struct Rigidbody2D_tBDC6900A76D3C47E291446FF008D02B817C81CDE;
+// UnityEngine.Shader
+struct Shader_tE2731FF351B74AB4186897484FB01E000C1160CA;
 // UnityEngine.Skybox
 struct Skybox_tCAAEF216A36B4CD9FD498E4EED256EAE7B81DDDD;
 // UnityEngine.Texture
@@ -163,12 +165,14 @@ extern String_t* _stringLiteral277CD9ABCEB695355593A659EE2FB0516C67A511;
 extern String_t* _stringLiteral2CDD67B3902C30F8C9270317435D1A06D107FE2D;
 extern String_t* _stringLiteral2D2CB022BC3D26BD1407C4AA787D5E46E1AD4C3B;
 extern String_t* _stringLiteral3AFDB7966AC85C1625354B8F4CC909053E192609;
+extern String_t* _stringLiteral3B9299E5BA0CF51C354712EC59C465189A82B6B3;
 extern String_t* _stringLiteral4F57A1CE99E68A7B05C42D0A7EA0070EAFABD31C;
 extern String_t* _stringLiteral5BC58BB69A2DB68D33F81E1D371D8BCF8EA38CC2;
 extern String_t* _stringLiteral732E00936B20E81756962013B2AB2CC1F6100CDE;
 extern String_t* _stringLiteral7F02101460A67757CF4FCB29B8C786394F9335D9;
 extern String_t* _stringLiteral84DEF6497B3E599C434B4C4A96EB23877462FE05;
 extern String_t* _stringLiteral8C731673442B5342660AB8368FEB5F32A50F9ED1;
+extern String_t* _stringLiteral90BEAC2757237965D385DF207DD5898895D49DDD;
 extern String_t* _stringLiteral9D0D05F5F775D14A347704E840E7F79E79F1794B;
 extern String_t* _stringLiteral9D26EC561940B04EEB12F020A66122C79877166C;
 extern String_t* _stringLiteralB5F7B77EF041F1E71600419488BA53F3FE8FC71B;
@@ -214,6 +218,9 @@ extern const uint32_t PlatformerCharacter2D_Awake_m23C5C051B0C2458AD4A2DEA36616E
 extern const uint32_t PlatformerCharacter2D_FixedUpdate_m59FF258199C5A3CEDC770BDA0F72D2199AFC1E21_MetadataUsageId;
 extern const uint32_t PlatformerCharacter2D_Move_m284C5E9F9237FE79506ABE6777FD504D2691344A_MetadataUsageId;
 extern const uint32_t Restarter_OnTriggerEnter2D_m9FDEE988A37A132052AA0614D4A19A3E3EEBAEEB_MetadataUsageId;
+extern const uint32_t WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7_MetadataUsageId;
+extern const uint32_t WaterBase_Update_mD5E6CC8A3FEC375029124EFD583B1FAD7BC6C018_MetadataUsageId;
+extern const uint32_t WaterBase_WaterTileBeingRendered_m4F95C9C0A2E21A5062FF6EA597BD28EDFE566F93_MetadataUsageId;
 extern const uint32_t WaterBasic_Update_mDB87B46D88275149FA45D8EBA9CBDF5258B8A8E1_MetadataUsageId;
 extern const uint32_t WaterTile_AcquireComponents_mFA5B00ACD7B737445D796214FB875705B2BA4522_MetadataUsageId;
 extern const uint32_t WaterTile_OnWillRenderObject_m7F20C4F2E7344365BBE965EEDD89D52D40EEFA6D_MetadataUsageId;
@@ -2024,6 +2031,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CAMERACLEARFLAGS_TAC22BD22D12708CBDC63F6CFB31109E5E17CF239_H
+#ifndef DEPTHTEXTUREMODE_T284833A8AB245ACA7E27BE611BE03B18B0249F01_H
+#define DEPTHTEXTUREMODE_T284833A8AB245ACA7E27BE611BE03B18B0249F01_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.DepthTextureMode
+struct  DepthTextureMode_t284833A8AB245ACA7E27BE611BE03B18B0249F01 
+{
+public:
+	// System.Int32 UnityEngine.DepthTextureMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(DepthTextureMode_t284833A8AB245ACA7E27BE611BE03B18B0249F01, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // DEPTHTEXTUREMODE_T284833A8AB245ACA7E27BE611BE03B18B0249F01_H
 #ifndef HIDEFLAGS_T30B57DC00548E963A569318C8F4A4123E7447E37_H
 #define HIDEFLAGS_T30B57DC00548E963A569318C8F4A4123E7447E37_H
 #ifdef __clang__
@@ -2137,6 +2173,64 @@ struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_marshaled_com
 	intptr_t ___m_CachedPtr_0;
 };
 #endif // OBJECT_TAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_H
+#ifndef RENDERTEXTUREFORMAT_T2AB1B77FBD247648292FBBE1182F12B5FC47AF85_H
+#define RENDERTEXTUREFORMAT_T2AB1B77FBD247648292FBBE1182F12B5FC47AF85_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.RenderTextureFormat
+struct  RenderTextureFormat_t2AB1B77FBD247648292FBBE1182F12B5FC47AF85 
+{
+public:
+	// System.Int32 UnityEngine.RenderTextureFormat::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(RenderTextureFormat_t2AB1B77FBD247648292FBBE1182F12B5FC47AF85, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RENDERTEXTUREFORMAT_T2AB1B77FBD247648292FBBE1182F12B5FC47AF85_H
+#ifndef WATERMODE_TFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2_H
+#define WATERMODE_TFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityStandardAssets.Water.Water/WaterMode
+struct  WaterMode_tFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2 
+{
+public:
+	// System.Int32 UnityStandardAssets.Water.Water/WaterMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(WaterMode_tFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WATERMODE_TFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2_H
 #ifndef WATERQUALITY_T224496AF545039D0204AE51D832A4926CC4E393E_H
 #define WATERQUALITY_T224496AF545039D0204AE51D832A4926CC4E393E_H
 #ifdef __clang__
@@ -2406,6 +2500,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MATERIAL_TF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598_H
+#ifndef SHADER_TE2731FF351B74AB4186897484FB01E000C1160CA_H
+#define SHADER_TE2731FF351B74AB4186897484FB01E000C1160CA_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Shader
+struct  Shader_tE2731FF351B74AB4186897484FB01E000C1160CA  : public Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SHADER_TE2731FF351B74AB4186897484FB01E000C1160CA_H
 #ifndef TEXTURE_T387FE83BB848001FD06B14707AEA6D5A0F6A95F4_H
 #define TEXTURE_T387FE83BB848001FD06B14707AEA6D5A0F6A95F4_H
 #ifdef __clang__
@@ -3689,13 +3803,33 @@ extern "C" IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m466D001F105E25DEB5C9BC
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m2C7E51568033239B506E15E7804A0B8658246498_gshared (Dictionary_2_t32F25F093828AA9F93CB11C2A2B4648FD62A09BA * __this, const RuntimeMethod* method);
 
+// UnityEngine.Shader UnityEngine.Material::get_shader()
+extern "C" IL2CPP_METHOD_ATTR Shader_tE2731FF351B74AB4186897484FB01E000C1160CA * Material_get_shader_m9CEDCA4D97D42588C6B827400E364E4A8EC55FF0 (Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Shader::set_maximumLOD(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Shader_set_maximumLOD_mAF8E3615BB40E1381CDC4110D20D3BB866AFDC4B (Shader_tE2731FF351B74AB4186897484FB01E000C1160CA * __this, int32_t p0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.SystemInfo::SupportsRenderTextureFormat(UnityEngine.RenderTextureFormat)
+extern "C" IL2CPP_METHOD_ATTR bool SystemInfo_SupportsRenderTextureFormat_m74D259714A97501D28951CA48298D9F0AE3B5907 (int32_t p0, const RuntimeMethod* method);
+// System.Void UnityEngine.Shader::EnableKeyword(System.String)
+extern "C" IL2CPP_METHOD_ATTR void Shader_EnableKeyword_m600614EB1D434CA8ECFC8DAA5BC6E2ED4E55CD9F (String_t* p0, const RuntimeMethod* method);
+// System.Void UnityEngine.Shader::DisableKeyword(System.String)
+extern "C" IL2CPP_METHOD_ATTR void Shader_DisableKeyword_m2D15FB4C26535D9AF45445B4149EADD4BF68C701 (String_t* p0, const RuntimeMethod* method);
+// UnityEngine.Camera UnityEngine.Camera::get_main()
+extern "C" IL2CPP_METHOD_ATTR Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * Camera_get_main_m9256A9F84F92D7ED73F3E6C4E2694030AD8B61FA (const RuntimeMethod* method);
+// System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR bool Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
+// UnityEngine.DepthTextureMode UnityEngine.Camera::get_depthTextureMode()
+extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_depthTextureMode_m157C12D349137B72F27061C027E6954EC65D54AD (Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Camera::set_depthTextureMode(UnityEngine.DepthTextureMode)
+extern "C" IL2CPP_METHOD_ATTR void Camera_set_depthTextureMode_mBD8E259A3E29C4A5AC1FA8898700789B43264D2C (Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * __this, int32_t p0, const RuntimeMethod* method);
+// System.Void UnityStandardAssets.Water.WaterBase::UpdateShader()
+extern "C" IL2CPP_METHOD_ATTR void WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7 (WaterBase_t85BC1998BDD7AC8129D4EEE02D54F83D00D84691 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.MonoBehaviour::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Renderer>()
 inline Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * Component_GetComponent_TisRenderer_t0556D67DD582620D1F495627EDE30D03284151F4_m3E0C8F08ADF98436AEF5AE9F4C56A51FF7D0A892 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
 {
 	return ((  Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * (*) (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m3FED1FF44F93EF1C3A07526800331B638EF4105B_gshared)(__this, method);
 }
-// System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
-extern "C" IL2CPP_METHOD_ATTR bool Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
 // UnityEngine.Material UnityEngine.Renderer::get_sharedMaterial()
 extern "C" IL2CPP_METHOD_ATTR Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * Renderer_get_sharedMaterial_m2BE9FF3D269968F2E323AC60EFBBCC0B26E7E6F9 (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector4 UnityEngine.Material::GetVector(System.String)
@@ -3712,8 +3846,6 @@ extern "C" IL2CPP_METHOD_ATTR float Mathf_Repeat_m8459F4AAFF92DB770CC892BF71EE94
 extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m545458525879607A5392A10B175D0C19B2BC715D (Vector4_tD148D6428C3F8FF6CD998F82090113C2B490B76E * __this, float p0, float p1, float p2, float p3, const RuntimeMethod* method);
 // System.Void UnityEngine.Material::SetVector(System.String,UnityEngine.Vector4)
 extern "C" IL2CPP_METHOD_ATTR void Material_SetVector_m6FC2CC4EBE6C45D48D8B9164148A0CB3124335EC (Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * __this, String_t* p0, Vector4_tD148D6428C3F8FF6CD998F82090113C2B490B76E  p1, const RuntimeMethod* method);
-// System.Void UnityEngine.MonoBehaviour::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Void UnityStandardAssets.Water.WaterTile::AcquireComponents()
 extern "C" IL2CPP_METHOD_ATTR void WaterTile_AcquireComponents_mFA5B00ACD7B737445D796214FB875705B2BA4522 (WaterTile_t80AE74FC30FE4B5295FFDBD49353D4DE587635EB * __this, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.Component::get_transform()
@@ -3911,10 +4043,6 @@ extern "C" IL2CPP_METHOD_ATTR void Material_SetTexture_mAA0F00FACFE40CFE4BE28A11
 extern "C" IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  Transform_get_rotation_m3AB90A67403249AECCA5E02BC70FCE8C90FE9FB9 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_rotation_m429694E264117C6DC682EC6AF45C7864E5155935 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  p0, const RuntimeMethod* method);
-// System.Void UnityEngine.Shader::EnableKeyword(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Shader_EnableKeyword_m600614EB1D434CA8ECFC8DAA5BC6E2ED4E55CD9F (String_t* p0, const RuntimeMethod* method);
-// System.Void UnityEngine.Shader::DisableKeyword(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Shader_DisableKeyword_m2D15FB4C26535D9AF45445B4149EADD4BF68C701 (String_t* p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object)
 extern "C" IL2CPP_METHOD_ATTR void Object_DestroyImmediate_mF6F4415EF22249D6E650FAA40E403283F19B7446 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
 // System.Collections.Generic.Dictionary`2/Enumerator<!0,!1> System.Collections.Generic.Dictionary`2<UnityEngine.Camera,UnityEngine.Camera>::GetEnumerator()
@@ -4062,6 +4190,201 @@ extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D453
 extern "C" IL2CPP_METHOD_ATTR void WindowViewBase__ctor_m58C9A90B9E625AD391BF64CD551CBAD5B9D09229 (WindowViewBase_t0751C6B936C4F86B667E1464B667BC148E665B77 * __this, const RuntimeMethod* method);
 // System.Void System.Action::Invoke()
 extern "C" IL2CPP_METHOD_ATTR void Action_Invoke_mC8D676E5DDF967EC5D23DD0E96FB52AA499817FD (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * __this, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityStandardAssets.Water.WaterBase::UpdateShader()
+extern "C" IL2CPP_METHOD_ATTR void WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7 (WaterBase_t85BC1998BDD7AC8129D4EEE02D54F83D00D84691 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = __this->get_waterQuality_5();
+		if ((((int32_t)L_0) <= ((int32_t)1)))
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * L_1 = __this->get_sharedMaterial_4();
+		NullCheck(L_1);
+		Shader_tE2731FF351B74AB4186897484FB01E000C1160CA * L_2 = Material_get_shader_m9CEDCA4D97D42588C6B827400E364E4A8EC55FF0(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		Shader_set_maximumLOD_mAF8E3615BB40E1381CDC4110D20D3BB866AFDC4B(L_2, ((int32_t)501), /*hidden argument*/NULL);
+		goto IL_0055;
+	}
+
+IL_0020:
+	{
+		int32_t L_3 = __this->get_waterQuality_5();
+		if ((((int32_t)L_3) <= ((int32_t)0)))
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * L_4 = __this->get_sharedMaterial_4();
+		NullCheck(L_4);
+		Shader_tE2731FF351B74AB4186897484FB01E000C1160CA * L_5 = Material_get_shader_m9CEDCA4D97D42588C6B827400E364E4A8EC55FF0(L_4, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		Shader_set_maximumLOD_mAF8E3615BB40E1381CDC4110D20D3BB866AFDC4B(L_5, ((int32_t)301), /*hidden argument*/NULL);
+		goto IL_0055;
+	}
+
+IL_0040:
+	{
+		Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * L_6 = __this->get_sharedMaterial_4();
+		NullCheck(L_6);
+		Shader_tE2731FF351B74AB4186897484FB01E000C1160CA * L_7 = Material_get_shader_m9CEDCA4D97D42588C6B827400E364E4A8EC55FF0(L_6, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Shader_set_maximumLOD_mAF8E3615BB40E1381CDC4110D20D3BB866AFDC4B(L_7, ((int32_t)201), /*hidden argument*/NULL);
+	}
+
+IL_0055:
+	{
+		bool L_8 = SystemInfo_SupportsRenderTextureFormat_m74D259714A97501D28951CA48298D9F0AE3B5907(1, /*hidden argument*/NULL);
+		if (L_8)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		__this->set_edgeBlend_6((bool)0);
+	}
+
+IL_0064:
+	{
+		bool L_9 = __this->get_edgeBlend_6();
+		if (!L_9)
+		{
+			goto IL_009f;
+		}
+	}
+	{
+		Shader_EnableKeyword_m600614EB1D434CA8ECFC8DAA5BC6E2ED4E55CD9F(_stringLiteral3B9299E5BA0CF51C354712EC59C465189A82B6B3, /*hidden argument*/NULL);
+		Shader_DisableKeyword_m2D15FB4C26535D9AF45445B4149EADD4BF68C701(_stringLiteral90BEAC2757237965D385DF207DD5898895D49DDD, /*hidden argument*/NULL);
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_10 = Camera_get_main_m9256A9F84F92D7ED73F3E6C4E2694030AD8B61FA(/*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		bool L_11 = Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534(L_10, /*hidden argument*/NULL);
+		if (!L_11)
+		{
+			goto IL_00b3;
+		}
+	}
+	{
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_12 = Camera_get_main_m9256A9F84F92D7ED73F3E6C4E2694030AD8B61FA(/*hidden argument*/NULL);
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_13 = L_12;
+		NullCheck(L_13);
+		int32_t L_14 = Camera_get_depthTextureMode_m157C12D349137B72F27061C027E6954EC65D54AD(L_13, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		Camera_set_depthTextureMode_mBD8E259A3E29C4A5AC1FA8898700789B43264D2C(L_13, ((int32_t)((int32_t)L_14|(int32_t)1)), /*hidden argument*/NULL);
+		return;
+	}
+
+IL_009f:
+	{
+		Shader_EnableKeyword_m600614EB1D434CA8ECFC8DAA5BC6E2ED4E55CD9F(_stringLiteral90BEAC2757237965D385DF207DD5898895D49DDD, /*hidden argument*/NULL);
+		Shader_DisableKeyword_m2D15FB4C26535D9AF45445B4149EADD4BF68C701(_stringLiteral3B9299E5BA0CF51C354712EC59C465189A82B6B3, /*hidden argument*/NULL);
+	}
+
+IL_00b3:
+	{
+		return;
+	}
+}
+// System.Void UnityStandardAssets.Water.WaterBase::WaterTileBeingRendered(UnityEngine.Transform,UnityEngine.Camera)
+extern "C" IL2CPP_METHOD_ATTR void WaterBase_WaterTileBeingRendered_m4F95C9C0A2E21A5062FF6EA597BD28EDFE566F93 (WaterBase_t85BC1998BDD7AC8129D4EEE02D54F83D00D84691 * __this, Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___tr0, Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * ___currentCam1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WaterBase_WaterTileBeingRendered_m4F95C9C0A2E21A5062FF6EA597BD28EDFE566F93_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_0 = ___currentCam1;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534(L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		bool L_2 = __this->get_edgeBlend_6();
+		if (!L_2)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_3 = ___currentCam1;
+		Camera_t48B2B9ECB3CE6108A98BF949A1CECF0FE3421F34 * L_4 = L_3;
+		NullCheck(L_4);
+		int32_t L_5 = Camera_get_depthTextureMode_m157C12D349137B72F27061C027E6954EC65D54AD(L_4, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		Camera_set_depthTextureMode_mBD8E259A3E29C4A5AC1FA8898700789B43264D2C(L_4, ((int32_t)((int32_t)L_5|(int32_t)1)), /*hidden argument*/NULL);
+	}
+
+IL_001e:
+	{
+		return;
+	}
+}
+// System.Void UnityStandardAssets.Water.WaterBase::Update()
+extern "C" IL2CPP_METHOD_ATTR void WaterBase_Update_mD5E6CC8A3FEC375029124EFD583B1FAD7BC6C018 (WaterBase_t85BC1998BDD7AC8129D4EEE02D54F83D00D84691 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WaterBase_Update_mD5E6CC8A3FEC375029124EFD583B1FAD7BC6C018_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * L_0 = __this->get_sharedMaterial_4();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534(L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7(__this, /*hidden argument*/NULL);
+	}
+
+IL_0013:
+	{
+		return;
+	}
+}
+// System.Void UnityStandardAssets.Water.WaterBase::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void WaterBase__ctor_m570396950A35AC4FDC13EC0E483E942E413526FB (WaterBase_t85BC1998BDD7AC8129D4EEE02D54F83D00D84691 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_waterQuality_5(2);
+		__this->set_edgeBlend_6((bool)1);
+		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
