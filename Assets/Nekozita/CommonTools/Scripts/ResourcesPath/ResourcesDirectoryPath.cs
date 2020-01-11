@@ -18,12 +18,7 @@ public static class ResourcesDirectoryPath{
 	  public const string PREFAB_STORY_STAGE_13               = "Prefab/Story/Stage13";
 	  public const string PREFAB_STORY_STAGE_14               = "Prefab/Story/Stage14";
 	  public const string PREFAB_STORY_STAGE_15               = "Prefab/Story/Stage15";
-	  public const string PREFAB_STORY_STAGE_16               = "Prefab/Story/Stage16";
-	  public const string PREFAB_STORY_STAGE_17               = "Prefab/Story/Stage17";
-	  public const string PREFAB_STORY_STAGE_18               = "Prefab/Story/Stage18";
-	  public const string PREFAB_STORY_STAGE_19               = "Prefab/Story/Stage19";
 	  public const string PREFAB_STORY_STAGE_2                = "Prefab/Story/Stage2";
-	  public const string PREFAB_STORY_STAGE_20               = "Prefab/Story/Stage20";
 	  public const string PREFAB_STORY_STAGE_3                = "Prefab/Story/Stage3";
 	  public const string PREFAB_STORY_STAGE_4                = "Prefab/Story/Stage4";
 	  public const string PREFAB_STORY_STAGE_5                = "Prefab/Story/Stage5";

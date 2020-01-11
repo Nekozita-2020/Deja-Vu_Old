@@ -3,6 +3,7 @@
 /// </summary>
 public static class ResourcesPath{
 
+	  public const string AUDIO_BGM_BE_HAPPY                     = "BGM_Be Happy";
 	  public const string AUDIO_BGM_HARUJION                     = "BGM_Harujion";
 	  public const string AUDIO_BGM_HEALING                      = "BGM_Healing";
 	  public const string AUDIO_BGM_SIROGANE_NO_KOBUNE_PIANO_VER = "BGM_SiroganeNoKobune_PianoVer";
@@ -13,25 +14,33 @@ public static class ResourcesPath{
 	  public const string PREFAB_APPLE                           = "Prefab/Story/Stage0/Apple";
 	  public const string PREFAB_CREDIT_WINDOW                   = "Prefab/Home/CreditWindow";
 	  public const string PREFAB_CUBE                            = "Prefab/Story/Stage0/Cube";
-	  public const string PREFAB_DEJA_VU_TUTORIAL                = "Prefab/UI/Deja-Vu_Tutorial";
 	  public const string PREFABEIGHTH_NOTE                      = "Prefab/Story/Common/eighth_note";
+	  public const string PREFAB_FIR_TREE                        = "Prefab/Story/Stage1/Fir_Tree";
 	  public const string PREFAB_GRAPE                           = "Prefab/Common/Grape";
 	  public const string PREFAB_GRAPE_MEMORY_WINDOW             = "Prefab/Home/GrapeMemoryWindow";
+	  public const string PREFAB_ITEM_BOX                        = "Prefab/Story/Stage2/ItemBox";
 	  public const string PREFAB_LOGO_WINDOW                     = "Prefab/LogoWindow";
-	  public const string PREFAB_MEDAL                           = "Prefab/Story/Stage1/Medal";
+	  public const string PREFAB_MAIN_CAMERA                     = "Prefab/UI/MainCamera";
+	  public const string PREFAB_MEDAL                           = "Prefab/Story/Stage9/Medal";
+	  public const string PREFAB_OAK_TREE                        = "Prefab/Story/Stage1/Oak_Tree";
 	  public const string PREFAB_OBJECT_MANAGER                  = "Prefab/ObjectManager";
-	  public const string PREFAB_PIANO                           = "Prefab/Story/Stage1/Piano";
+	  public const string PREFAB_PALM_TREE                       = "Prefab/Story/Stage1/Palm_Tree";
+	  public const string PREFAB_PAUSEBLE_OBJECTS                = "Prefab/Story/Common/PausebleObjects";
+	  public const string PREFAB_PIANO                           = "Prefab/Story/Stage9/Piano";
+	  public const string PREFAB_POPLAR_TREE                     = "Prefab/Story/Stage1/Poplar_Tree";
 	  public const string PREFABQUARTER_NOTE                     = "Prefab/Story/Common/quarter_note";
+	  public const string PREFAB_RONDOM_TREE                     = "Prefab/Story/Common/RondomTree";
 	  public const string PREFAB_SCENE_CONTROLLER                = "Prefab/SceneController";
 	  public const string PREFAB_SETTING_WINDOW                  = "Prefab/Home/SettingWindow";
 	  public const string PREFAB_SOUND_MANAGER                   = "Prefab/SoundManager";
 	  public const string PREFAB_SPHERE                          = "Prefab/Story/Stage0/Sphere";
-	  public const string PREFAB_SPIRAL_TROPHY                   = "Prefab/Story/Stage1/SpiralTrophy";
+	  public const string PREFAB_SPIRAL_TROPHY                   = "Prefab/Story/Stage9/SpiralTrophy";
+	  public const string PREFAB_STAGE_GROUND_PREFAB             = "Prefab/Story/Common/StageGroundPrefab";
 	  public const string PREFAB_STORY_WINDOW                    = "Prefab/Home/StoryWindow";
-	  public const string PREFAB_TERRAIN_PREFAB                  = "Prefab/Story/Common/TerrainPrefab";
 	  public const string PREFAB_TOUCH_SENSER                    = "Prefab/UI/TouchSenser";
 	  public const string PREFAB_TREBLE_CLEF                     = "Prefab/Story/Common/Treble_clef";
-	  public const string PREFAB_TROPHY                          = "Prefab/Story/Stage1/Trophy";
+	  public const string PREFAB_TRIGGER_AREA                    = "Prefab/Story/Common/TriggerArea";
+	  public const string PREFAB_TROPHY                          = "Prefab/Story/Stage9/Trophy";
 	  public const string PREFAB_WATER_FLOAR                     = "Prefab/Common/WaterFloar/WaterFloar";
 
 }

@@ -2280,7 +2280,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1848919694}
-  - component: {fileID: 1848919695}
   - component: {fileID: 1848919696}
   m_Layer: 0
   m_Name: GameManager
@@ -2303,7 +2302,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1848919695
+--- !u!114 &1848919696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2312,7 +2311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1848919693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404e534987e994b8caac1e22bca5dc99, type: 3}
+  m_Script: {fileID: 11500000, guid: ed7b00661bdd3471388256f2519b71ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayBGM: {fileID: 0}
@@ -2327,30 +2326,9 @@ MonoBehaviour:
     type: 3}
   TutorialWindow: {fileID: 6320964176291267329}
   PausebleFlug: 0
---- !u!114 &1848919696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848919693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7b00661bdd3471388256f2519b71ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayBGM: {fileID: 0}
-  MainCamera: {fileID: 0}
-  GameOverUI: {fileID: 0}
-  StageClearUI: {fileID: 0}
-  PauseButton: {fileID: 0}
-  TouchSenser: {fileID: 0}
-  PausebleObjects: {fileID: 0}
-  Grape: {fileID: 0}
-  DestroyEffect: {fileID: 0}
-  TutorialWindow: {fileID: 0}
-  PausebleFlug: 0
-  TriggerAreaList: []
+  m_ItemImageList: []
+  m_Belongings: []
+  m_ItemBoxList: []
 --- !u!1 &1867581267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2714,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848919695}
+      - m_Target: {fileID: 0}
         m_MethodName: OnPause
         m_Mode: 1
         m_Arguments:
@@ -3050,11 +3028,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 910194759467449271, guid: 23e12c66296cc467baee2a0b9128fc3a,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e12c66296cc467baee2a0b9128fc3a, type: 3}
