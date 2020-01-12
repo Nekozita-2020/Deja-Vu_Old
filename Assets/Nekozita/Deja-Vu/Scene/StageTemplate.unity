@@ -2325,6 +2325,7 @@ MonoBehaviour:
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
     type: 3}
   TutorialWindow: {fileID: 6320964176291267329}
+  PausebleFlug: 0
 --- !u!1 &1867581267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +2606,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1406901888}
+    - target: {fileID: 3671675323966810065, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+        type: 3}
+      propertyPath: m_Name
+      value: 400m(LastSetPosition)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc6b3ecb6bb94dbabfff20b355b9799, type: 3}
 --- !u!1 &1974141042 stripped
