@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ItemBox : MonoBehaviour
 {
     public Image m_ItemImage = null;
-    public Action<Collider> m_CallBack = null;
+    public Action<Sprite> m_CallBack = null;
 
     // このアイテムを取得した時のエフェクト
     [SerializeField] ParticleSystem m_GetItemEffect = null;
@@ -16,13 +16,10 @@ public class ItemBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider m_Collision)
     {
-        this.m_CallBack?.Invoke(m_Collision);
+        this.m_CallBack?.Invoke(this.m_ItemImage.sprite);
 
-        if(m_Collision.gameObject.tag == "Grape")
-        {
-            // このアイテムが取得された時の処理
-            OnAcquiredItem();
-        }
+        // このアイテムが取得された時の処理
+        OnAcquiredItem();
     }
 
     /// <summary>
