@@ -9,6 +9,9 @@ public class GrapeMemoryWindow : WindowBase
 
     GrapeMemoryWindowView View;
 
+    // グレープの記憶解放時期リスト
+    private List<int> UnlockTimingList = new List<int>();
+
     protected override void SettingView()
     {
         base.SettingView();
@@ -20,22 +23,50 @@ public class GrapeMemoryWindow : WindowBase
 
     void Start()
     {
+        // DataStoreの全ての解放タイミングを保存しておく
+        GetUnlockTiming();
+
         // ストーリーの進捗度を取得(クリアしたステージ数)
-        int StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
+        int m_StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
-        // 記憶が欠けているテキストを表示
-        View.StillLostMemoryText.gameObject.SetActive(true);
-        int ListNum = 0;
+        // グレープの記憶を解放する
+        UnlockOfGrapeMemory(m_StoryProgress);
+    }
 
-        for (int i = 0; i <= StoryProgress; i++)
+    /// <summary>
+    /// DataStoreの全ての解放タイミングを保存しておく
+    /// </summary>
+    private void GetUnlockTiming()
+    {
+        // DataStoreの"全解放以外の"解放タイミングを保存しておく
+        // ※全解放は複数の記憶が解放される為、別リストで解放記憶が管理されてる
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_1);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_2);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_3);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_4);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_5);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_6);
+        UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_7);
+    }
+
+    /// <summary>
+    /// グレープの記憶を解放する
+    /// </summary>
+    /// <param name="_StoryProgress"></param>
+    private void UnlockOfGrapeMemory(int _StoryProgress)
+    {
+        int m_UnlockIndexNum = 0;
+
+        for (int i = 0; i <= _StoryProgress; i++)
         {
-            if (i == 3 || i == 5 || i == 8 || i == 10 ||
-                i == 13 || i == 15 || i == 18 || i == 19)
+            if (UnlockTimingList.Contains(i))
             {
-                View.MemoryList[ListNum].gameObject.SetActive(true);
-                ListNum++;
+                View.MemoryList[m_UnlockIndexNum].gameObject.SetActive(true);
+                m_UnlockIndexNum++;
             }
-            else if(i == 20)
+
+            // 全解放時は、別リストで管理されてる複数の記憶が解放
+            if (DataStore.UnlockTimingOfGrapeMemory.Unlock_All <= i)
             {
                 foreach (Text x in View.Memory_20) x.gameObject.SetActive(true);
                 View.StillLostMemoryText.gameObject.SetActive(false);

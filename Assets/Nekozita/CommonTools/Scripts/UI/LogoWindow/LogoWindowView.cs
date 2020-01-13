@@ -95,7 +95,7 @@ public class LogoWindowView : WindowViewBase
             FadeInFlag = false;
 
             // ロゴ表示時間分待機させる
-            StartCoroutine("WaitForSecond");
+            StartCoroutine(WaitForSecond());
         }
         else if (FadeInFlag == false && DefaultAlphaNum <= Blocker.color.a)
         {

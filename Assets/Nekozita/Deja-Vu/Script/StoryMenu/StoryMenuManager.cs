@@ -29,17 +29,21 @@ public class StoryMenuManager : GameManagerBase
         // UIをストーリーの進捗度に合わせる(エンドレスとチュートリアルで最少は2)
         for(int i = 0; i <= PlayerPrefs.GetInt("ClearStage", -1) + 2; i++)
         {
-            // ストーリーノードを表示
-            StageNodeList.transform.GetChild(i).gameObject.SetActive(true);
+            // 最終ステージをクリアしていたら、新たにステージは解放しない
+            if(i < 15)
+            {
+                // ストーリーノードを表示
+                StageNodeList.transform.GetChild(i).gameObject.SetActive(true);
 
-            // クリアしたステージ説明の名前とそのオブジェクトを取得
-            string DescriptionName =
-                StageDescriptionList.transform.GetChild(i).gameObject.name;
-            GameObject DescriptionObj =
-                StageDescriptionList.transform.GetChild(i).gameObject;
+                // クリアしたステージ説明の名前とそのオブジェクトを取得
+                string DescriptionName =
+                    StageDescriptionList.transform.GetChild(i).gameObject.name;
+                GameObject DescriptionObj =
+                    StageDescriptionList.transform.GetChild(i).gameObject;
 
-            // 取得内容を元に、クリアしたステージのStageDescriptionを保存
-            StageDescriptionDic.Add(DescriptionName, DescriptionObj);
+                // 取得内容を元に、クリアしたステージのStageDescriptionを保存
+                StageDescriptionDic.Add(DescriptionName, DescriptionObj);
+            }
         }
     }
 

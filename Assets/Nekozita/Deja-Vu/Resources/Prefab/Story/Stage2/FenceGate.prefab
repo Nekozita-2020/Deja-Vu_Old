@@ -585,10 +585,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3225432432032428852}
   - component: {fileID: 8516675949559799886}
+  - component: {fileID: 5382168745902935126}
+  - component: {fileID: 7803654509243454472}
   - component: {fileID: 6410511517534423312}
   m_Layer: 0
-  m_Name: fence_gate
-  m_TagString: Key
+  m_Name: FenceGate
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,6 +630,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5382168745902935126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400753957346736614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233323bffb88c4ed68d5026b9229947c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7803654509243454472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400753957346736614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.750774, y: 11, z: 1}
+  m_Center: {x: -8, y: 5.5, z: -20}
 --- !u!114 &6410511517534423312
 MonoBehaviour:
   m_ObjectHideFlags: 0

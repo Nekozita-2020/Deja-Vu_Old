@@ -80,7 +80,7 @@ public class HomeManager : GameManagerBase
     // 【デバッグ】
     public void OnClickAllClearButton()
     {
-        PlayerPrefs.SetInt("ClearStage", 14);
+        PlayerPrefs.SetInt("ClearStage", 15);
         PlayerPrefs.Save();
     }
 }

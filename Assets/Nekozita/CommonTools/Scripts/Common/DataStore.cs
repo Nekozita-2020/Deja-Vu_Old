@@ -17,4 +17,20 @@ public class DataStore : MonoBehaviour
         public static readonly float LimitRight = 7.0f;
         public static readonly float LimitLeft = -7.0f;
     }
+
+    /// <summary>
+    /// グレープの記憶の解放時期
+    /// </summary>
+    public class UnlockTimingOfGrapeMemory
+    {
+        // 解放タイミング = クリアしたステージ番号
+        public static readonly int Unlock_1 = 2;
+        public static readonly int Unlock_2 = 4;
+        public static readonly int Unlock_3 = 6;
+        public static readonly int Unlock_4 = 8;
+        public static readonly int Unlock_5 = 10;
+        public static readonly int Unlock_6 = 12;
+        public static readonly int Unlock_7 = 14;
+        public static readonly int Unlock_All = 15;
+    }
 }
