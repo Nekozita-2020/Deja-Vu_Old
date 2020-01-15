@@ -21,7 +21,7 @@ public class Stage2_GameManager : StageGameManagerBase
     [SerializeField] private List<ItemBox> m_ItemBoxList4 = null;
 
     // 目標アイテムの吹き出し
-    [SerializeField] private List<SpriteRenderer> m_SeekItemList = null;
+    [SerializeField] private List<Image> m_SeekItemList = null;
 
     // ゴール前ゲート
     [SerializeField] private FenceGate m_FenceGate = null;
