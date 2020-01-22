@@ -9,6 +9,7 @@ public class Shake : MonoBehaviour
     [SerializeField] private bool Vertical = false;
 
     [Header("回転方向")]
+    [SerializeField] private Transform m_Centor = null;
     // true: 時計回り false: 反時計回り
     [SerializeField] private bool ClockWise = true;
 
@@ -38,14 +39,21 @@ public class Shake : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // いずれかの移動方向が指定されている時
-        if(Horizontal || Vertical)
-        {
-            if(ClockWise)
-                Elapsed -= Time.deltaTime * speed;
-            else
-                Elapsed += Time.deltaTime * speed;
+        if (ClockWise)
+            Elapsed -= Time.deltaTime * speed;
+        else
+            Elapsed += Time.deltaTime * speed;
 
+        // 回転させる時
+        if (Horizontal && Vertical)
+        {
+            // this.transform.localPosition = new Vector3(Mathf.Cos(Elapsed) * Width,
+            //     Mathf.Sin(Elapsed) * Height, this.transform.localPosition.z);
+            transform.RotateAround(m_Centor.position, Vector3.forward, Width);
+        }
+        // どちらかの移動方向が指定されている時
+        else if (Horizontal || Vertical)
+        {
             // 水平方向
             if (Horizontal)
             {

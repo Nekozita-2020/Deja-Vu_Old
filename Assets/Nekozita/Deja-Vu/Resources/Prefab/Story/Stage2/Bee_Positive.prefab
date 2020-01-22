@@ -4329,7 +4329,7 @@ GameObject:
   - component: {fileID: 7798926989115862610}
   - component: {fileID: 690256031322205809}
   - component: {fileID: 7948683902445998024}
-  - component: {fileID: 2616830979383561724}
+  - component: {fileID: 2130066411008255942}
   m_Layer: 0
   m_Name: Bee_Positive
   m_TagString: Positive
@@ -4457,7 +4457,7 @@ MonoBehaviour:
       isCreate: 1
       viewAdvanced: 0
     modifyNameEnabled: 1
---- !u!114 &2616830979383561724
+--- !u!114 &2130066411008255942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4471,8 +4471,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Horizontal: 1
   Vertical: 1
-  Width: 5
-  Height: 5
+  m_Centor: {fileID: 0}
+  ClockWise: 1
+  Width: 2
+  Height: 1
   RamdomSpeed: 1
   RamdomLow: 1
   RamdomUpper: 3
