@@ -6752,7 +6752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7b00661bdd3471388256f2519b71ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayBGM: {fileID: 0}
+  PlayBGM: {fileID: 8300000, guid: a2e9ceafa6d32495bbb5d6e3ecf6fe93, type: 3}
   MainCamera: {fileID: 1406901884}
   GameOverUI: {fileID: 2130633430}
   StageClearUI: {fileID: 2130633429}
