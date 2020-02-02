@@ -855,7 +855,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30102. \u4E00\u671F\u4E00\u4F1A\u3011"
+  m_Text: "\u30102. \u30AD\u30C4\u30CD\u306E\u3044\u305F\u305A\u3089\u3011"
 --- !u!222 &252244019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11021,7 +11021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -20, y: -0.00000046626187}
+  m_AnchoredPosition: {x: -20, y: -0.0000043639006}
   m_SizeDelta: {x: 580, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1623335066612609402
@@ -11072,7 +11072,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1623335065217253269}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
