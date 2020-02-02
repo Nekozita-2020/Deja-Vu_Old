@@ -44,7 +44,7 @@ public class UIMessageController : MonoBehaviour
     // 実際に変化させるFadeImageのアルファ値
     private float NowFadeImageColor_Alpha;
 
-        // タップしたかのフラグ
+    // タップしたかのフラグ
     private bool TapFlag = false;
 
     // ドラッグしたかのフラグ

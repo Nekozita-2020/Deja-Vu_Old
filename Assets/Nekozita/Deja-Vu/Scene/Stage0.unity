@@ -244,20 +244,105 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnPause
       objectReference: {fileID: 0}
+    - target: {fileID: 7864052509355778070, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508622109831, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052507981332746, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7864052507981332744, guid: 1a1796b77d9b945788ac6d66c135f691,
         type: 3}
       propertyPath: PauseEffectList.Array.data[0]
       value: 
       objectReference: {fileID: 1024027009}
+    - target: {fileID: 7864052508270004464, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508270004478, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184653, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
         type: 3}
       propertyPath: m_Text
-      value: "\u3088\u3057\u3002\n\n\u8A18\u61B6\u306E\u4E2D\u3067\u306E\u52D5\u304D\u65B9\u306F\u3053\u308C\u3067\u5927\u4E08\u592B\u304B\u306A\u3002\n\n\u65E9\u304F\u8A18\u61B6\u3092\u53D6\u308A\u623B\u3055\u306A\u3044\u3068\u3002\n\n\u3067\u3082\u3001\u624B\u639B\u304B\u308A\u3082\u4F55\u3082\u306A\u3044\u3057\u306A\u3041\u3002"
+      value: "\u3088\u3057\u3002\n\n\u8A18\u61B6\u306E\u4E2D\u3067\u306E\u52D5\u304D\u65B9\u306F\n\u3053\u308C\u3067\u5927\u4E08\u592B\u304B\u306A\u3002\n\n\u65E9\u304F\u8A18\u61B6\u3092\n\u53D6\u308A\u623B\u3055\u306A\u3044\u3068\u3002\n\n\u3067\u3082\u3001\u624B\u639B\u304B\u308A\u3082\n\u4F55\u3082\u306A\u3044\u3057\u306A\u3041\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.97647065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508725184651, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508690918201, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7864052508690918151, guid: 1a1796b77d9b945788ac6d66c135f691,
         type: 3}
       propertyPath: m_Text
-      value: "\u2026\u30EA\u30D6\u306B\u3042\u308B\u8A18\u61B6\u3092\u3001\n\u624B\u5F53\u305F\u308A\u6B21\u7B2C\u306B\u5DE1\u3063\u3066\u307F\u308B\u3057\u304B\u306A\u3055\u305D\u3046\u3060\u3002\n\n\u3044\u308D\u3093\u306A\u8A18\u61B6\u3092\u5DE1\u3063\u3066\u307F\u308B\u306E\u3082\u697D\u3057\u305D\u3046\u3060\u3057\u3002\n\n\u305A\u3063\u3068\u9000\u5C48\u3057\u306A\u304B\u3063\u305F\u308A\u3057\u3066\uFF01\n\n\u2026\u2026\u305A\u3063\u3068\u2026\u2026\u2026\u3002"
+      value: "\u2026\u8A18\u61B6\u3092\u3001\u624B\u5F53\u305F\u308A\u6B21\u7B2C\u306B\n\u5DE1\u3063\u3066\u307F\u308B\u3057\u304B\u306A\u3044\u304B\u3002\n\n\u3044\u308D\u3093\u306A\u8A18\u61B6\u3092\n\u5DE1\u308B\u306E\u3082\u697D\u3057\u305D\u3046\u3060\u3057\u3002\n\n\u305A\u3063\u3068\n\u9000\u5C48\u3057\u306A\u304B\u3063\u305F\u308A\u3057\u3066\uFF01\n\n\u2026\u2026\u305A\u3063\u3068\u2026\u2026\u2026\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508690918151, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508690918151, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508690918151, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.97647065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052508690918151, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864052509265595608, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1796b77d9b945788ac6d66c135f691, type: 3}
@@ -1157,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404e534987e994b8caac1e22bca5dc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayBGM: {fileID: 8300000, guid: d139139b508774f8e88c32b48d5c5463, type: 3}
+  PlayBGM: {fileID: 8300000, guid: 614cb31b0b86f4fbd80c6f084a8462c0, type: 3}
   MainCamera: {fileID: 1867884999}
   GameOverUI: {fileID: 192837705}
   StageClearUI: {fileID: 192837704}
