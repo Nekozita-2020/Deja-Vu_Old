@@ -968,6 +968,35 @@ struct Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C_marshaled_com
 	ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * ___m_LegacyContacts_6;
 };
 #endif // COLLISION_T7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C_H
+#ifndef COLLISIONDETECTIONMODE_TEB20E6741E9E096FFE68B2F993EF839C12F87CB6_H
+#define COLLISIONDETECTIONMODE_TEB20E6741E9E096FFE68B2F993EF839C12F87CB6_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.CollisionDetectionMode
+struct  CollisionDetectionMode_tEB20E6741E9E096FFE68B2F993EF839C12F87CB6 
+{
+public:
+	// System.Int32 UnityEngine.CollisionDetectionMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(CollisionDetectionMode_tEB20E6741E9E096FFE68B2F993EF839C12F87CB6, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLLISIONDETECTIONMODE_TEB20E6741E9E096FFE68B2F993EF839C12F87CB6_H
 #ifndef COLLISIONFLAGS_T5638B0B2D65637D85403CB6FC2279DCBBB8AF63E_H
 #define COLLISIONFLAGS_T5638B0B2D65637D85403CB6FC2279DCBBB8AF63E_H
 #ifdef __clang__
@@ -1439,6 +1468,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RIGIDBODYCONSTRAINTS_TC57FF2BFB454674CE1FDEF9EEDAF5FCFAB23FFC8_H
+#ifndef RIGIDBODYINTERPOLATION_T00D5C0028310C1C0D18B1148F59071F354987F95_H
+#define RIGIDBODYINTERPOLATION_T00D5C0028310C1C0D18B1148F59071F354987F95_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.RigidbodyInterpolation
+struct  RigidbodyInterpolation_t00D5C0028310C1C0D18B1148F59071F354987F95 
+{
+public:
+	// System.Int32 UnityEngine.RigidbodyInterpolation::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(RigidbodyInterpolation_t00D5C0028310C1C0D18B1148F59071F354987F95, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RIGIDBODYINTERPOLATION_T00D5C0028310C1C0D18B1148F59071F354987F95_H
 #ifndef COMPONENT_T05064EF382ABCAF4B8C94F8A350EA85184C26621_H
 #define COMPONENT_T05064EF382ABCAF4B8C94F8A350EA85184C26621_H
 #ifdef __clang__
@@ -1459,6 +1517,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // COMPONENT_T05064EF382ABCAF4B8C94F8A350EA85184C26621_H
+#ifndef PHYSICMATERIAL_TBEBB6F4620A5221A4CBAEDB2E5984CCA70AA07F8_H
+#define PHYSICMATERIAL_TBEBB6F4620A5221A4CBAEDB2E5984CCA70AA07F8_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.PhysicMaterial
+struct  PhysicMaterial_tBEBB6F4620A5221A4CBAEDB2E5984CCA70AA07F8  : public Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PHYSICMATERIAL_TBEBB6F4620A5221A4CBAEDB2E5984CCA70AA07F8_H
 #ifndef COLLIDER_T0FEEB36760860AD21B3B1F0509C365B393EC4BDF_H
 #define COLLIDER_T0FEEB36760860AD21B3B1F0509C365B393EC4BDF_H
 #ifdef __clang__
@@ -2297,6 +2375,14 @@ IL_0042:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // UnityEngine.Vector3 UnityEngine.ContactPoint::get_point()
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_point_mB222EB009D8B3DBE5F248088167F074551B424F7 (ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * __this, const RuntimeMethod* method)
 {
@@ -2464,6 +2550,14 @@ extern "C" IL2CPP_METHOD_ATTR void Joint_set_anchor_Injected_mCDEEE334517B97D137
 	_il2cpp_icall_func = (Joint_set_anchor_Injected_mCDEEE334517B97D137C1AE4ADAAFAD9CD85399EB_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Joint::set_anchor_Injected(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___value0);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -4278,6 +4372,14 @@ extern "C" IL2CPP_METHOD_ATTR void Rigidbody_AddExplosionForce_Injected_m52842CC
 	_il2cpp_icall_func = (Rigidbody_AddExplosionForce_Injected_m52842CCC1B482C3713F35132507C8F9652BC5D07_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::AddExplosionForce_Injected(System.Single,UnityEngine.Vector3&,System.Single,System.Single,UnityEngine.ForceMode)");
 	_il2cpp_icall_func(__this, ___explosionForce0, ___explosionPosition1, ___explosionRadius2, ___upwardsModifier3, ___mode4);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -759,11 +759,15 @@ extern "C" void SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pi
 extern "C" void SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const RuntimeType SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_0_0_0;
+extern "C" void Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_0_0_0;
 extern "C" void DelegatePInvokeWrapper_ApplyTween_t2F43618EC5A9D9BFE6D6E786124F756DFF5B8B0D();
 extern const RuntimeType ApplyTween_t2F43618EC5A9D9BFE6D6E786124F756DFF5B8B0D_0_0_0;
 extern "C" void DelegatePInvokeWrapper_EasingFunction_t28872DBE2F8634DAB27BEBF112376EEC2238A934();
 extern const RuntimeType EasingFunction_t28872DBE2F8634DAB27BEBF112376EEC2238A934_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[224] = 
+extern Il2CppInteropData g_Il2CppInteropData[225] = 
 {
 	{ NULL, Escape_t7D205DCBE40F7D5FE25F443E2DBF79A63870C5C6_marshal_pinvoke, Escape_t7D205DCBE40F7D5FE25F443E2DBF79A63870C5C6_marshal_pinvoke_back, Escape_t7D205DCBE40F7D5FE25F443E2DBF79A63870C5C6_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t7D205DCBE40F7D5FE25F443E2DBF79A63870C5C6_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
 	{ NULL, SafeStringMarshal_tD41B530333F2C9F500BD6FEC91735D16F06C9A6F_marshal_pinvoke, SafeStringMarshal_tD41B530333F2C9F500BD6FEC91735D16F06C9A6F_marshal_pinvoke_back, SafeStringMarshal_tD41B530333F2C9F500BD6FEC91735D16F06C9A6F_marshal_pinvoke_cleanup, NULL, NULL, &SafeStringMarshal_tD41B530333F2C9F500BD6FEC91735D16F06C9A6F_0_0_0 } /* Mono.SafeStringMarshal */,
@@ -986,6 +990,7 @@ extern Il2CppInteropData g_Il2CppInteropData[224] =
 	{ DelegatePInvokeWrapper_Raycast3DCallback_t83483916473C9710AEDB316A65CBE62C58935C5F, NULL, NULL, NULL, NULL, NULL, &Raycast3DCallback_t83483916473C9710AEDB316A65CBE62C58935C5F_0_0_0 } /* UnityEngine.UI.ReflectionMethodsCache/Raycast3DCallback */,
 	{ DelegatePInvokeWrapper_RaycastAllCallback_t751407A44270E02FAA43D0846A58EE6A8C4AE1CE, NULL, NULL, NULL, NULL, NULL, &RaycastAllCallback_t751407A44270E02FAA43D0846A58EE6A8C4AE1CE_0_0_0 } /* UnityEngine.UI.ReflectionMethodsCache/RaycastAllCallback */,
 	{ NULL, SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pinvoke, SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pinvoke_back, SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_marshal_pinvoke_cleanup, NULL, NULL, &SpriteState_t58B9DD66A79CD69AB4CFC3AD0C41E45DC2192C0A_0_0_0 } /* UnityEngine.UI.SpriteState */,
+	{ NULL, Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke, Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke_back, Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_marshal_pinvoke_cleanup, NULL, NULL, &Bool3_t5E6B3AF9D3D02D35FC6DF3CBF7795D45E6AB8E2C_0_0_0 } /* SAColliderBuilderCommon/Bool3 */,
 	{ DelegatePInvokeWrapper_ApplyTween_t2F43618EC5A9D9BFE6D6E786124F756DFF5B8B0D, NULL, NULL, NULL, NULL, NULL, &ApplyTween_t2F43618EC5A9D9BFE6D6E786124F756DFF5B8B0D_0_0_0 } /* iTween/ApplyTween */,
 	{ DelegatePInvokeWrapper_EasingFunction_t28872DBE2F8634DAB27BEBF112376EEC2238A934, NULL, NULL, NULL, NULL, NULL, &EasingFunction_t28872DBE2F8634DAB27BEBF112376EEC2238A934_0_0_0 } /* iTween/EasingFunction */,
 	NULL,

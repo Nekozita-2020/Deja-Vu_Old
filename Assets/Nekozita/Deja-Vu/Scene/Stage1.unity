@@ -268,12 +268,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db66149dc1884c4eb26cb537dab79db, type: 3}
---- !u!1 &229561803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2763121525270530154, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
-    type: 3}
-  m_PrefabInstance: {fileID: 1351570849}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &236849829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3671675322242606300, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
@@ -2734,6 +2728,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2763121525912395383, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49
+      objectReference: {fileID: 0}
     - target: {fileID: 2763121526363724703, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3816,7 +3815,7 @@ MonoBehaviour:
   StageClearUI: {fileID: 685369712}
   PauseButton: {fileID: 685369715}
   TouchSenser: {fileID: 1883722573}
-  PausebleObjects: {fileID: 229561803}
+  PausebleObjects: {fileID: 2763121526066847179}
   Grape: {fileID: 1922550207}
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
     type: 3}
@@ -4660,6 +4659,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db66149dc1884c4eb26cb537dab79db, type: 3}
+--- !u!1 &2763121526066847179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2763121525270530154, guid: dfc6b3ecb6bb94dbabfff20b355b9799,
+    type: 3}
+  m_PrefabInstance: {fileID: 1351570849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4043770659255467101
 PrefabInstance:
   m_ObjectHideFlags: 0
