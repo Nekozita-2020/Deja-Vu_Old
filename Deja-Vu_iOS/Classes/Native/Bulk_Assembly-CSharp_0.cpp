@@ -18347,10 +18347,12 @@ public:
 	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * ___ClearMessageUI_5;
 	// UnityEngine.GameObject StageClearUIManager::GrapeMemoryWin_BackGround
 	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * ___GrapeMemoryWin_BackGround_6;
+	// UnityEngine.UI.Text StageClearUIManager::m_NewMemoryText
+	Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 * ___m_NewMemoryText_7;
 	// System.Int32 StageClearUIManager::ClearStegeNum
-	int32_t ___ClearStegeNum_7;
+	int32_t ___ClearStegeNum_8;
 	// System.Int32 StageClearUIManager::StoryProgress
-	int32_t ___StoryProgress_8;
+	int32_t ___StoryProgress_9;
 
 public:
 	inline static int32_t get_offset_of_ClearMessageUI_5() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___ClearMessageUI_5)); }
@@ -18371,20 +18373,29 @@ public:
 		Il2CppCodeGenWriteBarrier((&___GrapeMemoryWin_BackGround_6), value);
 	}
 
-	inline static int32_t get_offset_of_ClearStegeNum_7() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___ClearStegeNum_7)); }
-	inline int32_t get_ClearStegeNum_7() const { return ___ClearStegeNum_7; }
-	inline int32_t* get_address_of_ClearStegeNum_7() { return &___ClearStegeNum_7; }
-	inline void set_ClearStegeNum_7(int32_t value)
+	inline static int32_t get_offset_of_m_NewMemoryText_7() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___m_NewMemoryText_7)); }
+	inline Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 * get_m_NewMemoryText_7() const { return ___m_NewMemoryText_7; }
+	inline Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 ** get_address_of_m_NewMemoryText_7() { return &___m_NewMemoryText_7; }
+	inline void set_m_NewMemoryText_7(Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 * value)
 	{
-		___ClearStegeNum_7 = value;
+		___m_NewMemoryText_7 = value;
+		Il2CppCodeGenWriteBarrier((&___m_NewMemoryText_7), value);
 	}
 
-	inline static int32_t get_offset_of_StoryProgress_8() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___StoryProgress_8)); }
-	inline int32_t get_StoryProgress_8() const { return ___StoryProgress_8; }
-	inline int32_t* get_address_of_StoryProgress_8() { return &___StoryProgress_8; }
-	inline void set_StoryProgress_8(int32_t value)
+	inline static int32_t get_offset_of_ClearStegeNum_8() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___ClearStegeNum_8)); }
+	inline int32_t get_ClearStegeNum_8() const { return ___ClearStegeNum_8; }
+	inline int32_t* get_address_of_ClearStegeNum_8() { return &___ClearStegeNum_8; }
+	inline void set_ClearStegeNum_8(int32_t value)
 	{
-		___StoryProgress_8 = value;
+		___ClearStegeNum_8 = value;
+	}
+
+	inline static int32_t get_offset_of_StoryProgress_9() { return static_cast<int32_t>(offsetof(StageClearUIManager_t7064ADD9F9DACA6710850182D577566EA43C46E6, ___StoryProgress_9)); }
+	inline int32_t get_StoryProgress_9() const { return ___StoryProgress_9; }
+	inline int32_t* get_address_of_StoryProgress_9() { return &___StoryProgress_9; }
+	inline void set_StoryProgress_9(int32_t value)
+	{
+		___StoryProgress_9 = value;
 	}
 };
 
@@ -41155,34 +41166,39 @@ extern "C" IL2CPP_METHOD_ATTR void StageClearUIManager_Start_m48267F9581C3A46769
 	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * G_B3_0 = NULL;
 	{
 		int32_t L_0 = PlayerPrefs_GetInt_m1CBBA4989F15BA668EE24950D3C6B56E2ED20BD6(_stringLiteral8B7798AAF3354FD64B4FCBF659FC988F3A7432DF, (-1), /*hidden argument*/NULL);
-		__this->set_StoryProgress_8(L_0);
-		int32_t L_1 = __this->get_StoryProgress_8();
-		int32_t L_2 = __this->get_ClearStegeNum_7();
+		__this->set_StoryProgress_9(L_0);
+		int32_t L_1 = __this->get_StoryProgress_9();
+		int32_t L_2 = __this->get_ClearStegeNum_8();
 		if ((((int32_t)L_1) >= ((int32_t)L_2)))
 		{
-			goto IL_0025;
+			goto IL_0036;
 		}
 	}
 	{
 		StageClearUIManager_AddStoryProgress_m4A2B6E0B29EBA981EF189E1FC5D4CD528E232E61(__this, /*hidden argument*/NULL);
+		Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 * L_3 = __this->get_m_NewMemoryText_7();
+		NullCheck(L_3);
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_4 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		GameObject_SetActive_m25A39F6D9FB68C51F13313F9804E85ACC937BC04(L_4, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0025:
+IL_0036:
 	{
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_3 = __this->get_ClearMessageUI_5();
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_4 = L_3;
-		G_B3_0 = L_4;
-		if (L_4)
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_5 = __this->get_ClearMessageUI_5();
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_6 = L_5;
+		G_B3_0 = L_6;
+		if (L_6)
 		{
-			G_B4_0 = L_4;
-			goto IL_0030;
+			G_B4_0 = L_6;
+			goto IL_0041;
 		}
 	}
 	{
 		return;
 	}
 
-IL_0030:
+IL_0041:
 	{
 		NullCheck(G_B4_0);
 		GameObject_SetActive_m25A39F6D9FB68C51F13313F9804E85ACC937BC04(G_B4_0, (bool)1, /*hidden argument*/NULL);
@@ -41199,7 +41215,7 @@ extern "C" IL2CPP_METHOD_ATTR void StageClearUIManager_AddStoryProgress_m4A2B6E0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		int32_t L_0 = __this->get_ClearStegeNum_7();
+		int32_t L_0 = __this->get_ClearStegeNum_8();
 		PlayerPrefs_SetInt_mBF4101DF829B4738CCC293E1C2D173AEE45EFE62(_stringLiteral8B7798AAF3354FD64B4FCBF659FC988F3A7432DF, L_0, /*hidden argument*/NULL);
 		PlayerPrefs_Save_m6CC1FE22D4B10AC819F55802D725BE17EA2AD37B(/*hidden argument*/NULL);
 		return;

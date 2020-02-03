@@ -10,7 +10,7 @@ public class GrapeMemoryWindow : WindowBase
     GrapeMemoryWindowView View;
 
     // グレープの記憶解放時期リスト
-    private List<int> UnlockTimingList = new List<int>();
+    // private List<int> UnlockTimingList = new List<int>();
 
     protected override void SettingView()
     {
@@ -24,7 +24,7 @@ public class GrapeMemoryWindow : WindowBase
     void Start()
     {
         // DataStoreの全ての解放タイミングを保存しておく
-        GetUnlockTiming();
+        // GetUnlockTiming();
 
         // ストーリーの進捗度を取得(クリアしたステージ数)
         int m_StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
@@ -32,14 +32,15 @@ public class GrapeMemoryWindow : WindowBase
         // グレープの記憶を解放する
         UnlockOfGrapeMemory(m_StoryProgress);
     }
-
+    /*
     /// <summary>
     /// DataStoreの全ての解放タイミングを保存しておく
     /// </summary>
-    private void GetUnlockTiming()
+    public void GetUnlockTiming()
     {
         // DataStoreの"全解放以外の"解放タイミングを保存しておく
-        // ※全解放は複数の記憶が解放される為、別リストで解放記憶が管理されてる
+        // ※ラストステージクリア時はそのタイミングで複数の記憶が解放される為、
+        //  別リストで解放記憶が管理されてる
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_1);
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_2);
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_3);
@@ -48,7 +49,7 @@ public class GrapeMemoryWindow : WindowBase
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_6);
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_7);
     }
-
+    */
     /// <summary>
     /// グレープの記憶を解放する
     /// </summary>
@@ -57,9 +58,12 @@ public class GrapeMemoryWindow : WindowBase
     {
         int m_UnlockIndexNum = 0;
 
+        // DataStoreのグレープの記憶解放時期リストを作成
+        DataStore.MakeUnlockTimingList();
+
         for (int i = 0; i <= _StoryProgress; i++)
         {
-            if (UnlockTimingList.Contains(i))
+            if (DataStore.m_UnlockTimingList.Contains(i))
             {
                 View.MemoryList[m_UnlockIndexNum].gameObject.SetActive(true);
                 m_UnlockIndexNum++;

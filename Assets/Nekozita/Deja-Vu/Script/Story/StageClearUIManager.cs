@@ -29,8 +29,15 @@ public class StageClearUIManager : GameManagerBase
             // 【重要】このステージを初めてクリアした時のみ、ストーリー進捗度を進める
             AddStoryProgress();
 
-            // 新たな記憶が解放されたテキストを出す
-            m_NewMemoryText.gameObject.SetActive(true);
+            // DataStoreのグレープの記憶解放時期リストを作成
+            DataStore.MakeUnlockTimingList();
+
+            // グレープの記憶が解放されるタイミングなら
+            if (DataStore.m_UnlockTimingList.Contains(ClearStegeNum))
+            {
+                // 新たな記憶が解放されたテキストを出す
+                m_NewMemoryText.gameObject.SetActive(true);
+            }
         }
 
         ClearMessageUI?.SetActive(true);
