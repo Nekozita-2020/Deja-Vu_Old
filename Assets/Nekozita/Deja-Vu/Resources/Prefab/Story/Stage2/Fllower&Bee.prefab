@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 325318065651895237}
+  - component: {fileID: 2343433815041681768}
   m_Layer: 5
   m_Name: Fllower&Bee
   m_TagString: Untagged
@@ -35,6 +36,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2343433815041681768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325318065651895236}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54f8edfd271754533ae0bc7bc886dded, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &325318065162258132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 5576575238699670647, guid: 5c39cddc257a8473fa19dc0508dc4279,
         type: 3}
       propertyPath: m_Name
-      value: Bee_Positive
+      value: Bee_Positive_Outside
       objectReference: {fileID: 0}
     - target: {fileID: 3522611763520936517, guid: 5c39cddc257a8473fa19dc0508dc4279,
         type: 3}
@@ -112,7 +132,18 @@ PrefabInstance:
       propertyPath: AdjustPosition_Y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4628572355220297165, guid: 5c39cddc257a8473fa19dc0508dc4279,
+        type: 3}
+      propertyPath: m_Centor
+      value: 
+      objectReference: {fileID: 325318065301151144}
+    - target: {fileID: 4628572355220297165, guid: 5c39cddc257a8473fa19dc0508dc4279,
+        type: 3}
+      propertyPath: AdjustPosition_Y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2130066411008255942, guid: 5c39cddc257a8473fa19dc0508dc4279, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c39cddc257a8473fa19dc0508dc4279, type: 3}
 --- !u!4 &3774324019193748625 stripped
 Transform:
@@ -130,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 5576575238699670647, guid: d3463bba8875a46f09fd93930abd3038,
         type: 3}
       propertyPath: m_Name
-      value: Bee_Negative
+      value: Bee_Negative_Outside
       objectReference: {fileID: 0}
     - target: {fileID: 3522611763520936517, guid: d3463bba8875a46f09fd93930abd3038,
         type: 3}
@@ -197,7 +228,23 @@ PrefabInstance:
       propertyPath: AdjustPosition_Y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 584236898767080101, guid: d3463bba8875a46f09fd93930abd3038,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804502922354567969, guid: d3463bba8875a46f09fd93930abd3038,
+        type: 3}
+      propertyPath: m_Centor
+      value: 
+      objectReference: {fileID: 325318065301151144}
+    - target: {fileID: 2804502922354567969, guid: d3463bba8875a46f09fd93930abd3038,
+        type: 3}
+      propertyPath: AdjustPosition_Y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 584236898767080101, guid: d3463bba8875a46f09fd93930abd3038, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d3463bba8875a46f09fd93930abd3038, type: 3}
 --- !u!4 &3774324019062216601 stripped
 Transform:
@@ -278,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 5576575238699670647, guid: d3463bba8875a46f09fd93930abd3038,
         type: 3}
       propertyPath: m_Name
-      value: Bee_Negative (1)
+      value: Bee_Negative_Inside
       objectReference: {fileID: 0}
     - target: {fileID: 3522611763520936517, guid: d3463bba8875a46f09fd93930abd3038,
         type: 3}
@@ -360,7 +407,18 @@ PrefabInstance:
       propertyPath: AdjustPosition_Y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2804502922354567969, guid: d3463bba8875a46f09fd93930abd3038,
+        type: 3}
+      propertyPath: m_Centor
+      value: 
+      objectReference: {fileID: 325318065301151144}
+    - target: {fileID: 2804502922354567969, guid: d3463bba8875a46f09fd93930abd3038,
+        type: 3}
+      propertyPath: AdjustPosition_Y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 584236898767080101, guid: d3463bba8875a46f09fd93930abd3038, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d3463bba8875a46f09fd93930abd3038, type: 3}
 --- !u!4 &6621871597001155599 stripped
 Transform:
@@ -378,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 5576575238699670647, guid: 5c39cddc257a8473fa19dc0508dc4279,
         type: 3}
       propertyPath: m_Name
-      value: Bee_Positive (1)
+      value: Bee_Positive_Inside
       objectReference: {fileID: 0}
     - target: {fileID: 3522611763520936517, guid: 5c39cddc257a8473fa19dc0508dc4279,
         type: 3}
@@ -460,7 +518,18 @@ PrefabInstance:
       propertyPath: AdjustPosition_Y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4628572355220297165, guid: 5c39cddc257a8473fa19dc0508dc4279,
+        type: 3}
+      propertyPath: m_Centor
+      value: 
+      objectReference: {fileID: 325318065301151144}
+    - target: {fileID: 4628572355220297165, guid: 5c39cddc257a8473fa19dc0508dc4279,
+        type: 3}
+      propertyPath: AdjustPosition_Y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2130066411008255942, guid: 5c39cddc257a8473fa19dc0508dc4279, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c39cddc257a8473fa19dc0508dc4279, type: 3}
 --- !u!4 &6814084716832253148 stripped
 Transform:

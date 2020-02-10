@@ -3,31 +3,39 @@ using System.Collections;
 
 public class Rotation : MonoBehaviour
 {
-    [Header("回転軸")]
-    [SerializeField] private bool Axis_X = false;
-    [SerializeField] private bool Axis_Y = false;
-    [SerializeField] private bool Axis_Z = false;
+    [Header("中心座標と微調整")]
+    [SerializeField] private Transform m_Centor = null;
+    [SerializeField] private float AdjustPosition_X = 0, AdjustPosition_Y = 0;
+
+    [Header("回転速度")]
+    [SerializeField] private bool RamdomSpeed = false;
+    [SerializeField] private float RamdomLow = 1.0f;
+    [SerializeField] private float RamdomUpper = 3.0f;
+    private float speed = 1.0f;
 
     [Header("回転方向 True:時計回り Flase:反時計回り")]
     [SerializeField] private bool IsClockwise = true;
 
-    [Header("1秒間に回転させる角度")]
-    [SerializeField] private int Angle = 90;
+
+
+    private void Start()
+    {
+        // ランダムフラグがOnならspeedを更新
+        if (RamdomSpeed)
+        {
+            speed = Random.Range(RamdomLow, RamdomUpper);
+        }
+    }
 
     private void FixedUpdate()
     {
-        if (IsClockwise)
-        {
-            if (Axis_X) this.transform.Rotate(new Vector3(Angle, 0, 0) * Time.deltaTime, Space.Self);
-            if (Axis_Y) this.transform.Rotate(new Vector3(0, Angle, 0) * Time.deltaTime, Space.Self);
-            if (Axis_Z) this.transform.Rotate(new Vector3(0, 0, Angle) * Time.deltaTime, Space.Self);
+        float Adjust_X = m_Centor.position.x + AdjustPosition_X;
+        float Adjust_Y = m_Centor.position.y + AdjustPosition_Y;
+        Vector3 Adjust_Centor = new Vector3(Adjust_X, Adjust_Y);
 
-        }
+        if (IsClockwise)
+            this.transform.RotateAround(Adjust_Centor, Vector3.forward, speed);
         else
-        {
-            if (Axis_X) this.transform.Rotate(new Vector3(-Angle, 0, 0) * Time.deltaTime, Space.Self);
-            if (Axis_Y) this.transform.Rotate(new Vector3(0, -Angle, 0) * Time.deltaTime, Space.Self);
-            if (Axis_Z) this.transform.Rotate(new Vector3(0, 0, -Angle) * Time.deltaTime, Space.Self);
-        }
+            this.transform.RotateAround(Adjust_Centor, Vector3.forward, -speed);
     }
 }
