@@ -4117,56 +4117,87 @@ public:
 struct  Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
 {
 public:
-	// System.Boolean Rotation::Axis_X
-	bool ___Axis_X_4;
-	// System.Boolean Rotation::Axis_Y
-	bool ___Axis_Y_5;
-	// System.Boolean Rotation::Axis_Z
-	bool ___Axis_Z_6;
+	// UnityEngine.Transform Rotation::m_Centor
+	Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___m_Centor_4;
+	// System.Single Rotation::AdjustPosition_X
+	float ___AdjustPosition_X_5;
+	// System.Single Rotation::AdjustPosition_Y
+	float ___AdjustPosition_Y_6;
+	// System.Boolean Rotation::RamdomSpeed
+	bool ___RamdomSpeed_7;
+	// System.Single Rotation::RamdomLow
+	float ___RamdomLow_8;
+	// System.Single Rotation::RamdomUpper
+	float ___RamdomUpper_9;
+	// System.Single Rotation::speed
+	float ___speed_10;
 	// System.Boolean Rotation::IsClockwise
-	bool ___IsClockwise_7;
-	// System.Int32 Rotation::Angle
-	int32_t ___Angle_8;
+	bool ___IsClockwise_11;
 
 public:
-	inline static int32_t get_offset_of_Axis_X_4() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___Axis_X_4)); }
-	inline bool get_Axis_X_4() const { return ___Axis_X_4; }
-	inline bool* get_address_of_Axis_X_4() { return &___Axis_X_4; }
-	inline void set_Axis_X_4(bool value)
+	inline static int32_t get_offset_of_m_Centor_4() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___m_Centor_4)); }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * get_m_Centor_4() const { return ___m_Centor_4; }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA ** get_address_of_m_Centor_4() { return &___m_Centor_4; }
+	inline void set_m_Centor_4(Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * value)
 	{
-		___Axis_X_4 = value;
+		___m_Centor_4 = value;
+		Il2CppCodeGenWriteBarrier((&___m_Centor_4), value);
 	}
 
-	inline static int32_t get_offset_of_Axis_Y_5() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___Axis_Y_5)); }
-	inline bool get_Axis_Y_5() const { return ___Axis_Y_5; }
-	inline bool* get_address_of_Axis_Y_5() { return &___Axis_Y_5; }
-	inline void set_Axis_Y_5(bool value)
+	inline static int32_t get_offset_of_AdjustPosition_X_5() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___AdjustPosition_X_5)); }
+	inline float get_AdjustPosition_X_5() const { return ___AdjustPosition_X_5; }
+	inline float* get_address_of_AdjustPosition_X_5() { return &___AdjustPosition_X_5; }
+	inline void set_AdjustPosition_X_5(float value)
 	{
-		___Axis_Y_5 = value;
+		___AdjustPosition_X_5 = value;
 	}
 
-	inline static int32_t get_offset_of_Axis_Z_6() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___Axis_Z_6)); }
-	inline bool get_Axis_Z_6() const { return ___Axis_Z_6; }
-	inline bool* get_address_of_Axis_Z_6() { return &___Axis_Z_6; }
-	inline void set_Axis_Z_6(bool value)
+	inline static int32_t get_offset_of_AdjustPosition_Y_6() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___AdjustPosition_Y_6)); }
+	inline float get_AdjustPosition_Y_6() const { return ___AdjustPosition_Y_6; }
+	inline float* get_address_of_AdjustPosition_Y_6() { return &___AdjustPosition_Y_6; }
+	inline void set_AdjustPosition_Y_6(float value)
 	{
-		___Axis_Z_6 = value;
+		___AdjustPosition_Y_6 = value;
 	}
 
-	inline static int32_t get_offset_of_IsClockwise_7() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___IsClockwise_7)); }
-	inline bool get_IsClockwise_7() const { return ___IsClockwise_7; }
-	inline bool* get_address_of_IsClockwise_7() { return &___IsClockwise_7; }
-	inline void set_IsClockwise_7(bool value)
+	inline static int32_t get_offset_of_RamdomSpeed_7() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___RamdomSpeed_7)); }
+	inline bool get_RamdomSpeed_7() const { return ___RamdomSpeed_7; }
+	inline bool* get_address_of_RamdomSpeed_7() { return &___RamdomSpeed_7; }
+	inline void set_RamdomSpeed_7(bool value)
 	{
-		___IsClockwise_7 = value;
+		___RamdomSpeed_7 = value;
 	}
 
-	inline static int32_t get_offset_of_Angle_8() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___Angle_8)); }
-	inline int32_t get_Angle_8() const { return ___Angle_8; }
-	inline int32_t* get_address_of_Angle_8() { return &___Angle_8; }
-	inline void set_Angle_8(int32_t value)
+	inline static int32_t get_offset_of_RamdomLow_8() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___RamdomLow_8)); }
+	inline float get_RamdomLow_8() const { return ___RamdomLow_8; }
+	inline float* get_address_of_RamdomLow_8() { return &___RamdomLow_8; }
+	inline void set_RamdomLow_8(float value)
 	{
-		___Angle_8 = value;
+		___RamdomLow_8 = value;
+	}
+
+	inline static int32_t get_offset_of_RamdomUpper_9() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___RamdomUpper_9)); }
+	inline float get_RamdomUpper_9() const { return ___RamdomUpper_9; }
+	inline float* get_address_of_RamdomUpper_9() { return &___RamdomUpper_9; }
+	inline void set_RamdomUpper_9(float value)
+	{
+		___RamdomUpper_9 = value;
+	}
+
+	inline static int32_t get_offset_of_speed_10() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___speed_10)); }
+	inline float get_speed_10() const { return ___speed_10; }
+	inline float* get_address_of_speed_10() { return &___speed_10; }
+	inline void set_speed_10(float value)
+	{
+		___speed_10 = value;
+	}
+
+	inline static int32_t get_offset_of_IsClockwise_11() { return static_cast<int32_t>(offsetof(Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0, ___IsClockwise_11)); }
+	inline bool get_IsClockwise_11() const { return ___IsClockwise_11; }
+	inline bool* get_address_of_IsClockwise_11() { return &___IsClockwise_11; }
+	inline void set_IsClockwise_11(bool value)
+	{
+		___IsClockwise_11 = value;
 	}
 };
 
@@ -6945,13 +6976,16 @@ extern const int32_t g_FieldOffsetTable2722[3] =
 	RotateAround_tEAE6DA2E9BAEBB978D656A2F7ECF8F8FD5F7E5D4::get_offset_of_m_Angle_6(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2723 = { sizeof (Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2723[5] = 
+extern const int32_t g_FieldOffsetTable2723[8] = 
 {
-	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_Axis_X_4(),
-	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_Axis_Y_5(),
-	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_Axis_Z_6(),
-	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_IsClockwise_7(),
-	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_Angle_8(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_m_Centor_4(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_AdjustPosition_X_5(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_AdjustPosition_Y_6(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_RamdomSpeed_7(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_RamdomLow_8(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_RamdomUpper_9(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_speed_10(),
+	Rotation_t3A65AF0041C17225B569870E46302C79AB156DB0::get_offset_of_IsClockwise_11(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2724 = { sizeof (Shake_t00B6111D847DC9399EFCAD85BE3F5DEE66A64B21), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable2724[13] = 

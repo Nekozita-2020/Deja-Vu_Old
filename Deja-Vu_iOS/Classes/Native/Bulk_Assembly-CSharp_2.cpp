@@ -146,8 +146,6 @@ struct Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA;
 struct Vector3U5BU5D_tB9EC3346CC4A0EA5447D968E84A9AC1F6F372C28;
 // UnityEngine.WheelCollider
 struct WheelCollider_t92116DAF9E41154A9FB854E1BE553799E6837641;
-// UnityStandardAssets.Vehicles.Car.Suspension
-struct Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE;
 // UnityStandardAssets.Vehicles.Car.WheelEffects
 struct WheelEffects_t84C4593F7C4603BD1B0A03B7828ABE66AE7A8E23;
 // UnityStandardAssets.Vehicles.Car.WheelEffects/<StartSkidTrail>d__18
@@ -312,7 +310,6 @@ extern const uint32_t PlatformerCharacter2D_Move_m284C5E9F9237FE79506ABE6777FD50
 extern const uint32_t Restarter_OnTriggerEnter2D_m9FDEE988A37A132052AA0614D4A19A3E3EEBAEEB_MetadataUsageId;
 extern const uint32_t SpecularLighting_Start_m5D7FA59C5115E64436E4C8B0A6937993C712616D_MetadataUsageId;
 extern const uint32_t SpecularLighting_Update_m41CE980E0FED55077BC990DDEC73CD3A114A8E9A_MetadataUsageId;
-extern const uint32_t Suspension_Update_mBAAE312ED07CE98D29DB08AAB7B1E86336082EAF_MetadataUsageId;
 extern const uint32_t U3CStartSkidTrailU3Ed__18_MoveNext_mF16E329999960ABC3D61A5F7DACEC32A6998F551_MetadataUsageId;
 extern const uint32_t U3CStartSkidTrailU3Ed__18_System_Collections_IEnumerator_Reset_m03FE3A63028851A22E8386C7533F7D9F0CE099E0_MetadataUsageId;
 extern const uint32_t WaterBase_UpdateShader_mA6E5BFC6AF238573B4CFD91891DED74EFB9BE8E7_MetadataUsageId;
@@ -2915,35 +2912,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RENDERINGPATH_T5E196960B7ECE9BA17943445415336FA4E19F82B_H
-#ifndef SPEEDTYPE_TE41C5F42349FE6F1F3E171F8C70C763BBD731BB3_H
-#define SPEEDTYPE_TE41C5F42349FE6F1F3E171F8C70C763BBD731BB3_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.Vehicles.Car.SpeedType
-struct  SpeedType_tE41C5F42349FE6F1F3E171F8C70C763BBD731BB3 
-{
-public:
-	// System.Int32 UnityStandardAssets.Vehicles.Car.SpeedType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(SpeedType_tE41C5F42349FE6F1F3E171F8C70C763BBD731BB3, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SPEEDTYPE_TE41C5F42349FE6F1F3E171F8C70C763BBD731BB3_H
 #ifndef WATERMODE_TFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2_H
 #define WATERMODE_TFDEB07D7F0D666A2596ABBA2D6957F0FD9B21FE2_H
 #ifdef __clang__
@@ -3702,56 +3670,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // AUDIOSOURCE_T5196F862B4E60F404613361C90D87FBDD041E93C_H
-#ifndef SUSPENSION_TF41FAA99BB231CC58DD5D5508E02F50618CD12EE_H
-#define SUSPENSION_TF41FAA99BB231CC58DD5D5508E02F50618CD12EE_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.Vehicles.Car.Suspension
-struct  Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
-{
-public:
-	// UnityEngine.GameObject UnityStandardAssets.Vehicles.Car.Suspension::wheel
-	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * ___wheel_4;
-	// UnityEngine.Vector3 UnityStandardAssets.Vehicles.Car.Suspension::m_TargetOriginalPosition
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___m_TargetOriginalPosition_5;
-	// UnityEngine.Vector3 UnityStandardAssets.Vehicles.Car.Suspension::m_Origin
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___m_Origin_6;
-
-public:
-	inline static int32_t get_offset_of_wheel_4() { return static_cast<int32_t>(offsetof(Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE, ___wheel_4)); }
-	inline GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * get_wheel_4() const { return ___wheel_4; }
-	inline GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F ** get_address_of_wheel_4() { return &___wheel_4; }
-	inline void set_wheel_4(GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * value)
-	{
-		___wheel_4 = value;
-		Il2CppCodeGenWriteBarrier((&___wheel_4), value);
-	}
-
-	inline static int32_t get_offset_of_m_TargetOriginalPosition_5() { return static_cast<int32_t>(offsetof(Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE, ___m_TargetOriginalPosition_5)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_m_TargetOriginalPosition_5() const { return ___m_TargetOriginalPosition_5; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_m_TargetOriginalPosition_5() { return &___m_TargetOriginalPosition_5; }
-	inline void set_m_TargetOriginalPosition_5(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
-	{
-		___m_TargetOriginalPosition_5 = value;
-	}
-
-	inline static int32_t get_offset_of_m_Origin_6() { return static_cast<int32_t>(offsetof(Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE, ___m_Origin_6)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_m_Origin_6() const { return ___m_Origin_6; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_m_Origin_6() { return &___m_Origin_6; }
-	inline void set_m_Origin_6(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
-	{
-		___m_Origin_6 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SUSPENSION_TF41FAA99BB231CC58DD5D5508E02F50618CD12EE_H
 #ifndef WHEELEFFECTS_T84C4593F7C4603BD1B0A03B7828ABE66AE7A8E23_H
 #define WHEELEFFECTS_T84C4593F7C4603BD1B0A03B7828ABE66AE7A8E23_H
 #ifdef __clang__
@@ -5148,20 +5066,8 @@ extern "C" IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m466D001F105E25DEB5C9BC
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m2C7E51568033239B506E15E7804A0B8658246498_gshared (Dictionary_2_t32F25F093828AA9F93CB11C2A2B4648FD62A09BA * __this, const RuntimeMethod* method);
 
-// UnityEngine.Transform UnityEngine.GameObject::get_transform()
-extern "C" IL2CPP_METHOD_ATTR Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
-extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.Component::get_transform()
 extern "C" IL2CPP_METHOD_ATTR Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
-extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Subtraction_mF9846B723A5034F8B9F5F5DCB78E3D67649143D3 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p1, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
-extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Addition_m929F9C17E5D11B94D50B4AFF1D730B70CB59B50E (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p1, const RuntimeMethod* method);
-// System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
-extern "C" IL2CPP_METHOD_ATTR void Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
-// System.Void UnityEngine.MonoBehaviour::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.Transform::get_root()
 extern "C" IL2CPP_METHOD_ATTR Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * Transform_get_root_m101A8B5C2CC6D868B6B66EEDBD5336FC1EB5DDD6 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponentInChildren<UnityEngine.ParticleSystem>()
@@ -5191,6 +5097,8 @@ inline AudioSource_t5196F862B4E60F404613361C90D87FBDD041E93C * Component_GetComp
 extern "C" IL2CPP_METHOD_ATTR void WheelEffects_set_PlayingAudio_mBC81EE54C3E5463D748754AAB82B306E45F3EA5C (WheelEffects_t84C4593F7C4603BD1B0A03B7828ABE66AE7A8E23 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.GameObject::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void GameObject__ctor_mBB454E679AD9CF0B84D3609A01E6A9753ACF4686 (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, String_t* p0, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.GameObject::get_transform()
+extern "C" IL2CPP_METHOD_ATTR Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::get_up()
@@ -5199,6 +5107,8 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 
 extern "C" IL2CPP_METHOD_ATTR float WheelCollider_get_radius_m6740216F0D9ABC451D904863EFD1230337516D68 (WheelCollider_t92116DAF9E41154A9FB854E1BE553799E6837641 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Multiply_m1C5F07723615156ACF035D88A1280A9E8F35A04E (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, float p1, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Subtraction_mF9846B723A5034F8B9F5F5DCB78E3D67649143D3 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p1, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_position_mDA89E4893F14ECA5CBEEE7FB80A5BF7C1B8EA6DC (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem::Emit(System.Int32)
@@ -5221,6 +5131,8 @@ extern "C" IL2CPP_METHOD_ATTR void WheelEffects_set_skidding_m08E7B4E1377272D5FD
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_parent_m65B8E4660B2C554069C57A957D9E55FECA7AA73E (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m09F51D8BDECFD2E8C618498EF7377029B669030D (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, float p1, const RuntimeMethod* method);
+// System.Void UnityEngine.MonoBehaviour::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Void System.Object::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0 (RuntimeObject * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Object::Instantiate<UnityEngine.Transform>(!!0)
@@ -5232,6 +5144,8 @@ inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * Object_Instantiate_
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_get_up_m6309EBC4E42D6D0B3D28056BD23D0331275306F7 (const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::op_UnaryNegation(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_UnaryNegation_m2AFBBF22801F9BCA5A4EBE642A29F433FE1339C2 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR void Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // System.Void System.NotSupportedException::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_mA121DE1CAC8F25277DEB489DC7771209D91CAE33 (NotSupportedException_tE75B318D6590A02A5D9B29FD97409B1750FA0010 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Behaviour::get_enabled()
@@ -5409,6 +5323,8 @@ extern "C" IL2CPP_METHOD_ATTR float Matrix4x4_get_Item_m3F051969B5275A3EA6F3C620
 extern "C" IL2CPP_METHOD_ATTR void Matrix4x4_set_Item_m63E67A0D3E7C3CFEA191C2E73D4380A07C9046AE (Matrix4x4_t6BF60F70C9169DF14C9D2577672A44224B236ECA * __this, int32_t p0, float p1, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector4::get_Item(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR float Vector4_get_Item_m39878FDA732B20347BB37CD1485560E9267EDC98 (Vector4_tD148D6428C3F8FF6CD998F82090113C2B490B76E * __this, int32_t p0, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_op_Addition_m929F9C17E5D11B94D50B4AFF1D730B70CB59B50E (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p1, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Matrix4x4::MultiplyVector(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Matrix4x4_MultiplyVector_mFED70C58FB201633483463CE64DBF0D0BE081863 (Matrix4x4_t6BF60F70C9169DF14C9D2577672A44224B236ECA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  p0, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
@@ -5717,73 +5633,6 @@ extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D453
 extern "C" IL2CPP_METHOD_ATTR void WindowViewBase__ctor_m58C9A90B9E625AD391BF64CD551CBAD5B9D09229 (WindowViewBase_t0751C6B936C4F86B667E1464B667BC148E665B77 * __this, const RuntimeMethod* method);
 // System.Void System.Action::Invoke()
 extern "C" IL2CPP_METHOD_ATTR void Action_Invoke_mC8D676E5DDF967EC5D23DD0E96FB52AA499817FD (Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * __this, const RuntimeMethod* method);
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void UnityStandardAssets.Vehicles.Car.Suspension::Start()
-extern "C" IL2CPP_METHOD_ATTR void Suspension_Start_m7AD27D0E698CD72F7937A20D719A41FDCE7B3F86 (Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE * __this, const RuntimeMethod* method)
-{
-	{
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_0 = __this->get_wheel_4();
-		NullCheck(L_0);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_1 = GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C(L_0, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_2 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_1, /*hidden argument*/NULL);
-		__this->set_m_TargetOriginalPosition_5(L_2);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_3 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		NullCheck(L_3);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_4 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_3, /*hidden argument*/NULL);
-		__this->set_m_Origin_6(L_4);
-		return;
-	}
-}
-// System.Void UnityStandardAssets.Vehicles.Car.Suspension::Update()
-extern "C" IL2CPP_METHOD_ATTR void Suspension_Update_mBAAE312ED07CE98D29DB08AAB7B1E86336082EAF (Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Suspension_Update_mBAAE312ED07CE98D29DB08AAB7B1E86336082EAF_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_0 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_1 = __this->get_m_Origin_6();
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_2 = __this->get_wheel_4();
-		NullCheck(L_2);
-		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_3 = GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C(L_2, /*hidden argument*/NULL);
-		NullCheck(L_3);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_4 = Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8(L_3, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_5 = __this->get_m_TargetOriginalPosition_5();
-		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_6 = Vector3_op_Subtraction_mF9846B723A5034F8B9F5F5DCB78E3D67649143D3(L_4, L_5, /*hidden argument*/NULL);
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_7 = Vector3_op_Addition_m929F9C17E5D11B94D50B4AFF1D730B70CB59B50E(L_1, L_6, /*hidden argument*/NULL);
-		NullCheck(L_0);
-		Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728(L_0, L_7, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityStandardAssets.Vehicles.Car.Suspension::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void Suspension__ctor_m95209CC1F4C1449A4B8A53C4DC634C33410BE205 (Suspension_tF41FAA99BB231CC58DD5D5508E02F50618CD12EE * __this, const RuntimeMethod* method)
-{
-	{
-		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
