@@ -27,7 +27,7 @@ public class Pausable : MonoBehaviour
     public bool pausing;
 
     [Header("無視するGameObject")]
-    public GameObject[] ignoreGameObjects;
+    public GameObject[] IgnoreGameObjects;
 
     /// <summary>
     /// ポーズ状態が変更された瞬間を調べるため、前回のポーズ状況を記録しておく
@@ -48,6 +48,11 @@ public class Pausable : MonoBehaviour
     /// ポーズ中のMonoBehaviourの配列
     /// </summary>
     MonoBehaviour[] pausingMonoBehaviours;
+
+    /// <summary>
+    /// ポーズ中のAnimatorの配列
+    /// </summary>
+    Animator[] pausingAnimator;
 
     // デフォルトではParticleSystemは止まらないので、単体で指定する必要がある
     // 少しスクリプトを理解すれば他と同じように止められそう
@@ -78,7 +83,8 @@ public class Pausable : MonoBehaviour
         // 子要素から、スリープ中でなく、IgnoreGameObjectsに含まれていないRigidbodyを抽出
         Predicate<Rigidbody> rigidbodyPredicate =
             obj => !obj.IsSleeping() &&
-                   Array.FindIndex(ignoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
+                   Array.FindIndex(IgnoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
+
         pausingRigidbodies = Array.FindAll(transform.GetComponentsInChildren<Rigidbody>(), rigidbodyPredicate);
         rigidbodyVelocities = new RigidbodyVelocity[pausingRigidbodies.Length];
         for (int i = 0; i < pausingRigidbodies.Length; i++)
@@ -93,7 +99,7 @@ public class Pausable : MonoBehaviour
         Predicate<MonoBehaviour> monoBehaviourPredicate =
             obj => obj.enabled &&
                    obj != this &&
-                   Array.FindIndex(ignoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
+                   Array.FindIndex(IgnoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
 
         pausingMonoBehaviours = Array.FindAll(transform.GetComponentsInChildren<MonoBehaviour>(), monoBehaviourPredicate);
 
@@ -102,6 +108,23 @@ public class Pausable : MonoBehaviour
             foreach (var monoBehaviour in pausingMonoBehaviours)
             {
                 monoBehaviour.enabled = false;
+            }
+        }
+
+        // Animatorの停止
+        // 子要素から、有効かつこのインスタンスでないもの、IgnoreGameObjectsに含まれていないAnimatorを抽出
+        Predicate<Animator> AnimatorPredicate =
+            obj => obj.enabled &&
+                   obj != this &&
+                   Array.FindIndex(IgnoreGameObjects, gameObject => gameObject == obj.gameObject) < 0;
+
+        pausingAnimator = Array.FindAll(transform.GetComponentsInChildren<Animator>(), AnimatorPredicate);
+
+        if (pausingAnimator != null)
+        {
+            foreach (var Animator in pausingAnimator)
+            {
+                Animator.enabled = false;
             }
         }
 
@@ -128,6 +151,15 @@ public class Pausable : MonoBehaviour
             foreach (var monoBehaviour in pausingMonoBehaviours)
             {
                 monoBehaviour.enabled = true;
+            }
+        }
+
+        // Animatorの再開
+        if (pausingAnimator != null)
+        {
+            foreach (var Animator in pausingAnimator)
+            {
+                Animator.enabled = true;
             }
         }
 

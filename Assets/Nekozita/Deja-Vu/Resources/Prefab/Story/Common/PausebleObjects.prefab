@@ -407,11 +407,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausing: 0
-  ignoreGameObjects:
+  IgnoreGameObjects:
   - {fileID: 2763121526432796212}
+  - {fileID: 2763121524817507695}
   - {fileID: 2763121525912395376}
   - {fileID: 2763121524840583483}
-  - {fileID: 2763121524817507695}
   - {fileID: 2763121526363724696}
   - {fileID: 2763121524788307216}
 --- !u!1 &2763121525595110701
