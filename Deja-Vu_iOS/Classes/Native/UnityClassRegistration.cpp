@@ -396,26 +396,26 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<TextRenderingPrivate::GUIText>("TextRendering");
 	//50. TextRendering::Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//51. UI::Canvas
-	RegisterUnityClass<UI::Canvas>("UI");
-	//52. UI::CanvasGroup
-	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//53. UI::CanvasRenderer
-	RegisterUnityClass<UI::CanvasRenderer>("UI");
-	//54. ParticleSystem
-	RegisterUnityClass<ParticleSystem>("ParticleSystem");
-	//55. ParticleSystemRenderer
-	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
-	//56. WheelCollider
-	RegisterUnityClass<WheelCollider>("Vehicles");
-	//57. Animator
+	//51. Animator
 	RegisterUnityClass<Animator>("Animation");
-	//58. AnimatorOverrideController
+	//52. AnimatorOverrideController
 	RegisterUnityClass<AnimatorOverrideController>("Animation");
-	//59. RuntimeAnimatorController
+	//53. RuntimeAnimatorController
 	RegisterUnityClass<RuntimeAnimatorController>("Animation");
-	//60. Animation
+	//54. Animation
 	RegisterUnityClass<Animation>("Animation");
+	//55. UI::Canvas
+	RegisterUnityClass<UI::Canvas>("UI");
+	//56. UI::CanvasGroup
+	RegisterUnityClass<UI::CanvasGroup>("UI");
+	//57. UI::CanvasRenderer
+	RegisterUnityClass<UI::CanvasRenderer>("UI");
+	//58. ParticleSystem
+	RegisterUnityClass<ParticleSystem>("ParticleSystem");
+	//59. ParticleSystemRenderer
+	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
+	//60. WheelCollider
+	RegisterUnityClass<WheelCollider>("Vehicles");
 	//61. NavMeshAgent
 	RegisterUnityClass<NavMeshAgent>("AI");
 	//62. Rigidbody2D
