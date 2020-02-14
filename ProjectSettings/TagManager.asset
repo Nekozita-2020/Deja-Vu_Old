@@ -18,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Grape
+  - Object
+  - 
   - 
   - 
   - 
@@ -46,6 +46,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: TopSenser
+  - name: TouchSenser
     uniqueID: 1449412535
     locked: 0

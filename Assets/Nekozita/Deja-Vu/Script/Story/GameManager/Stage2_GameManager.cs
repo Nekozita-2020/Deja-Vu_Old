@@ -11,7 +11,7 @@ public class Stage2_GameManager : StageGameManagerBase
     [NonSerialized] private List<Sprite> m_ItemImageList_Cache = new List<Sprite>();
 
     // 所持アイテムを表示するUI
-    [SerializeField] private List<SpriteRenderer> m_Belongings = null;
+    [SerializeField] private List<Image> m_Belongings = null;
     private List<Sprite> SpriteList = new List<Sprite>(3);
 
     // ステージに配置されてるアイテムボックスリスト1〜4
@@ -124,7 +124,10 @@ public class Stage2_GameManager : StageGameManagerBase
     private void UpdateBelongingsList()
     {
         for(int i = 0; i < SpriteList.Count; i++)
-        m_Belongings[i].sprite = SpriteList[i];
+        {
+            m_Belongings[i].gameObject.SetActive(true);
+            m_Belongings[i].sprite = SpriteList[i];
+        }
     }
 
     private void OnSetSeekItem()

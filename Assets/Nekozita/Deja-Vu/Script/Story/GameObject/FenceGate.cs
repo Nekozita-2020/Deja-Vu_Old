@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FenceGate : MonoBehaviour
 {
     // 所持アイテムリスト
-    [NonSerialized] public List<SpriteRenderer> m_Belongings = new List<SpriteRenderer>();
+    [NonSerialized] public List<Image> m_Belongings = new List<Image>();
 
     // ゲートを開くための条件アイテムリスト
     [NonSerialized] public List<Sprite> m_SeekItemList = new List<Sprite>();
