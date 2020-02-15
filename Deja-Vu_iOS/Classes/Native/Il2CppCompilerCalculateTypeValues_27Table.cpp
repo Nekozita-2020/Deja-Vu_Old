@@ -76,8 +76,6 @@ struct List_1_tE65C666BC8FBCAAFE36D7A5944042F1CCB157C73;
 struct List_1_tBA8D772D87B6502B2A4D0EFE166C846285F50650;
 // System.Collections.Generic.List`1<UnityEngine.Sprite>
 struct List_1_t18801B80DBA94AAA8DF21D6ED1C15CF944BCA6CC;
-// System.Collections.Generic.List`1<UnityEngine.SpriteRenderer>
-struct List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE;
 // System.Collections.Generic.List`1<UnityEngine.Transform>
 struct List_1_t1863EF4EE1FDEED14D460C85AF61BE0850892F6D;
 // System.Collections.Generic.List`1<UnityEngine.UI.Image>
@@ -3539,16 +3537,16 @@ public:
 struct  FenceGate_t96A5955ED4CBA5E81EE504497DCFB61C3088CE20  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
 {
 public:
-	// System.Collections.Generic.List`1<UnityEngine.SpriteRenderer> FenceGate::m_Belongings
-	List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * ___m_Belongings_4;
+	// System.Collections.Generic.List`1<UnityEngine.UI.Image> FenceGate::m_Belongings
+	List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * ___m_Belongings_4;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> FenceGate::m_SeekItemList
 	List_1_t18801B80DBA94AAA8DF21D6ED1C15CF944BCA6CC * ___m_SeekItemList_5;
 
 public:
 	inline static int32_t get_offset_of_m_Belongings_4() { return static_cast<int32_t>(offsetof(FenceGate_t96A5955ED4CBA5E81EE504497DCFB61C3088CE20, ___m_Belongings_4)); }
-	inline List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * get_m_Belongings_4() const { return ___m_Belongings_4; }
-	inline List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE ** get_address_of_m_Belongings_4() { return &___m_Belongings_4; }
-	inline void set_m_Belongings_4(List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * value)
+	inline List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * get_m_Belongings_4() const { return ___m_Belongings_4; }
+	inline List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED ** get_address_of_m_Belongings_4() { return &___m_Belongings_4; }
+	inline void set_m_Belongings_4(List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * value)
 	{
 		___m_Belongings_4 = value;
 		Il2CppCodeGenWriteBarrier((&___m_Belongings_4), value);
@@ -6695,8 +6693,8 @@ public:
 	List_1_t18801B80DBA94AAA8DF21D6ED1C15CF944BCA6CC * ___m_ItemImageList_15;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> Stage2_GameManager::m_ItemImageList_Cache
 	List_1_t18801B80DBA94AAA8DF21D6ED1C15CF944BCA6CC * ___m_ItemImageList_Cache_16;
-	// System.Collections.Generic.List`1<UnityEngine.SpriteRenderer> Stage2_GameManager::m_Belongings
-	List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * ___m_Belongings_17;
+	// System.Collections.Generic.List`1<UnityEngine.UI.Image> Stage2_GameManager::m_Belongings
+	List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * ___m_Belongings_17;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> Stage2_GameManager::SpriteList
 	List_1_t18801B80DBA94AAA8DF21D6ED1C15CF944BCA6CC * ___SpriteList_18;
 	// System.Collections.Generic.List`1<ItemBox> Stage2_GameManager::m_ItemBoxList1
@@ -6732,9 +6730,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_m_Belongings_17() { return static_cast<int32_t>(offsetof(Stage2_GameManager_tFC6738A25CF7B8A07D04F6B265813BCFDDE89DD4, ___m_Belongings_17)); }
-	inline List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * get_m_Belongings_17() const { return ___m_Belongings_17; }
-	inline List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE ** get_address_of_m_Belongings_17() { return &___m_Belongings_17; }
-	inline void set_m_Belongings_17(List_1_tF4E8D159DD07D98EA19E13678532680DA76CB4DE * value)
+	inline List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * get_m_Belongings_17() const { return ___m_Belongings_17; }
+	inline List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED ** get_address_of_m_Belongings_17() { return &___m_Belongings_17; }
+	inline void set_m_Belongings_17(List_1_t5E6CEE165340A9D74D8BD47B8E6F422DFB7744ED * value)
 	{
 		___m_Belongings_17 = value;
 		Il2CppCodeGenWriteBarrier((&___m_Belongings_17), value);
