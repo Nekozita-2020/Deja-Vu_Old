@@ -3027,12 +3027,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1974141041}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &467101244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1439614328295896620, guid: 84ee8d3192cf0472b98b40227ecccaad,
-    type: 3}
-  m_PrefabInstance: {fileID: 3923062279531389072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490568134
 GameObject:
   m_ObjectHideFlags: 0
@@ -20639,7 +20633,7 @@ MonoBehaviour:
   GameOverUI: {fileID: 2130633430}
   StageClearUI: {fileID: 2130633429}
   PauseButton: {fileID: 2130633432}
-  TouchSenser: {fileID: 467101244}
+  TouchSenser: {fileID: 2019517458}
   PausebleObjects: {fileID: 1974141042}
   Grape: {fileID: 1974141043}
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
@@ -25261,6 +25255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e1dcb1363343e4a23f1536197a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2019517458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2320400695849805216, guid: 1a1796b77d9b945788ac6d66c135f691,
+    type: 3}
+  m_PrefabInstance: {fileID: 2130633428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2032785210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28510,6 +28510,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987963908740633685, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 740591319}
+    - target: {fileID: 2987963908740633685, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDrag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1796b77d9b945788ac6d66c135f691, type: 3}
@@ -32373,6 +32383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439614328295896620, guid: 84ee8d3192cf0472b98b40227ecccaad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3923062280835071504, guid: 84ee8d3192cf0472b98b40227ecccaad,
         type: 3}

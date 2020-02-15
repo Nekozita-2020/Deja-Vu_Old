@@ -118,12 +118,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7864052509189796711}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &467101244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1439614328295896620, guid: 84ee8d3192cf0472b98b40227ecccaad,
-    type: 3}
-  m_PrefabInstance: {fileID: 3923062279531389072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598458491
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +337,7 @@ MonoBehaviour:
   GameOverUI: {fileID: 1233633380}
   StageClearUI: {fileID: 174936945}
   PauseButton: {fileID: 2059947074}
-  TouchSenser: {fileID: 467101244}
+  TouchSenser: {fileID: 0}
   PausebleObjects: {fileID: 1974141042}
   Grape: {fileID: 1974141043}
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
@@ -725,5 +719,15 @@ PrefabInstance:
       propertyPath: PauseEffectList.Array.data[0]
       value: 
       objectReference: {fileID: 1974141044}
+    - target: {fileID: 2987963908740633685, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 740591319}
+    - target: {fileID: 2987963908740633685, guid: 1a1796b77d9b945788ac6d66c135f691,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDrag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1796b77d9b945788ac6d66c135f691, type: 3}
