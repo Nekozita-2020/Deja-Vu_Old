@@ -52,5 +52,9 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# [BuildFiles] Unity→Xcode
+/Deja-Vu_iOS/
+
+
 # Crashlytics generated file
 crashlytics-build.properties
