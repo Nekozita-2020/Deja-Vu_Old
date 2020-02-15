@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Nekozita/Deja-Vu/Scene/Stage2.unity
     guid: b31d64e06cfaf4db9ba2819a260bace1
   - enabled: 1
+    path: Assets/Nekozita/Deja-Vu/Scene/Stage3.unity
+    guid: 13bdd99682bd749b1a6788d7e56060a5
+  - enabled: 1
     path: Assets/Nekozita/Deja-Vu/Scene/Stage9.unity
     guid: f449a415534b041268782a489527c67f
   m_configObjects: {}
