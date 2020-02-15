@@ -337,7 +337,7 @@ MonoBehaviour:
   GameOverUI: {fileID: 1233633380}
   StageClearUI: {fileID: 174936945}
   PauseButton: {fileID: 2059947074}
-  TouchSenser: {fileID: 0}
+  TouchSenser: {fileID: 7864052509189796712}
   PausebleObjects: {fileID: 1974141042}
   Grape: {fileID: 1974141043}
   DestroyEffect: {fileID: 2208810652113972158, guid: c843475a03fc0404cbc66e89516a6cf5,
@@ -731,3 +731,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a1796b77d9b945788ac6d66c135f691, type: 3}
+--- !u!1 &7864052509189796712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2320400695849805216, guid: 1a1796b77d9b945788ac6d66c135f691,
+    type: 3}
+  m_PrefabInstance: {fileID: 7864052509189796711}
+  m_PrefabAsset: {fileID: 0}

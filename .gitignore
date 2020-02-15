@@ -53,7 +53,7 @@ sysinfo.txt
 *.unitypackage
 
 # [BuildFiles] Unity→Xcode
-/Deja-Vu_iOS/
+/[Dd]eja-Vu_iOS/
 
 
 # Crashlytics generated file
