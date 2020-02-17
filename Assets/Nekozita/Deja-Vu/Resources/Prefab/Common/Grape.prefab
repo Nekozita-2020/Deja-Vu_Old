@@ -1076,8 +1076,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 3}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: 1.5, y: 3, z: 3}
+  m_Center: {x: 0, y: 1.8, z: 0}
 --- !u!95 &5932251235019208658
 Animator:
   serializedVersion: 3
@@ -1862,6 +1862,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3160411539851039486}
     m_Modifications:
+    - target: {fileID: 8316813621258352580, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
+        type: 3}
+      propertyPath: m_Name
+      value: MentalEffect
+      objectReference: {fileID: 0}
     - target: {fileID: 8316813621258352583, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1916,11 +1921,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8316813621258352580, guid: 0580bbae24d794cd1bc4ca9b1461db2a,
-        type: 3}
-      propertyPath: m_Name
-      value: MentalEffect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0580bbae24d794cd1bc4ca9b1461db2a, type: 3}
