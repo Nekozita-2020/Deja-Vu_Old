@@ -53,8 +53,7 @@ sysinfo.txt
 *.unitypackage
 
 # [BuildFiles] Unity→Xcode
-/[Dd]eja-Vu_iOS/
-
+*.cpp
 
 # Crashlytics generated file
 crashlytics-build.properties
