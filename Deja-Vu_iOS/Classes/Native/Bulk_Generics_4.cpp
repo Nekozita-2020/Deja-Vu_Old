@@ -1634,26 +1634,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // HASHSET_1_T725419BA457D845928B505ACE877FF46BC71E897_H
-#ifndef ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
-#define ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Collections.Generic.ICollectionDebugView`1<System.Object>
-struct  ICollectionDebugView_1_tD1D98F2CFECA8921317EC16A7F265BE697F11BCD  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
 #ifndef ICOLLECTIONDEBUGVIEW_1_TDB6BE6BBE12633D368C4DE0585A35483E361A97E_H
 #define ICOLLECTIONDEBUGVIEW_1_TDB6BE6BBE12633D368C4DE0585A35483E361A97E_H
 #ifdef __clang__
@@ -1674,6 +1654,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ICOLLECTIONDEBUGVIEW_1_TDB6BE6BBE12633D368C4DE0585A35483E361A97E_H
+#ifndef ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
+#define ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Collections.Generic.ICollectionDebugView`1<System.Object>
+struct  ICollectionDebugView_1_tD1D98F2CFECA8921317EC16A7F265BE697F11BCD  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ICOLLECTIONDEBUGVIEW_1_TD1D98F2CFECA8921317EC16A7F265BE697F11BCD_H
 #ifndef IDICTIONARYDEBUGVIEW_2_TDECEFD297E1D1C6B57D98EDFD5330A9AC7D53364_H
 #define IDICTIONARYDEBUGVIEW_2_TDECEFD297E1D1C6B57D98EDFD5330A9AC7D53364_H
 #ifdef __clang__
