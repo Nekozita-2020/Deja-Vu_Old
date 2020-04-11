@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 1109817804682075204}
   - component: {fileID: 2317159861860267538}
   - component: {fileID: 3259812431064751583}
+  - component: {fileID: 1270722187491994904}
   m_Layer: 0
   m_Name: Coin_Positive
   m_TagString: Positive
@@ -441,3 +442,20 @@ MonoBehaviour:
       isCreate: 1
       viewAdvanced: 0
     modifyNameEnabled: 1
+--- !u!114 &1270722187491994904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670682486614554319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bdcc8e12c3a45e396f30269d9a9d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardSpeed: 10
+  IsRamdom_InitialSpeed: 1
+  m_RamdomSpeedLower: 0.5
+  m_RamdomSpeedUpper: 10
+  IsForward: 1

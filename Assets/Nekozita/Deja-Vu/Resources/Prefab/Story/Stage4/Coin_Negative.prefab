@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1109817804682075204}
   - component: {fileID: 2317159861860267538}
   - component: {fileID: 2353264681956168855}
+  - component: {fileID: 8683348204975227074}
   m_Layer: 0
   m_Name: Coin_Negative
   m_TagString: Negative
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3670682486614554319}
-  m_LocalRotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2608816594792236067}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &1109817804682075204
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -133,6 +134,23 @@ MonoBehaviour:
       isCreate: 1
       viewAdvanced: 0
     modifyNameEnabled: 1
+--- !u!114 &8683348204975227074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670682486614554319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bdcc8e12c3a45e396f30269d9a9d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardSpeed: 10
+  IsRamdom_InitialSpeed: 1
+  m_RamdomSpeedLower: 0.5
+  m_RamdomSpeedUpper: 10
+  IsForward: 1
 --- !u!1 &4390454658970272162
 GameObject:
   m_ObjectHideFlags: 0
