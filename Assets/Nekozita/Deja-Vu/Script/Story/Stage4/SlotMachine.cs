@@ -18,6 +18,22 @@ public class SlotMachine : MonoBehaviour
 
 
 
+    private void Start()
+    {
+        Init();
+    }
+
+    private void Init()
+    {
+        var m_FiollowScript = this.gameObject.GetComponent<FollowTarget_Z>();
+
+        // Grapeを追従するようにする
+        if (m_FiollowScript != null)
+            m_FiollowScript.target = DataStore.OnGetCurrentGrape().transform;
+        else
+            Debug.Log("FollowTarget_Zがアタッチされてない");
+    }
+
     private void Update()
     {
         if (m_GanarateFlug == true)
@@ -44,7 +60,10 @@ public class SlotMachine : MonoBehaviour
 
         // オブジェクトの向きをランダムにする
         float m_RandomPos_x = Random.Range(DataStore.MovementRange.LimitLeft, DataStore.MovementRange.LimitRight);
-        Vector3 RandomAngle = new Vector3(m_RandomPos_x, 0, 0);
+        float m_FixedPos_y = DataStore.OnGetCurrentGrape().transform.localPosition.y;
+        float m_FixedPos_z = DataStore.OnGetCurrentGrape().transform.localPosition.z;
+
+        Vector3 RandomAngle = new Vector3(m_RandomPos_x, m_FixedPos_y, m_FixedPos_z);
         Obj.transform.LookAt(RandomAngle);
 
         // 生成したオブジェクトに消滅する条件を与えておく

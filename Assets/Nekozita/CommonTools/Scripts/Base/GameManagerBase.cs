@@ -8,7 +8,7 @@ public class GameManagerBase : MonoBehaviour
     [Header("再生するBGM")]
     [SerializeField] private AudioClip PlayBGM = null;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         // 使用していないアセットをアンロードしてメモリを解放
         Resources.UnloadUnusedAssets();

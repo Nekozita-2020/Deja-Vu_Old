@@ -21,6 +21,14 @@ public class StageGameManagerBase : GameManagerBase
 
 
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        // DataStoreにプレイ中のGrapeオブジェクトを記憶させる
+        DataStore.OnSetCurrentGrape(this.Grape);
+    }
+
     private void Start()
     {
         this.Init();

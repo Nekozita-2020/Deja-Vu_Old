@@ -7,7 +7,30 @@ using UnityEngine;
 /// </summary>
 public class DataStore : MonoBehaviour
 {
+    // プレイ中のステージのGrapeのオブジェクトをその都度セットする想定
+    private static GameObject m_CurrentGrape = null;
+
+    // グレープの記憶の解放時期
     public static readonly List<int> m_UnlockTimingList = new List<int>();
+
+
+
+    /// <summary>
+    /// プレイ中のステージのGrapeのオブジェクトを保存する
+    /// </summary>
+    /// <param name="_Grape"></param>
+    public static void OnSetCurrentGrape(GameObject _Grape)
+    {
+        m_CurrentGrape = _Grape;
+    }
+
+
+    public static GameObject OnGetCurrentGrape()
+    {
+        if (m_CurrentGrape == null)
+            Debug.Log("CurrentGrapeがセットされていない");
+        return m_CurrentGrape;
+    }
 
     /// <summary>
     /// グレープの記憶の解放時期
