@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SlotMachine : MonoBehaviour
 {
+    // オブジェクト生成をするタイミングかどうかのフラグ
+    [SerializeField] private bool m_GanarateFlug = false;
+
     // 生成するオブジェクト郡
     [SerializeField] private List<GameObject> m_CoinsObjList = null;
 
     [Header("オブジェクトの生成間隔秒(〜秒毎に生成)")]
     [SerializeField] private float GenerateInterval = 1.0f;
-
-    // オブジェクト生成をするタイミングかどうかのフラグ
-    private bool m_GanarateFlug = false;
 
     // 時間管理用
     private float m_Time = 0.0f;

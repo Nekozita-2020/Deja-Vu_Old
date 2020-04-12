@@ -7053,9 +7053,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a129cc6902446da81437a7005486ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_GanarateFlug: 1
   m_CoinsObjList:
-  - {fileID: 3670682486614554319, guid: dd2a91f0802534eddacf08c95aafe39c, type: 3}
-  - {fileID: 3670682486614554319, guid: 804c9aa7ad7b8499e9eac1be14cebc16, type: 3}
+  - {fileID: 7649272160800681061, guid: dd2a91f0802534eddacf08c95aafe39c, type: 3}
+  - {fileID: 7649272160800681061, guid: df59c5524eacd44238c10683daeb2053, type: 3}
   GenerateInterval: 1
 --- !u!1 &8140634469949147595
 GameObject:
