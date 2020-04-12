@@ -7,6 +7,8 @@ public class SlotMachine : MonoBehaviour
     // オブジェクト生成をするタイミングかどうかのフラグ
     [SerializeField] private bool m_GanarateFlug = false;
 
+    // オブジェクトを生成する位置
+    [SerializeField] private Transform m_GeneratePos = null;
     // 生成するオブジェクト郡
     [SerializeField] private List<GameObject> m_CoinsObjList = null;
 
@@ -56,10 +58,11 @@ public class SlotMachine : MonoBehaviour
     private void GenerateToObject()
     {
         int GenerateNum = Random.Range(0, m_CoinsObjList.Count);
-        var Obj = Instantiate(m_CoinsObjList[GenerateNum], this.gameObject.transform);
+        var Obj = Instantiate(m_CoinsObjList[GenerateNum], m_GeneratePos);
 
         // オブジェクトの向きをランダムにする
-        float m_RandomPos_x = Random.Range(DataStore.MovementRange.LimitLeft, DataStore.MovementRange.LimitRight);
+        float m_RandomPos_x = Random.Range(DataStore.MovementRange.LimitLeft + 1,
+            DataStore.MovementRange.LimitRight - 1);
         float m_FixedPos_y = DataStore.OnGetCurrentGrape().transform.localPosition.y;
         float m_FixedPos_z = DataStore.OnGetCurrentGrape().transform.localPosition.z;
 
@@ -67,6 +70,6 @@ public class SlotMachine : MonoBehaviour
         Obj.transform.LookAt(RandomAngle);
 
         // 生成したオブジェクトに消滅する条件を与えておく
-        Destroy(Obj, 3.0f);
+        // Destroy(Obj, 3.0f);
     }
 }

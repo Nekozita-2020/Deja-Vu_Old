@@ -24,7 +24,6 @@ public class DataStore : MonoBehaviour
         m_CurrentGrape = _Grape;
     }
 
-
     public static GameObject OnGetCurrentGrape()
     {
         if (m_CurrentGrape == null)
