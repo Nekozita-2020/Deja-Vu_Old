@@ -12,7 +12,7 @@ public class BoundScript : MonoBehaviour
     public float m_RamdomBouncinessUpper = 30.0f;
 
 
-    //sphereに触れた時のメソッド
+    // オブジェクトに衝突した時のメソッド
     private void OnCollisionEnter(Collision collision)
     {
         // バウンドする度にバウンド係数をランダム設定

@@ -14,7 +14,7 @@ public class Stage1_GameManager : StageGameManagerBase
 
         foreach(var item in TriggerAreaList)
         {
-            item.CallBack = OnAcceleration_Grape;
+            item.m_ColliderCallBack = OnAcceleration_Grape;
         }
     }
 

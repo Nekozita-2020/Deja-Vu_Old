@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 7497153223585305693}
   m_Layer: 0
   m_Name: Prim.00000000
-  m_TagString: Untagged
+  m_TagString: Negative
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,6 +365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 1240187028090980193}
+  m_RamdomBouncinessLower: 1
+  m_RamdomBouncinessUpper: 30
 --- !u!1 &7755095246444420421
 GameObject:
   m_ObjectHideFlags: 0

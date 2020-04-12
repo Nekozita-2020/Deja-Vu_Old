@@ -34,7 +34,7 @@ public class Piano : MonoBehaviour
         // (ScriptableObjectでもエンドレスモードに対応できないため、苦肉の策)
         m_Grape = GameObject.Find("Grape");
 
-        m_CollisionSensor.CallBack = ActiveMovement;
+        m_CollisionSensor.m_ColliderCallBack = ActiveMovement;
     }
 
     private void FixedUpdate()

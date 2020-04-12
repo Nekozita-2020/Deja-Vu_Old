@@ -49,7 +49,8 @@ public class StageGameManagerBase : GameManagerBase
     protected virtual void SetCallBack()
     {
         TouchSenser.GetComponent<DoubleTapSencer>().OnDoubleTap = OnDoubleTapAction;
-        Grape.GetComponent<CollisionSensor>().CallBack = CollisionAction;
+        Grape.GetComponent<CollisionSensor>().m_ColliderCallBack = CollisionAction;
+        // Grape.GetComponent<CollisionSensor>().m_ColisionCallBack = CollisionAction;
     }
 
     /// <summary>
