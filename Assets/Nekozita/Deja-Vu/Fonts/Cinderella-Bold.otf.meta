@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 69a73359f4727413a88508e4853e14e4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cinderella-Bold
+  fontNames:
+  - Cinderella-Bold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a62539aaa01eb44b38460e2112b8f9c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

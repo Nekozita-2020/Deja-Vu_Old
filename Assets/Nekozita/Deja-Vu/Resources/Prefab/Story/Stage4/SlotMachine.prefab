@@ -7090,7 +7090,8 @@ MonoBehaviour:
   m_CoinsObjList:
   - {fileID: 7649272160800681061, guid: dd2a91f0802534eddacf08c95aafe39c, type: 3}
   - {fileID: 7649272160800681061, guid: a1ec8977e858543a9b849786c97a7c35, type: 3}
-  GenerateInterval: 1
+  GenerateInterval: 3
+  ChangeLevelInterval: 1
 --- !u!1 &8140634469949147595
 GameObject:
   m_ObjectHideFlags: 0
