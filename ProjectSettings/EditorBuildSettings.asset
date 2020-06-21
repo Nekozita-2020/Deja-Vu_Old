@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Nekozita/Deja-Vu/Scene/Title.unity
-    guid: 71b61967cd39f4a3b97c9668d55c1938
+    guid: 0cae4f029445a436b8a75a777bade248
   - enabled: 1
     path: Assets/Nekozita/Deja-Vu/Scene/CommonTools.unity
     guid: 1021d1ab140f2436f896eefb7b157753
