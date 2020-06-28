@@ -27,6 +27,11 @@ public class EntryPoint : SingletonMonoBehaviour<EntryPoint>
                 );
             */
         }
+
+        // ロゴウインドウを出す
+        // ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
+
+
     }
 
     /*
