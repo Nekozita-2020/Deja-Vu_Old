@@ -8,6 +8,8 @@ using System;
 /// </summary>
 public class WindowViewBase : MonoBehaviour
 {
+    // アニメーター
+    [SerializeField] private Animator m_Animator = null;
 
     // 現在表示しているWindow
     [SerializeField] public Action OnCloseEvent = null;
