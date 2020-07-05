@@ -2,34 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerBase : MonoBehaviour
+namespace Nekozita
 {
-
-    [Header("再生するBGM")]
-    [SerializeField] private AudioClip PlayBGM = null;
-
-    protected virtual void Awake()
+    public class GameManagerBase : MonoBehaviour
     {
-        // 使用していないアセットをアンロードしてメモリを解放
-        Resources.UnloadUnusedAssets();
+        [Header("再生するBGM")]
+        [SerializeField] private AudioClip PlayBGM = null;
 
-        // フェードインしてシーンをスタートさせる
-        SceneController.Instance?.FadeIn();
 
-        if(PlayBGM != null)
+
+        protected virtual void Awake()
         {
-            // BGMを再生(同じBGMが再生されていれば未処理)
-            SoundManager.Instance.PlayBGM(PlayBGM.name);
+            // 使用していないアセットをアンロードしてメモリを解放
+            Resources.UnloadUnusedAssets();
+
+            /*
+            // フェードインしてシーンをスタートさせる
+            SceneController.Instance?.FadeIn();
+            */
+
+            if (PlayBGM != null)
+            {
+                // BGMを再生(同じBGMが再生されていれば未処理)
+                SoundManager.Instance.PlayBGM(PlayBGM.name);
+            }
+        }
+
+        /// <summary>
+        /// 指定したシーンへ遷移させる
+        /// </summary>
+        /// <param name="_SceneLavel">Scene name.</param>
+        public void OnSceneChange(SceneLavel _SceneLavel)
+        {
+            // SceneController.Instance.FadeOut(SceneName);
+            SceneLoader.LoadScene(_SceneLavel);
         }
     }
-
-    /// <summary>
-    /// 指定したシーンへ遷移させる
-    /// </summary>
-    /// <param name="SceneName">Scene name.</param>
-    public void OnSceneChange(string SceneName)
-    {
-        SceneController.Instance.FadeOut(SceneName);
-    }
-
 }

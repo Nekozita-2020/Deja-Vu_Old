@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.63031185, g: 0.6987638, b: 0.7827142, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -692,8 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66735499402004197b459ef8be7c6435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LogoWindowView: {fileID: 0}
-  m_TitleManager: {fileID: 2105435645}
 --- !u!4 &1462759489
 Transform:
   m_ObjectHideFlags: 0
@@ -1137,7 +1135,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1322,12 +1320,12 @@ PrefabInstance:
     - target: {fileID: 8997666473194810849, guid: 63ab6d0c64dab4614b832cade658d9dc,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSceneChange
+      value: OnClickTitleScene
       objectReference: {fileID: 0}
     - target: {fileID: 8997666473194810849, guid: 63ab6d0c64dab4614b832cade658d9dc,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8997666473194810849, guid: 63ab6d0c64dab4614b832cade658d9dc,
         type: 3}

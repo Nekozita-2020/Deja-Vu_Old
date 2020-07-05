@@ -4,74 +4,76 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class StageClearUIManager : GameManagerBase
+namespace Nekozita
 {
-
-    [SerializeField] GameObject ClearMessageUI = null;
-    [SerializeField] GameObject GrapeMemoryWin_BackGround = null;
-    [SerializeField] Text m_NewMemoryText = null;
-
-    [Header("クリアしたステージ番号(=このステージの番号)")]
-    [SerializeField] private int ClearStegeNum = 0;
-
-    // ストーリーの進捗度を取得(クリアしたステージ数)
-    private int StoryProgress;
-
-
-
-    private void Start()
+    public class StageClearUIManager : GameManagerBase
     {
+        [SerializeField] GameObject ClearMessageUI = null;
+        [SerializeField] GameObject GrapeMemoryWin_BackGround = null;
+        [SerializeField] Text m_NewMemoryText = null;
+
+        [Header("クリアしたステージ番号(=このステージの番号)")]
+        [SerializeField] private int ClearStegeNum = 0;
+
         // ストーリーの進捗度を取得(クリアしたステージ数)
-        StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
+        private int StoryProgress;
 
-        if(StoryProgress < ClearStegeNum)
+
+
+        private void Start()
         {
-            // 【重要】このステージを初めてクリアした時のみ、ストーリー進捗度を進める
-            AddStoryProgress();
+            // ストーリーの進捗度を取得(クリアしたステージ数)
+            StoryProgress = PlayerPrefs.GetInt("ClearStage", -1);
 
-            // DataStoreのグレープの記憶解放時期リストを作成
-            DataStore.MakeUnlockTimingList();
-
-            // グレープの記憶が解放されるタイミングなら
-            if (DataStore.m_UnlockTimingList.Contains(ClearStegeNum))
+            if (StoryProgress < ClearStegeNum)
             {
-                // 新たな記憶が解放されたテキストを出す
-                m_NewMemoryText.gameObject.SetActive(true);
+                // 【重要】このステージを初めてクリアした時のみ、ストーリー進捗度を進める
+                AddStoryProgress();
+
+                // DataStoreのグレープの記憶解放時期リストを作成
+                DataStore.MakeUnlockTimingList();
+
+                // グレープの記憶が解放されるタイミングなら
+                if (DataStore.m_UnlockTimingList.Contains(ClearStegeNum))
+                {
+                    // 新たな記憶が解放されたテキストを出す
+                    m_NewMemoryText.gameObject.SetActive(true);
+                }
+            }
+
+            ClearMessageUI?.SetActive(true);
+        }
+
+        /// <summary>
+        /// ストーリーの進捗度を進めてセーブ
+        /// </summary>
+        private void AddStoryProgress()
+        {
+            PlayerPrefs.SetInt("ClearStage", ClearStegeNum);
+            PlayerPrefs.Save();
+        }
+
+        public void OnClickGrapeMemoryWinButton()
+        {
+            GrapeMemoryWin_BackGround.SetActive(true);
+
+            // プレハブをロードしていなければロード(=子オブジェクトが閉じるボタンしか無いなら)
+            if (GrapeMemoryWin_BackGround.transform.childCount <= 1)
+            {
+                GameObject Obj = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE_MEMORY_WINDOW);
+
+                // 第2引数をfalseにすることで、子オブジェクトにした時、プレハブのScale値などが保たれる
+                Obj.transform.SetParent(GrapeMemoryWin_BackGround.transform, false);
+
+                // プレハブ側で値が設定されている為、仕方なくここで再配置
+                Obj.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
 
-        ClearMessageUI?.SetActive(true);
-    }
-
-    /// <summary>
-    /// ストーリーの進捗度を進めてセーブ
-    /// </summary>
-    private void AddStoryProgress()
-    {
-        PlayerPrefs.SetInt("ClearStage", ClearStegeNum);
-        PlayerPrefs.Save();
-    }
-
-    public void OnClickGrapeMemoryWinButton()
-    {
-        GrapeMemoryWin_BackGround.SetActive(true);
-
-        // プレハブをロードしていなければロード(=子オブジェクトが閉じるボタンしか無いなら)
-        if (GrapeMemoryWin_BackGround.transform.childCount <= 1)
+        public void OnClickCloseGrapeMemoryWinButton()
         {
-            GameObject Obj = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE_MEMORY_WINDOW);
-
-            // 第2引数をfalseにすることで、子オブジェクトにした時、プレハブのScale値などが保たれる
-            Obj.transform.SetParent(GrapeMemoryWin_BackGround.transform, false);
-
-            // プレハブ側で値が設定されている為、仕方なくここで再配置
-            Obj.transform.localPosition = new Vector3(0, 0, 0);
+            GrapeMemoryWin_BackGround.SetActive(false);
         }
-    }
 
-    public void OnClickCloseGrapeMemoryWinButton()
-    {
-        GrapeMemoryWin_BackGround.SetActive(false);
     }
-
 }

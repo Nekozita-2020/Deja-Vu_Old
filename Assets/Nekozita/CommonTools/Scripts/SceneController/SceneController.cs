@@ -10,7 +10,6 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneController : SingletonMonoBehaviour<SceneController>
 {
-
     // フェード用のCanvas
     [SerializeField] private Canvas FadeCanvas;
     private Image FadeImage = null;

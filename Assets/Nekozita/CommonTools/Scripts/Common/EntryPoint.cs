@@ -9,8 +9,9 @@ using Cysharp.Threading.Tasks;
 /// </summary>
 public class EntryPoint : SingletonMonoBehaviour<EntryPoint>
 {
-    [RuntimeInitializeOnLoadMethod()]
-    static async void Init()
+    // RuntimeInitializeLoadType.BeforeSceneLoadを付けることで各Awakeより前に呼べる
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static async void RuntimeInitialize()
     {
         // フレームレートを30FPSに設定
         Application.targetFrameRate = 30;
@@ -27,11 +28,6 @@ public class EntryPoint : SingletonMonoBehaviour<EntryPoint>
                 );
             */
         }
-
-        // ロゴウインドウを出す
-        // ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
-
-
     }
 
     /*

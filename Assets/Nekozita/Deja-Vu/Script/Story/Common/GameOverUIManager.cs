@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverUIManager : GameManagerBase
+namespace Nekozita
 {
-
-    public void OnSceneRestart()
+    public class GameOverUIManager : GameManagerBase
     {
-        OnSceneChange(SceneManager.GetActiveScene().name);
-    }
 
+        public void OnSceneRestart()
+        {
+            OnSceneChange((SceneLavel)SceneManager.GetActiveScene().buildIndex);
+        }
+
+    }
 }

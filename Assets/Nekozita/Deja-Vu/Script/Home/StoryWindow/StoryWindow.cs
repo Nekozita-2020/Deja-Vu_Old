@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryWindow : WindowBase
+namespace Nekozita
 {
-
-	StoryWindowView View;
-
-    protected override void SettingView()
+    public class StoryWindow : WindowBase
     {
-        base.SettingView();
 
-        View = m_View as StoryWindowView;
-        View.m_ClickStartButton = OnClickStartButton;
+        StoryWindowView View;
+
+        protected override void SettingView()
+        {
+            base.SettingView();
+
+            View = m_View as StoryWindowView;
+            View.m_ClickStartButton = OnClickStartButton;
+        }
+
+        public void OnClickStartButton()
+        {
+            // SceneController.Instance.FadeOut("StoryMenu");
+            SceneLoader.LoadScene(SceneLavel.Title);
+        }
+
     }
-
-    public void OnClickStartButton()
-    {
-        SceneController.Instance.FadeOut("StoryMenu");
-    }
-
 }

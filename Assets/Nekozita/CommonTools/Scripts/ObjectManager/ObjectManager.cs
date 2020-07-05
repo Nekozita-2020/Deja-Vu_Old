@@ -7,7 +7,7 @@ public class ObjectManager : SingletonMonoBehaviour<ObjectManager>
 {
 
     // ロードしたプレハブ
-    [SerializeField] public GameObject LoadObject = null;
+    public GameObject LoadObject = null;
 
     // ロードが完了したかどうかを管理する変数
     // private Action LastLoadExec = null;
