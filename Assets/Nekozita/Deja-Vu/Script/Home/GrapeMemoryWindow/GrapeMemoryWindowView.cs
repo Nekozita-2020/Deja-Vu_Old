@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+/*
 public class GrapeMemoryWindowView : WindowViewBase
 {
 
@@ -21,3 +21,4 @@ public class GrapeMemoryWindowView : WindowViewBase
     }
 
 }
+*/

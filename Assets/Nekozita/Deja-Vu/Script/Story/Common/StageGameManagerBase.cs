@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
+/*
 namespace Nekozita
 {
     public class StageGameManagerBase : GameManagerBase
@@ -186,3 +186,4 @@ namespace Nekozita
 
     }
 }
+*/

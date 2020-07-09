@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class SettingWindowView : WindowViewBase
 {
 
@@ -32,3 +32,4 @@ public class SettingWindowView : WindowViewBase
     }
 
 }
+*/

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Nekozita
 {
@@ -13,13 +14,23 @@ namespace Nekozita
 
         protected virtual void Awake()
         {
-            // 使用していないアセットをアンロードしてメモリを解放
-            Resources.UnloadUnusedAssets();
+            // 処理を滞りなく始める為に待機をさせる初期化メソッド
+            StartCoroutine(SyncInit());
+        }
 
-            /*
-            // フェードインしてシーンをスタートさせる
-            SceneController.Instance?.FadeIn();
-            */
+        protected virtual void Start()
+        {
+
+        }
+
+        /// <summary>
+        /// CommonToolsの生成等、処理の始まるタイミングの辻褄を合わせる為の初期化用メソッド
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator SyncInit()
+        {
+            // CommonToolsが生成されるまで待機させて、動作を保証させる
+            yield return new WaitUntil(() => EntryPoint.m_MakeToolsFlag);
 
             if (PlayBGM != null)
             {

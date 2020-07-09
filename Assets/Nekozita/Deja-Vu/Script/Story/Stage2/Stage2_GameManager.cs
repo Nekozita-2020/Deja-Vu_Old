@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 namespace Nekozita
 {
     public class Stage2_GameManager : StageGameManagerBase
@@ -160,3 +160,4 @@ namespace Nekozita
         }
     }
 }
+*/

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
-
+/*
 namespace Nekozita
 {
     public class EndlessGameManager : StageGameManagerBase
@@ -223,3 +223,4 @@ namespace Nekozita
 
     }
 }
+*/

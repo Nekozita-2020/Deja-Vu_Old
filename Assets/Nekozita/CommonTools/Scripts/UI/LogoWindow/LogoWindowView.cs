@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class LogoWindowView : WindowViewBase
 {
     // 蓋となる画像(この透明度を変えて下のロゴを表示させる)
@@ -121,3 +121,4 @@ public class LogoWindowView : WindowViewBase
         FadeOutFlag = true;
     }
 }
+*/

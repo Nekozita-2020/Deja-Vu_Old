@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/*
 namespace Nekozita
 {
     public class TitleManager : GameManagerBase
@@ -28,3 +28,4 @@ namespace Nekozita
 
     }
 }
+*/

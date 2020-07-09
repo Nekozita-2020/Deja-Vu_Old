@@ -6,7 +6,7 @@ namespace Nekozita
 {
     public class HomeManager : GameManagerBase
     {
-
+        /*
         // 各Windowの親となるオブジェクト
         [SerializeField] private GameObject HomeMenu = null;
 
@@ -22,8 +22,9 @@ namespace Nekozita
 
         void Start()
         {
+            base.Start();
             // シーンに必要なアセットをロード
-            ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
+            // ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
             // BGMを再生(同じBGMが再生されていれば未処理)
             // SoundManager.Instance.PlayBGM(ResourcesPath.AUDIO_BGM_HEALING_10);
@@ -88,5 +89,6 @@ namespace Nekozita
             PlayerPrefs.SetInt("ClearStage", 15);
             PlayerPrefs.Save();
         }
+        */
     }
 }

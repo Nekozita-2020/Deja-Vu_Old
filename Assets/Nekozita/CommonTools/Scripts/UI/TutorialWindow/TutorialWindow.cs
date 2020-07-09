@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 /// <summary>
 /// Windowの処理部分を担当させるクラス
 /// </summary>
@@ -31,3 +32,4 @@ public class TutorialWindow : WindowBase
     }
 
 }
+*/

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class CreditWindow : WindowBase
 {
 
@@ -13,3 +13,4 @@ public class CreditWindow : WindowBase
     }
 
 }
+*/

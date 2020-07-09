@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class StoryWindowView : WindowViewBase
 {
 
@@ -16,3 +16,4 @@ public class StoryWindowView : WindowViewBase
     }
     
 }
+*/

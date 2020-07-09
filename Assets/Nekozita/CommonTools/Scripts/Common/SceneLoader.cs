@@ -6,10 +6,10 @@ namespace Nekozita
 {
     /* How To
      * // 単純なシーン遷移
-     * SceneLoader.LoadScene(GameScenes.Home);
+     * SceneLoader.LoadScene(SceneLavel.Home);
      * 
      * // "Stage1"シーンを先にロードし、続けて"BattleManager"シーンをロード
-     * SceneLoader.LoadScene(GameScenes.Stage1, additiveLoadScenes: new[] { GameScenes.BattleManager });
+     * SceneLoader.LoadScene(SceneLavel.Title, additiveLoadScenes: new[] { SceneLavel.CommonTools });
     */
 
     public static class SceneLoader
@@ -46,7 +46,7 @@ namespace Nekozita
         /// トランジションマネージャが存在しない場合に初期化する
         /// </summary>
         public static void Initialize()
-        {
+        {            
             if (TransitionManager.Instance == null)
             {
                 var resource = Resources.Load("TransitionCanvas");
@@ -92,7 +92,7 @@ namespace Nekozita
         /// <param name="data">次のシーンへ引き継ぐデータ</param>
         /// <param name="additiveLoadScenes">追加でロードするシーン</param>
         /// <param name="autoMove">トランジションアニメーションを自動的に完了させるか
-        ///                        falseの場合はOpen()を実行しないとトランジションが終了しない</param>
+        ///  falseの場合はOpen()を実行しないとトランジションが終了しない</param>
         public static void LoadScene(SceneLavel scene,
             SceneDataPack data = null,
             SceneLavel[] additiveLoadScenes = null,

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class LogoWindow : WindowBase
 {
 
@@ -28,3 +28,4 @@ public class LogoWindow : WindowBase
         View.FadeInFlag = true;
     }
 }
+*/

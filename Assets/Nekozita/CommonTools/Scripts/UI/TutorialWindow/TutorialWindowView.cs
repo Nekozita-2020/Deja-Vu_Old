@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-
+/*
 /// <summary>
 /// Windowの表示部分の処理を担当させるクラス
 /// </summary>
@@ -32,3 +32,4 @@ public class TutorialWindowView : WindowViewBase
     }
 
 }
+*/

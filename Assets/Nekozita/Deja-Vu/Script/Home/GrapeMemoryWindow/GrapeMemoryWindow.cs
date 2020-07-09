@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class GrapeMemoryWindow : WindowBase
 {
 
@@ -49,7 +49,6 @@ public class GrapeMemoryWindow : WindowBase
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_6);
         UnlockTimingList.Add(DataStore.UnlockTimingOfGrapeMemory.Unlock_7);
     }
-    */
     /// <summary>
     /// グレープの記憶を解放する
     /// </summary>
@@ -85,3 +84,4 @@ public class GrapeMemoryWindow : WindowBase
     }
 
 }
+*/

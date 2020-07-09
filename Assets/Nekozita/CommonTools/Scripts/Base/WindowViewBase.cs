@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/*
 /// <summary>
 /// Windowの表示部分の処理を担当させるBaseクラス
 /// </summary>
@@ -30,3 +31,4 @@ public class WindowViewBase : MonoBehaviour
     }
 
 }
+*/
