@@ -6,6 +6,18 @@ namespace Nekozita
 {
     public class HomeManager : GameManagerBase
     {
+        protected override void Start()
+        {
+            base.Start();            
+        }
+
+
+        public void Test()
+        {
+            var resource = Resources.Load("Prefab/Window/BaseWindow");
+            Instantiate(resource, m_UICanvas.transform);
+        }
+
         /*
         // 各Windowの親となるオブジェクト
         [SerializeField] private GameObject HomeMenu = null;

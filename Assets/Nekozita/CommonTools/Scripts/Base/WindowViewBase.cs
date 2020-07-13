@@ -21,9 +21,13 @@ namespace Nekozita
 
 
 
-        public void Init(Transform _Content)
+        public void Init()
         {
-            m_Animator = _Content.GetComponent<Animator>();
+            // WindowにAnimatorがアタッチされている前提
+            m_Animator = this.GetComponent<Animator>();
+
+            // 念のためAnimatorは始め無効化しておく
+            SetAnimatorEnabled(false);
         }
 
         public virtual void OnOpenBeforeAni(WindowParameter _p) { }
@@ -48,17 +52,23 @@ namespace Nekozita
         public void PlayOpenAni()
         {
             SetAnimatorEnabled(true);
-            m_Animator.Play("PopupOpen");
+            m_Animator.Play("OpenWindow");
         }
 
         public void PlayCloseAni()
         {
             SetAnimatorEnabled(true);
-            m_Animator.Play("PopupClose");
+            m_Animator.Play("CloseWindow");
         }
 
+        /// <summary>
+        /// Animation内から呼び出し、イベントを発行する想定
+        /// </summary>
         public void EndAnim()
         {
+            Debug.Log("Anim終了検知");
+            SetAnimatorEnabled(false);
+            Debug.Log("Animatorfalse検知");
             m_OnCompleteAnim?.Invoke();
         }
 

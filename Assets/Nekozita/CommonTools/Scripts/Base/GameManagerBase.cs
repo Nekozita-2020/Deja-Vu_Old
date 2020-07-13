@@ -10,12 +10,16 @@ namespace Nekozita
         [Header("再生するBGM")]
         [SerializeField] private AudioClip PlayBGM = null;
 
+        protected Canvas m_UICanvas = null;
 
 
         protected virtual void Awake()
         {
             // 処理を滞りなく始める為に待機をさせる初期化メソッド
             StartCoroutine(SyncInit());
+
+            // UICanvasを取得
+            m_UICanvas = this.GetComponent<Canvas>();
         }
 
         protected virtual void Start()
