@@ -77,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3010\u30D9\u30FC\u30B9\u30A6\u30A4\u30F3\u30C9\u30A6\u3011"
+  m_Text: "\u3010\u30C6\u30B9\u30C8\u30A6\u30A4\u30F3\u30C9\u30A6\u3011"
 --- !u!1 &3286593489709064589
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8907\u88FD\u7528\u30A6\u30A4\u30F3\u30C9\u30A6"
+  m_Text: "\u30C6\u30B9\u30C8\u7528\u30A6\u30A4\u30F3\u30C9\u30A6"
 --- !u!1 &6904307763382657522
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,10 +780,10 @@ GameObject:
   - component: {fileID: 6904307764139588183}
   - component: {fileID: 6904307764139588176}
   - component: {fileID: 996541342240089264}
-  - component: {fileID: 7184294538813207146}
-  - component: {fileID: 722983060889409828}
+  - component: {fileID: 505769536808554205}
+  - component: {fileID: 495334101316339902}
   m_Layer: 5
-  m_Name: BaseWindow
+  m_Name: TestWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +868,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7184294538813207146
+--- !u!114 &505769536808554205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -877,10 +877,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6904307764139588178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38047bfcb0bb4b31945abeddcb03b64, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f3ebf1cabe744429a84f80f13c99cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &722983060889409828
+--- !u!114 &495334101316339902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -889,6 +889,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6904307764139588178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 312a735907408428eb77ea0227f59f46, type: 3}
+  m_Script: {fileID: 11500000, guid: aa97c9871ee5e44c1ae5ba2787dd5149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

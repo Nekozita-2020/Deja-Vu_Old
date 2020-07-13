@@ -6,6 +6,8 @@ namespace Nekozita
 {
     public class HomeManager : GameManagerBase
     {
+        [SerializeField] GameObject m_WindowPrefab = null;
+
         protected override void Start()
         {
             base.Start();            
@@ -14,8 +16,18 @@ namespace Nekozita
 
         public void Test()
         {
-            var resource = Resources.Load("Prefab/Window/BaseWindow");
-            Instantiate(resource, m_UICanvas.transform);
+            // var resource = Resources.Load("Prefab/Window/BaseWindow");
+            // WindowViewBase m_ViewBase = new WindowViewBase();
+            // WindowBase m_Base = new WindowBase();
+
+            // m_WindowPrefab.AddComponent<WindowViewBase>();
+            // m_WindowPrefab.AddComponent<WindowBase>();
+
+            var getwindow = m_WindowPrefab.GetComponent<WindowBase>();
+
+            Debug.Log("get " + getwindow);
+
+            Instantiate(m_WindowPrefab, m_UICanvas.transform);
         }
 
         /*

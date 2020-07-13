@@ -66,9 +66,7 @@ namespace Nekozita
         /// </summary>
         public void EndAnim()
         {
-            Debug.Log("Anim終了検知");
             SetAnimatorEnabled(false);
-            Debug.Log("Animatorfalse検知");
             m_OnCompleteAnim?.Invoke();
         }
 
