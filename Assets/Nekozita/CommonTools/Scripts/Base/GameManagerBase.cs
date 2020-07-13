@@ -45,7 +45,6 @@ namespace Nekozita
         /// <param name="_SceneLavel">Scene name.</param>
         public void OnSceneChange(SceneLavel _SceneLavel)
         {
-            // SceneController.Instance.FadeOut(SceneName);
             SceneLoader.LoadScene(_SceneLavel);
         }
     }

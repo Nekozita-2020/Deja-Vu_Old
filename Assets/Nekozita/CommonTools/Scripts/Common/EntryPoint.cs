@@ -13,29 +13,6 @@ namespace Nekozita
     {
         public static bool m_MakeToolsFlag = false;
 
-
-        /*
-        // RuntimeInitializeLoadType.BeforeSceneLoadを付けることで各Awakeより前に呼べる
-        // [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        static async void RuntimeInitialize()
-        {
-            // フレームレートを30FPSに設定
-            Application.targetFrameRate = 30;
-
-            // 追加予定のCommonToolsが有効でない時(まだ読み込んでいない時)だけ追加ロードするように
-            if (!SceneManager.GetSceneByName("CommonTools").IsValid())
-            {
-                await SceneManager.LoadSceneAsync("CommonTools", LoadSceneMode.Additive);
-
-                // 進捗とか表示する用の「UniTask Ver2」用の書き方
-                // await SceneManager.LoadSceneAsync("CommonTools", LoadSceneMode.Additive)
-                //     .ToUniTask(
-                //     Progress.Create<float>(n => Debug.Log($"現在{n * 100}%"))
-                //     );
-            }
-        }
-        */
-
         // RuntimeInitializeLoadType.BeforeSceneLoadを付けることで各Awakeより前に呼べる
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void RuntimeInitialize()
