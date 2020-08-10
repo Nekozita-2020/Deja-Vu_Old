@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 505769536808554205}
         m_MethodName: OnClick_Close
         m_Mode: 1
         m_Arguments:
@@ -892,3 +892,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa97c9871ee5e44c1ae5ba2787dd5149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Text: {fileID: 6904307763303318597}

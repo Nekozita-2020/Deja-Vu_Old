@@ -30,9 +30,9 @@ namespace Nekozita
             SetAnimatorEnabled(false);
         }
 
-        public virtual void OnOpenBeforeAni(WindowParameter _p) { }
+        public virtual void OnOpenBeforeAni(WindowDataPack _Data) { }
 
-        public virtual void OnOpenAniEnd(WindowParameter _p) { }
+        public virtual void OnOpenAniEnd(WindowDataPack _Data) { }
 
         // public virtual void OnReopenBeforeAni(WindowParameter _p) { }
 
@@ -44,17 +44,27 @@ namespace Nekozita
 
         public virtual void OnDestroy() { }
 
+        /// <summary>
+        /// Animatorの有効・無効化の切り替え
+        /// </summary>
+        /// <param name="_IsEnabled"></param>
         public void SetAnimatorEnabled(bool _IsEnabled)
         {
             m_Animator.enabled = _IsEnabled;
         }
 
+        /// <summary>
+        /// Windowを開く時のアニメーションを再生
+        /// </summary>
         public void PlayOpenAni()
         {
             SetAnimatorEnabled(true);
             m_Animator.Play("OpenWindow");
         }
 
+        /// <summary>
+        /// Windowを閉じる時のアニメーションを再生
+        /// </summary>
         public void PlayCloseAni()
         {
             SetAnimatorEnabled(true);

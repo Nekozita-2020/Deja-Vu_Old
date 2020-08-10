@@ -8,6 +8,11 @@ using UniRx;
 namespace Nekozita
 {
     /// <summary>
+    /// Windowにデータを受け渡すときに利用する
+    /// </summary>
+    public class WindowDataPack { }
+
+    /// <summary>
     /// Modelベースクラス
     /// </summary>
     public class WindowModelBase
@@ -18,13 +23,13 @@ namespace Nekozita
     /// <summary>
     /// Presenterベースクラス
     /// </summary>
-    public class WindowBase : MonoBehaviour
+    public class WindowBase<T> : MonoBehaviour
     {
         // Viewベースクラス
-        WindowViewBase m_View;
+        protected WindowViewBase m_View;
 
         // 引き継いできたデータクラス
-        WindowParameter m_Parameter;
+        protected WindowDataPack m_DataPack = null;
 
         /// <summary>
         /// トランジションのアニメーションの終了通知
@@ -34,30 +39,35 @@ namespace Nekozita
 
 
 
-        public WindowBase(WindowParameter _Parameter = null)
+        protected virtual void Awake()
         {
-            // 引き継ぎデータがあればキャッシュ
-            if (_Parameter != null)
-                m_Parameter = _Parameter;
-        }
-
-        private void Awake()
-        {
-            m_View = this.GetComponent<WindowViewBase>();
+            m_View = this.gameObject.GetComponent<WindowViewBase>();
 
             this.m_OnTransactionFinishedInternal = new Subject<Unit>();
         }
 
-        private void Start()
+        protected virtual void Start()
         {
-            // Viewのセッティング
-            m_View.Init();
+            if (m_View != null)
+            {
+                // Viewのセッティング
+                m_View?.Init();
 
-            // Presenterのセッティング
-            this.Init();
+                // Presenterのセッティング
+                this.Init();
+            }
         }
 
-        public void Init()
+        /// <summary>
+        /// 外部からこのWindowにデータを引き継ぐ
+        /// </summary>
+        /// <param name="_DataPack"></param>
+        public void OnInheritData(WindowDataPack _DataPack)
+        {
+            m_DataPack = _DataPack;
+        }
+
+        protected virtual void Init()
         {
             // Close時のコールバックをセット
             m_View.OnCloseEvent = OnCloseWindow;
@@ -70,27 +80,19 @@ namespace Nekozita
             OnOpenWindow();
         }
 
-        private IEnumerator SyncEndAnim(Action _EndAnimCallback = null)
-        {
-            // トランジションアニメーションが終了するのを待つ
-            yield return m_OnTransactionFinishedInternal.FirstOrDefault().ToYieldInstruction();
-
-            _EndAnimCallback?.Invoke();
-        }
-
         /// <summary>
         /// Open時の処理
         /// </summary>
         private void OnOpenWindow()
         {
             // アニメーション前に行う処理
-            m_View.OnOpenBeforeAni(m_Parameter);
+            m_View.OnOpenBeforeAni(m_DataPack);
 
             // アニメーションを再生
             m_View.PlayOpenAni();
 
             // アニメーションの終了を待機し、その後のアクションを実行するコルーチン
-            StartCoroutine(this.SyncEndAnim(() => m_View.OnOpenAniEnd(m_Parameter)));
+            StartCoroutine(this.SyncEndAnim(() => m_View.OnOpenAniEnd(m_DataPack)));
         }
 
         /// <summary>
@@ -113,14 +115,13 @@ namespace Nekozita
                 Destroy(this.gameObject);
             }));
         }
-    }
 
-    /// <summary>
-    /// Window側に渡したいデータ格納用クラス
-    /// ※渡したいデータをクラスにまとめてこれを継承させ、Window側でダウンキャストさせて扱う想定
-    /// </summary>
-    public class WindowParameter
-    {
+        private IEnumerator SyncEndAnim(Action _EndAnimCallback = null)
+        {
+            // アニメーションが終了するのを待つ
+            yield return m_OnTransactionFinishedInternal.FirstOrDefault().ToYieldInstruction();
 
+            _EndAnimCallback?.Invoke();
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Nekozita
         void Start()
         {
             // シーンに必要なアセットをロード
-            ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
+            // ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_WATER_FLOAR);
 
             // UIをストーリーの進捗度に合わせる(エンドレスとチュートリアルで最少は2)
             for (int i = 0; i <= PlayerPrefs.GetInt("ClearStage", -1) + 2; i++)

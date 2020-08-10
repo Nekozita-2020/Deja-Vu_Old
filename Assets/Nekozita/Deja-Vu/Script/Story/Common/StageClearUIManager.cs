@@ -60,6 +60,7 @@ namespace Nekozita
             // プレハブをロードしていなければロード(=子オブジェクトが閉じるボタンしか無いなら)
             if (GrapeMemoryWin_BackGround.transform.childCount <= 1)
             {
+                /*
                 GameObject Obj = ObjectManager.Instance.OnPrefabLoad(ResourcesPath.PREFAB_GRAPE_MEMORY_WINDOW);
 
                 // 第2引数をfalseにすることで、子オブジェクトにした時、プレハブのScale値などが保たれる
@@ -67,6 +68,7 @@ namespace Nekozita
 
                 // プレハブ側で値が設定されている為、仕方なくここで再配置
                 Obj.transform.localPosition = new Vector3(0, 0, 0);
+                */
             }
         }
 
