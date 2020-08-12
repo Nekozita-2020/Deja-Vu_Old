@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 505769536808554205}
+      - m_Target: {fileID: 6057721088756359014}
         m_MethodName: OnClick_Close
         m_Mode: 1
         m_Arguments:
@@ -780,8 +780,9 @@ GameObject:
   - component: {fileID: 6904307764139588183}
   - component: {fileID: 6904307764139588176}
   - component: {fileID: 996541342240089264}
-  - component: {fileID: 505769536808554205}
-  - component: {fileID: 495334101316339902}
+  - component: {fileID: 3237657953039875555}
+  - component: {fileID: 6057721088756359014}
+  - component: {fileID: 8820617929904971572}
   m_Layer: 5
   m_Name: TestWindow
   m_TagString: Untagged
@@ -868,7 +869,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &505769536808554205
+--- !u!225 &3237657953039875555
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904307764139588178}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
+--- !u!114 &6057721088756359014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -880,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3ebf1cabe744429a84f80f13c99cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &495334101316339902
+--- !u!114 &8820617929904971572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

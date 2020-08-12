@@ -8,7 +8,7 @@ namespace Nekozita
 {
     public static class UIManager
     {
-        public static void OnInstantiateWindow<T>(string _LoadWindowName, Transform _Parent = null, WindowDataPack _Data = null)
+        public static void OnInstantiateWindow(string _LoadWindowName, Transform _Parent = null, WindowDataPack _Data = null)
         {
             GameObject m_Window = OnLoadWindow(_LoadWindowName);
 
@@ -18,7 +18,7 @@ namespace Nekozita
 
                 // Windowに引き継ぐデータがある場合、引き継ぎを行う
                 if (_Data != null)
-                    m_Win.GetComponent<WindowBase<T>>().OnInheritData(_Data);
+                    m_Win.GetComponent<WindowBase>().OnInheritData(_Data);
             }
             else
                 Debug.Log("Missing Load!!  Because " + "<color=#0000ffff>"

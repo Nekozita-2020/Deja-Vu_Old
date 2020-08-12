@@ -25,7 +25,7 @@ namespace Nekozita
         {
             string m_Text = "引き継いだデータがあります。";
             var m_DataPack = new TestDataPack(m_Text);
-            UIManager.OnInstantiateWindow<TestWindow>("TestWindow", m_UICanvas.transform, m_DataPack);
+            UIManager.OnInstantiateWindow("TestWindow", m_UICanvas.transform, m_DataPack);
         }
 
         public void SceneChangeTest()

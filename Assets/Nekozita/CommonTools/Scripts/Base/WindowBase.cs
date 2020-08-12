@@ -23,8 +23,11 @@ namespace Nekozita
     /// <summary>
     /// Presenterベースクラス
     /// </summary>
-    public class WindowBase<T> : MonoBehaviour
+    public class WindowBase : MonoBehaviour
     {
+        // Type
+        protected virtual Type m_ScriptView => typeof (WindowViewBase);
+
         // Viewベースクラス
         protected WindowViewBase m_View;
 
@@ -55,6 +58,34 @@ namespace Nekozita
 
                 // Presenterのセッティング
                 this.Init();
+            }
+        }
+
+        /// <summary>
+        /// スクリプトアタッチ時などの初期化時に通る
+        /// Viewを自動で追加させる
+        /// </summary>
+        protected void Reset()
+        {
+            // MVP設計のスクリプトが重複することの無いように、ここでチェック
+            var m_Components = this.GetComponents<Component>();
+
+            foreach(var _Component in m_Components)
+            {
+                // 一旦WindowView及びそのサブクラスがあれば削除する(Viewの重複回避)
+                if (_Component.GetType().BaseType == typeof(WindowViewBase) ||
+                         _Component.GetType() == typeof(WindowViewBase))
+                {
+                    // 直ちに削除
+                    GameObject.DestroyImmediate(_Component);
+                }
+            }
+
+            WindowViewBase view = GetComponent(m_ScriptView) as WindowViewBase;
+
+            if (view == null)
+            {
+                this.gameObject.AddComponent(m_ScriptView);
             }
         }
 
