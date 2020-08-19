@@ -13,6 +13,8 @@ namespace Nekozita
         // Type
         protected override Type m_ScriptView => typeof(TestWindowView);
 
+        TestDataPack m_TestDataPack = null;
+
 
 
         protected override void Init()
@@ -20,15 +22,31 @@ namespace Nekozita
             base.Init();
 
             // Viewのセッティング
-            var View = m_View as TestWindowView;
-            if (View == null)
+            var m_View = m_ViewBase as TestWindowView;
+            if (m_View == null)
                 return;
 
+            // 引き継ぎデータがあればここでセット
             if (m_DataPack != null)
             {
-                var m_Data = m_DataPack as TestDataPack;
-                m_Text.text = m_Data.m_Text;
+                m_TestDataPack = m_DataPack as TestDataPack;
             }
+
+            // View側のコールバックをセット
+            m_View.m_OnClickYesButton = OnClickYesButton;
+
+            // ここから先は個別の処理に移る
+            this.OnSetText();
+        }
+
+        private void OnSetText()
+        {
+            m_Text.text = m_TestDataPack.m_Text;
+        }
+
+        private void OnClickYesButton()
+        {
+            Debug.Log("クリックを検知");
         }
     }
 }

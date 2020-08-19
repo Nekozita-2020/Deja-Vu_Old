@@ -29,7 +29,7 @@ namespace Nekozita
         protected virtual Type m_ScriptView => typeof (WindowViewBase);
 
         // Viewベースクラス
-        protected WindowViewBase m_View;
+        protected WindowViewBase m_ViewBase;
 
         // 引き継いできたデータクラス
         protected WindowDataPack m_DataPack = null;
@@ -44,17 +44,17 @@ namespace Nekozita
 
         protected virtual void Awake()
         {
-            m_View = this.gameObject.GetComponent<WindowViewBase>();
+            m_ViewBase = this.gameObject.GetComponent<WindowViewBase>();
 
             this.m_OnTransactionFinishedInternal = new Subject<Unit>();
         }
 
         protected virtual void Start()
         {
-            if (m_View != null)
+            if (m_ViewBase != null)
             {
                 // Viewのセッティング
-                m_View?.Init();
+                m_ViewBase?.Init();
 
                 // Presenterのセッティング
                 this.Init();
@@ -101,10 +101,10 @@ namespace Nekozita
         protected virtual void Init()
         {
             // Close時のコールバックをセット
-            m_View.OnCloseEvent = OnCloseWindow;
+            m_ViewBase.OnCloseEvent = OnCloseWindow;
 
             // アニメーションが終了したイベントをObservableに変換する
-            m_View.m_OnCompleteAnim.AddListener(
+            m_ViewBase.m_OnCompleteAnim.AddListener(
                 () => m_OnTransactionFinishedInternal.OnNext(Unit.Default));
 
             // Opne時の処理
@@ -117,13 +117,13 @@ namespace Nekozita
         private void OnOpenWindow()
         {
             // アニメーション前に行う処理
-            m_View.OnOpenBeforeAni(m_DataPack);
+            m_ViewBase.OnOpenBeforeAni(m_DataPack);
 
             // アニメーションを再生
-            m_View.PlayOpenAni();
+            m_ViewBase.PlayOpenAni();
 
             // アニメーションの終了を待機し、その後のアクションを実行するコルーチン
-            StartCoroutine(this.SyncEndAnim(() => m_View.OnOpenAniEnd(m_DataPack)));
+            StartCoroutine(this.SyncEndAnim(() => m_ViewBase.OnOpenAniEnd(m_DataPack)));
         }
 
         /// <summary>
@@ -132,15 +132,15 @@ namespace Nekozita
         private void OnCloseWindow()
         {
             // アニメーション前に行う処理
-            m_View.OnCloseBeforeAni();
+            m_ViewBase.OnCloseBeforeAni();
 
             // アニメーションを再生
-            m_View.PlayCloseAni();
+            m_ViewBase.PlayCloseAni();
 
             // アニメーションの終了を待機し、その後のアクションを実行するコルーチン
             StartCoroutine(this.SyncEndAnim(() =>
             {
-                m_View.OnCloseAniEnd();
+                m_ViewBase.OnCloseAniEnd();
 
                 // このWindowを破棄するタイミングで1度だけViewのOnDestroy()が実行される
                 Destroy(this.gameObject);
