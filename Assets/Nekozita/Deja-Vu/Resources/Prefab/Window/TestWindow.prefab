@@ -214,7 +214,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5935845104091481631}
-  m_ButtonSE: 0
+  m_ButtonSE_Type: 2
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -755,7 +755,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6904307763382657527}
-  m_ButtonSE: 0
+  m_ButtonSE_Type: 1
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

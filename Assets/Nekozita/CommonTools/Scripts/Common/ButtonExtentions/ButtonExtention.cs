@@ -30,7 +30,7 @@ namespace Nekozita
 
 		// 〜〜〜 ボタン別データ群 〜〜〜
 		// ボタンSEの種類
-		[SerializeField] private ButtonSE m_ButtonSE;
+		[SerializeField] private ButtonSE m_ButtonSE_Type = ButtonSE.None;
 
 		// 通常クリックイベント
 		[SerializeField] private Button.ButtonClickedEvent m_OnClick = null;
@@ -93,10 +93,10 @@ namespace Nekozita
 			m_IsRunning = true;
 
 			// ボタンSEを鳴らす
-
+			this.OnPlaySE();
 
 			// ボタンアニメーションを再生
-			PlayButtonAnim();
+			this.PlayButtonAnim();
 
 			// アニメーションの終了を待機し、その後のアクションを実行するコルーチン
 			StartCoroutine(this.SyncEndAnim(() =>
@@ -106,10 +106,27 @@ namespace Nekozita
 			}));
 		}
 
+		/// <summary>
+        /// ボタンSEを再生
+        /// </summary>
 		private void OnPlaySE()
         {
+			int m_SoundNum = (int)m_ButtonSE_Type;
 
-        }
+            switch (m_ButtonSE_Type)
+            {
+				case ButtonSE.None:
+					break;
+
+				case ButtonSE.Positive:
+					SoundManager.Instance.PlaySE($"SE_00{m_SoundNum}");
+					break;
+
+				case ButtonSE.Negative:
+					SoundManager.Instance.PlaySE($"SE_00{m_SoundNum}");
+					break;
+			}
+		}
 
 		/// <summary>
 		/// ボタンアニメーションを再生
